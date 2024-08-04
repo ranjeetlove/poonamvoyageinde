@@ -1,0 +1,16 @@
+[11-Apr-2024 16:52:37 UTC] PHP Warning:  require(/home/gwtknmarcjhd/public_html/vendor/composer/../symfony/polyfill-php80/bootstrap.php): Failed to open stream: No such file or directory in /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php on line 55
+[11-Apr-2024 16:52:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/gwtknmarcjhd/public_html/vendor/composer/../symfony/polyfill-php80/bootstrap.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php:55
+Stack trace:
+#0 /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php(38): composerRequire57cfd6636abd75e81c4fb812f5fd7eeb()
+#1 /home/gwtknmarcjhd/public_html/vendor/autoload.php(12): ComposerAutoloaderInit57cfd6636abd75e81c4fb812f5fd7eeb::getLoader()
+#2 /home/gwtknmarcjhd/public_html/public/index.php(34): require('/home/gwtknmarc...')
+#3 {main}
+  thrown in /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php on line 55
+[11-Apr-2024 16:52:40 UTC] PHP Warning:  require(/home/gwtknmarcjhd/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php on line 55
+[11-Apr-2024 16:52:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/gwtknmarcjhd/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php:55
+Stack trace:
+#0 /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php(38): composerRequire57cfd6636abd75e81c4fb812f5fd7eeb()
+#1 /home/gwtknmarcjhd/public_html/vendor/autoload.php(12): ComposerAutoloaderInit57cfd6636abd75e81c4fb812f5fd7eeb::getLoader()
+#2 /home/gwtknmarcjhd/public_html/public/index.php(34): require('/home/gwtknmarc...')
+#3 {main}
+  thrown in /home/gwtknmarcjhd/public_html/vendor/composer/autoload_real.php on line 55
