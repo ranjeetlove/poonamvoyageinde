@@ -277,7 +277,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid padding30 TabGroupsFilterWrapper">
+                <div class="TabGroupsFilterWrapper">
+                <div class="container">
                     <div class="text-center">
                         <h3 class="h3Heading">Popular Featured Destinations</h3>
                         <p class="headingPara">Traveling has helped us understand the meaning of life and helped us become better people. Every time we travel, we see the world with new eyes.</p>
@@ -504,20 +505,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid padding30 aboutWrapper">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
-                            <p class="toarPara">Poonam Voyage is a travel agency specializing in organizing tailor-made tours in India, with particular expertise in Rajasthan tours. As a Tour Operator in India , we are committed to providing unique and memorable experiences to our clients, exploring the cultural, historical and natural treasures of this fascinating region.</p>
-                            <p class="toarPara">Our tailor-made Rajasthan tours are designed to capture the essence of this land steeped in history and splendor. Whether it is a visit to the majestic palaces of Jaipur, a camel ride through the golden dunes of the Thar Desert, or a discovery of the bustling markets of Jodhpur, each itinerary is carefully crafted to satisfy the most discerning expectations of travelers.</p>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="aboutRight">
-                            <img src="{{asset('frontend/assets/img/about/ab5.jpg') }}" width="100%" />
+                </div>
+                <div class="aboutWrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
+                                <p class="toarPara">Poonam Voyage is a travel agency specializing in organizing tailor-made tours in India, with particular expertise in Rajasthan tours. As a Tour Operator in India , we are committed to providing unique and memorable experiences to our clients, exploring the cultural, historical and natural treasures of this fascinating region.</p>
+                                <p class="toarPara">Our tailor-made Rajasthan tours are designed to capture the essence of this land steeped in history and splendor. Whether it is a visit to the majestic palaces of Jaipur, a camel ride through the golden dunes of the Thar Desert, or a discovery of the bustling markets of Jodhpur, each itinerary is carefully crafted to satisfy the most discerning expectations of travelers.</p>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="aboutRight">
+                                <img src="{{asset('frontend/assets/img/about/ab5.jpg') }}" width="100%" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="container-fluid padding30 sectionWrapper">
                     <div class="row position-relative">
                         <div class="col-md-2"></div>
@@ -564,7 +569,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid padding30 aboutWrapper">
+                <div class="padding30 aboutWrapper">
+                <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="aboutRight">
@@ -580,9 +586,11 @@
                         
                     </div>
                 </div>
+                </div>
+                
             </div>
             <footer class="mainFooterWrapper">
-                <div class="container-fluid padding30">
+                <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="footerTextWrapper">
