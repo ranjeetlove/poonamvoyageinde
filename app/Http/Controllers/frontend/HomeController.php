@@ -40,4 +40,9 @@ class HomeController extends Controller
         $about= About::orderBy('id','desc')->first();
         return view('frontend.about-us',compact('banner','about'));
     }
+    public function newLandingPage(){
+        $banner= [];
+        return view('frontend.newLandingPage',compact('banner'));
+    }
+
 }
