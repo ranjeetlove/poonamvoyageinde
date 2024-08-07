@@ -82,9 +82,13 @@
                             <a href="{{route('index') }}" class="headerLefta">
                             <img src="{{asset('frontend/assets/img/logo/mlogo.jpg') }}" alt="" class="headerLogo">
                             </a>
+                            <a href="javascript:void(0)" class="headerMenuIcon menuCLick"><i class="bx bx-menu-alt-right"></i></a>
                         </div>
                         <div class="headerRightMenu">
                             <ul class="list-unstyled flexItem headerMenuList">
+                                <li>
+                                    <a href="javascript:void(0)" class="headerMenuLinks"><i class="bx bxs-x-circle menuCLick"></i></a>
+                                </li>
                                 <li>
                                     <a href="#" class="headerMenuLinks">Welcome</a>
                                 </li>
@@ -232,42 +236,42 @@
                     </div>
                     <div class="TopDestinationsWrapper">
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-6">
                                 <div class="destinationsCard">
                                     <div class="destinationImgae"><img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/destination-12-1.jpg" alt=""></div>
                                     <p>Gujrat</p>
                                     <span>2 Tour</span>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-6">
                                 <div class="destinationsCard">
                                     <div class="destinationImgae"v><img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/destination-8.jpg" alt=""></div>
                                     <p>South India</p>
                                     <span>2 Tour</span>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-6">
                                 <div class="destinationsCard">
                                     <div class="destinationImgae"><img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/destination-03.jpg" alt=""></div>
                                     <p>Kashmir</p>
                                     <span>2 Tour</span>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-6">
                                 <div class="destinationsCard">
                                     <div class="destinationImgae"><img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/destination-04.jpg" alt=""></div>
                                     <p>Ladakh</p>
                                     <span>2 Tour</span>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-6">
                                 <div class="destinationsCard">
                                     <div class="destinationImgae"><img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/destination-05.jpg" alt=""></div>
                                     <p>North India</p>
                                     <span>2 Tour</span>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-6">
                                 <div class="destinationsCard">
                                     <div class="destinationImgae"><img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/destination-06.jpg" alt=""></div>
                                     <p>Rajasthan</p>
@@ -278,226 +282,227 @@
                     </div>
                 </div>
                 <div class="TabGroupsFilterWrapper">
-                <div class="container">
-                    <div class="text-center">
-                        <h3 class="h3Heading">Popular Featured Destinations</h3>
-                        <p class="headingPara">Traveling has helped us understand the meaning of life and helped us become better people. Every time we travel, we see the world with new eyes.</p>
-                        <ul id="control" class="list-unstyled TabGroupsFilterUl">
-                            <li class="active" data-filter="all">All</li>
-                            <li data-filter="1">Gujrat</li> 
-                            <li data-filter="2">Kashmir</li> 
-                            <li data-filter="3">Ladakh</li> 
-                            <li data-filter="4">North India</li> 
-                            <li data-filter="5">Rajasthan</li> 
-                        </ul>
-                    </div>
-                    <div class="tabGroupCardWrapper">
-                        <div class="row filtr-container">
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item" data-category="5" data-sort="value">
-                                <div class="tabGroupCard">
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
+                    <div class="container">
+                        <div class="text-center">
+                            <h3 class="h3Heading">Popular Featured Destinations</h3>
+                            <p class="headingPara">Traveling has helped us understand the meaning of life and helped us become better people. Every time we travel, we see the world with new eyes.</p>
+                            <ul id="control" class="list-unstyled TabGroupsFilterUl">
+                                <li class="active" data-filter="all">All</li>
+                                <li data-filter="1">Gujrat</li> 
+                                <li data-filter="2">Kashmir</li> 
+                                <li data-filter="3">Ladakh</li> 
+                                <li data-filter="4">North India</li> 
+                                <li data-filter="5">Rajasthan</li> 
+                            </ul>
+                        </div>
+                        <div class="tabGroupCardWrapper">
+                            <div class="row filtr-container">
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item" data-category="5" data-sort="value">
+                                    <div class="tabGroupCard">
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
                                         </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item"  data-category="2" data-sort="value">
-                                <div class="tabGroupCard">
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-01.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
-                                        </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item" data-category="1" data-sort="value">
-                                <div class="tabGroupCard" >
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-02.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item"  data-category="2" data-sort="value">
+                                    <div class="tabGroupCard">
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-01.jpg" alt="">
                                         </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item" data-category="3" data-sort="value">
-                                <div class="tabGroupCard">
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-03.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
-                                        </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item" data-category="3" data-sort="value">
-                                <div class="tabGroupCard" data-category="3">
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-04.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item" data-category="1" data-sort="value">
+                                    <div class="tabGroupCard" >
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-02.jpg" alt="">
                                         </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item" data-category="3" data-sort="value">
+                                    <div class="tabGroupCard">
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-03.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item" data-category="3" data-sort="value">
+                                    <div class="tabGroupCard" data-category="3">
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-04.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item" data-category="3" data-sort="value">
-                                <div class="tabGroupCard" data-category="2">
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-05.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item" data-category="3" data-sort="value">
+                                    <div class="tabGroupCard" data-category="2">
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-05.jpg" alt="">
                                         </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item" data-category="4" data-sort="value">
-                                <div class="tabGroupCard">
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
-                                        </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 col-sm 6 col-xs 6 filtr-item" data-category="2" data-sort="value">
-                                <div class="tabGroupCard">
-                                    <div class="tabGroupImageCard">
-                                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-01.jpg" alt="">
-                                    </div>
-                                    <div class="tabGroupContentWrapper">
-                                        <p class="headingtab">Lorem ipsum dolor sit amet gts.</p>
-                                        <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                        <div class="tabStar">
-                                            <span>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                                <i class="bx bx-star"></i>
-                                            </span>
-                                            <span class="dayNight">
-                                                3days/2nights
-                                            </span>
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item" data-category="4" data-sort="value">
+                                    <div class="tabGroupCard">
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
                                         </div>
-                                        <div class="tabMore">
-                                            <a href="" class="tabMoreLink">More Information <i class="bx bx-star"></i></a>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item" data-category="2" data-sort="value">
+                                    <div class="tabGroupCard">
+                                        <div class="tabGroupImageCard">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-01.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper">
+                                            <a class="headingtab" href="#">Lorem ipsum dolor sit amet gts.</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="tabStar">
+                                                <span class='starColor'>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bx-star"></i>
+                                                    <i class="bx bx-star"></i>
+                                                </span>
+                                                <span class="dayNight">
+                                                    3 days / 2 nights
+                                                </span>
+                                            </div>
+                                            <div class="tabMore">
+                                                <a href="" class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -505,16 +510,15 @@
                         </div>
                     </div>
                 </div>
-                </div>
                 <div class="aboutWrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-12 col-sm-12 col-lg-5">
                                 <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
                                 <p class="toarPara">Poonam Voyage is a travel agency specializing in organizing tailor-made tours in India, with particular expertise in Rajasthan tours. As a Tour Operator in India , we are committed to providing unique and memorable experiences to our clients, exploring the cultural, historical and natural treasures of this fascinating region.</p>
                                 <p class="toarPara">Our tailor-made Rajasthan tours are designed to capture the essence of this land steeped in history and splendor. Whether it is a visit to the majestic palaces of Jaipur, a camel ride through the golden dunes of the Thar Desert, or a discovery of the bustling markets of Jodhpur, each itinerary is carefully crafted to satisfy the most discerning expectations of travelers.</p>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-12 col-sm-12 col-lg-7">
                                 <div class="aboutRight">
                                 <img src="{{asset('frontend/assets/img/about/ab5.jpg') }}" width="100%" />
                                 </div>
@@ -527,12 +531,13 @@
                     <div class="row position-relative">
                         <div class="col-md-2"></div>
                         <div class="col-md-8 text-center">
-                            <h3 class="h3Heading text-white">Best India Tours and Travels. Explore Amazing India Tour Packages</h3>
-                            <p class="toarPara text-white">Poonamvoyageinde is the right choice for tourism in India. Specialized for tours in Rajasthan, Gujarat, Kashmir and North India. We provide you with a travel guide in French to enhance your trip.</p>
+                            <h3 class="h3Heading text-white fontlarge">Best India Tours and Travels. Explore Amazing India Tour Packages</h3>
+                            <p class="toarPara fontPara text-white">Poonamvoyageinde is the right choice for tourism in India. Specialized for tours in Rajasthan, Gujarat, Kashmir and North India. We provide you with a travel guide in French to enhance your trip.</p>
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid padding30 testimonialsWrapper">
+                <div class="testimonialsWrapper">
+                <div class="container-fluid">
                     <div class="row position-relative">
                         <div class="col-md-6">
                             <h3 class="h3Heading mb-2">Travelers love our locals</h3>
@@ -569,25 +574,125 @@
                         </div>
                     </div>
                 </div>
-                <div class="padding30 aboutWrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="aboutRight">
-                            <img src="{{asset('frontend/assets/img/about/ab4.jpg') }}" width="100%" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
-                            <p class="toarPara">As a Tour Guide Agency in India , our dedicated team of local professionals will accompany you throughout your trip, sharing cultural insights, historical anecdotes and practical tips to make your experience authentic and enriching.</p>
-                            <p class="toarPara">At Poonam Voyage, we focus on customization, allowing our clients to choose and combine activities according to their preferences. Whether you are interested in architecture, local cuisine, colorful festivals or rural life, we create trips that match your passions.</p>
-                            <p class="toarPara">Choose Poonam Voyage to experience an exceptional adventure in the heart of India, exploring Rajasthan with an agency that truly understands the needs and aspirations of travelers eager for unique and authentic discoveries.</p>
-                        </div>
-                        
-                    </div>
-                </div>
                 </div>
                 
+                <div class="TabGroupsFilterWrapper">
+                    <div class="container">
+                    <div class="text-center">
+                            <h3 class="h3Heading">Our Top Rated Blogs</h3>
+                            <p class="headingPara">Traveling has helped us understand the meaning of life and helped us become better people. Every time we travel, we see the world with new eyes.</p>
+                            
+                        </div>
+                        <div class="tabGroupCardWrapper mt-4">
+                            <div class="row filtr-container">
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="tabGroupCard blogCard">
+                                        <div class="tabGroupImageCard blogCardImage">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper blogCardContent">
+                                            <span class="tagBlog">
+                                            <i class="bx bxs-map"></i> 
+                                            <span>North India</span>
+                                            </span>
+                                            <a class="headingtab" href="#">A tourist guide for French people exploring the hidden gems of India</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="flexItem gap-3">
+                                                <span class="tagBlog">
+                                                    <i class="bx bxs-pen"></i> 
+                                                    <span>By Auther</span>
+                                                </span>
+                                                <span class="tagBlog">
+                                                <i class="bx bxs-calendar-alt"></i> 
+                                                <span>25 July, 2024</span>
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="" class="readMoreBtn">Read More <i class="bx bx-arrow-back rotateIcon"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="tabGroupCard blogCard">
+                                        <div class="tabGroupImageCard blogCardImage">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper blogCardContent">
+                                            <span class="tagBlog">
+                                            <i class="bx bxs-map"></i> 
+                                            <span>North India</span>
+                                            </span>
+                                            <a class="headingtab" href="#">A tourist guide for French people exploring the hidden gems of India</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="flexItem gap-3">
+                                                <span class="tagBlog">
+                                                    <i class="bx bxs-pen"></i> 
+                                                    <span>By Auther</span>
+                                                </span>
+                                                <span class="tagBlog">
+                                                <i class="bx bxs-calendar-alt"></i> 
+                                                <span>25 July, 2024</span>
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="" class="readMoreBtn">Read More <i class="bx bx-arrow-back rotateIcon"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="tabGroupCard blogCard">
+                                        <div class="tabGroupImageCard blogCardImage">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper blogCardContent">
+                                            <span class="tagBlog">
+                                            <i class="bx bxs-map"></i> 
+                                            <span>North India</span>
+                                            </span>
+                                            <a class="headingtab" href="#">A tourist guide for French people exploring the hidden gems of India</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="flexItem gap-3">
+                                                <span class="tagBlog">
+                                                    <i class="bx bxs-pen"></i> 
+                                                    <span>By Auther</span>
+                                                </span>
+                                                <span class="tagBlog">
+                                                <i class="bx bxs-calendar-alt"></i> 
+                                                <span>25 July, 2024</span>
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="" class="readMoreBtn">Read More <i class="bx bx-arrow-back rotateIcon"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="viewAllBtn text-center">
+                                <a href="" class="readMoreBtn px-5 py-3">View All <i class="bx bx-arrow-back rotateIcon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding30 aboutWrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-6">
+                                <div class="aboutRight">
+                                <img src="{{asset('frontend/assets/img/about/ab4.jpg') }}" width="100%" />
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-6">
+                                <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
+                                <p class="toarPara">As a Tour Guide Agency in India , our dedicated team of local professionals will accompany you throughout your trip, sharing cultural insights, historical anecdotes and practical tips to make your experience authentic and enriching.</p>
+                                <p class="toarPara">At Poonam Voyage, we focus on customization, allowing our clients to choose and combine activities according to their preferences. Whether you are interested in architecture, local cuisine, colorful festivals or rural life, we create trips that match your passions.</p>
+                                <p class="toarPara">Choose Poonam Voyage to experience an exceptional adventure in the heart of India, exploring Rajasthan with an agency that truly understands the needs and aspirations of travelers eager for unique and authentic discoveries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <footer class="mainFooterWrapper">
                 <div class="container">
