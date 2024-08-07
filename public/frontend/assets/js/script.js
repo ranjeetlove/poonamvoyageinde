@@ -5,6 +5,7 @@ jQuery(function ($) {
    });
    $(window).on('scroll', function () {
       $(window).scrollTop() >= 200 ? $('.main-navbar-area').addClass('stickyadd') : $('.main-navbar-area').removeClass('stickyadd');
+      $(window).scrollTop() >= 200 ? $('.mainHeaderWrapper').addClass('stickyadd') : $('.mainHeaderWrapper').removeClass('stickyadd');
    });
    $('#languageButton').on('click', function (e) {
       $('.language > .menu').toggle();
@@ -81,6 +82,17 @@ jQuery(function ($) {
       autoplayTimeout: 8500,
       smartSpeed: 450,
       items: 1
+   })
+   $('.testimonialSlider').owlCarousel({
+      loop: true,
+      nav: false,
+      // navText: ["<i class='bx bx-left-arrow-alt'></i>", "<i class='bx bx-right-arrow-alt'></i>"],
+      dots: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      autoplayTimeout: 4000,
+      smartSpeed: 450,
+      items:1
    })
    $('.tours-slider').owlCarousel({
       loop: true,

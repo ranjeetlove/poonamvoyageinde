@@ -1,0 +1,518 @@
+body{
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
+.primaryColor{
+    color: #002248;
+}
+.padding30{
+    padding: 0 30px;
+}
+.headerTopMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.primaryBackgroundColor{
+    color: #002248;
+}
+.headerTopWrapper{
+    background: #002248;
+    padding: 5px 20px;
+}
+.flexItem{
+    display: flex;
+    align-items: center;
+}
+.headerTopMenu i, .headerTopMenu a{
+    color: #fff;
+}
+.headerTopLeft  a, .headerTopRight a{
+    margin-left: 10px;
+}
+.headerTopRightMenu a{
+    margin-right:7px ;
+}
+.headerSap{
+    display: inline-block;
+    margin: 0 20px;
+    color: #fff;
+}
+.headerTopMenu .inquaryBtn{
+    background: #fff;
+    color: #002248;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+.headerMenuWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerMenuList{
+    margin: 0;
+}
+.headerMenuList li{
+    padding: 0 20px;
+}
+.headerMenuList .headerMenuLinks{
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    transition: all .3s ease;
+    padding: 15px 0;
+}
+.headerMenuLinks:after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    background: #002248;
+    transition: all .3s ease;
+    left: 0;
+    bottom: 0;
+}
+.bannerTextWrapper{
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+}
+.bannerTextWrapper h2, .bannerTextWrapper p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.bannerTextWrapper h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.mainHeaderWrapper.stickyadd {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    -webkit-animation: slideInDown 1s 1;
+    animation: slideInDown 1s 1;
+    background: #fff;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+}
+.headerMenuLinks:hover{
+    color: #002248;
+}
+.headerMenuLinks:hover:after{
+    width: 100%;
+}
+.mainContentWrapper{
+    margin-top: 15px;
+}
+.bannerBox{
+    /* margin: 10px 20px; */
+    position: relative;
+}
+.bannerBox .bannerHome{
+    width: 100%;
+    max-height: calc(100vh - 150px);
+    object-fit: cover;
+}
+.bannerBox:after{
+    content: '';
+    background-color: #002248c2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.bannerFormWrapper{
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    border-radius: 20px;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bannerFormInputsWrapper {
+    width: 20%;
+    max-width: 20%;
+    flex: 0 0 auto;
+}
+.BannerFormInput {
+    border: none;
+    border-bottom: 1px solid #f6f6f6;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #999;
+}
+.nice-select:after{
+    content: unset;
+}
+.themeBtn{
+    display: flex;
+    background: #002248;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.destinationsCard span {
+    display: inline-block;
+    padding: 6px 15px;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translate(-50%);
+    background: #002248;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 12px;
+    z-index: 99;
+}
+
+.topDestinationMainWrapper{
+    padding: 40px 30px;
+}
+
+.destinationsCard {
+    text-align: center;
+    position: relative;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.destinationsCard p {
+    color: #002248;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.destinationsCard img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: all .5s ease;
+}
+.destinationImgae:after, .destinationImgae:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid;
+    border-color: #002248;
+    border-radius: 50%;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;   
+}
+.destinationImgae:before{
+    border: 4px solid;  
+}
+.destinationsCard:hover .destinationImgae:after ,
+    .destinationsCard:hover .destinationImgae:before{
+    visibility: visible;
+    opacity: 1;
+}
+.destinationsCard:hover .destinationImgae:before{
+    border: 4px solid #fff;
+}
+.destinationsCard:hover .destinationImgae img{
+    transform: scale(1.1);
+}
+.h3Heading{
+    margin-bottom: 2rem;
+    font-size: 32px;
+    font-weight: 700;
+}
+.destinationImgae{
+    position: relative;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+.TabGroupsFilterUl{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.TabGroupsFilterUl li{
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #c6c6c6;
+    color: #002248;
+    border-radius: 0px;
+    transition: all .3s ease;
+    position: relative;
+}
+.TabGroupsFilterUl li.active:before{
+    position: absolute;
+    content: "";
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+    background-color: #002248;
+    width: 12px;
+    height: 6px;
+}
+.TabGroupsFilterUl li.active{
+    background-color: #002248;
+    color: #fff;
+}
+.headingPara{
+    width: 54%;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 30px;
+}
+.TabGroupsFilterWrapper {
+    background: #f7f7f7;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.tabGroupCard{
+    box-shadow: 0 0 10px -6px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+.tabGroupImageCard {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.tabGroupImageCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease;
+}
+.tabGroupContentWrapper{
+    padding: 0 12px;
+}
+.tabGroupContentWrapper .headingtab{
+    font-size: 18px;
+    font-weight: 600;
+    color: #002248;
+    margin-bottom: 5px;
+}
+.descriptiontab{
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.tabStar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tabStar .dayNight{
+    display: inline-block;
+    padding: 8px 11px;
+    background: #c6c6c6;
+    border-radius: 30px;
+    font-size: 11px;
+    color: #333;
+    font-weight: 600;
+}
+.tabMore{
+    margin-top: 15px;
+    text-align: end;
+}
+.tabMoreLink{
+    color: #002248;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.tabGroupCard:hover .tabGroupImageCard img{
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+.aboutWrapper{
+    padding-top:40px;
+    padding-bottom: 40px;
+}
+.toarPara{
+    color: #888;
+    font-size: 15px;
+}
+.sectionWrapper{
+    background-image: url('https://www.poonamvoyageinde.com/frontend/assets/img/bg/bg3.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px;
+    position: relative;
+}
+.sectionWrapper:before{
+    content: '';
+    background: #002248c2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.testimonialsWrapper{
+    background-image: url('https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/about-bg-right.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 60px;
+    position: relative;
+    text-align: center;
+}
+.testmonialsText {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.testmonialsName {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.testimonialsImage{
+    width: 60px !important;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+.testimonialsSliderWrapper .owl-dots button{
+    width: 5px;
+    height: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 50%;
+    background: #888;
+    transition: all .3s ease;
+}
+.testimonialsSliderWrapper .owl-dots button.active{
+    width: 10px;
+    height: 10px;
+    background: #002248;
+}
+.testimonialsImages{
+    justify-content: center;
+}
+.testimonialsImages img{
+    border: 4px solid #002248;
+    transform: rotate(14deg);
+    width: 40%;
+    transition: all .3s ease;
+}
+.testimonialsImages img:nth-child(1){
+    border: 4px solid #002248;
+    transform: rotate(-14deg);
+    width: 40%;
+
+}
+.testimonialsImages img:hover{
+    transform: rotate(16deg);
+}
+.testimonialsImages img:nth-child(1):hover{
+    transform: rotate(-16deg);
+}
+.mainFooterWrapper {
+    background: #002248;
+    padding: 60px 0;
+    border-radius: 25px 25px 0 0;
+}
+.footerUlWrapper li a {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    padding: 7px 0;
+    transition: all .3s ease;
+    gap: 10px;
+    width: 100%;
+}
+.footerText{
+    color: #fff;
+    margin-top: 15px;
+    width: 90%;
+}
+.footerUlWrapper li a:hover {
+    font-weight: 600;
+    margin-left: 5px;
+}
+.footerUlWrapper li h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    padding-bottom: 30px;
+    position: relative;
+}
+.footerUlWrapper li h4:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background: #fff;
+    bottom: 7px;
+    left: 0;
+}
+.go-top {
+    position: fixed;
+    bottom: 30%;
+    right: 20px;
+    z-index: 99;
+    background: #011326;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+    color: #fff;
+    font-size: 1rem;
+}
+.go-top.active {
+    opacity: 1;
+    bottom: 15px;
+    visibility: visible;
+}

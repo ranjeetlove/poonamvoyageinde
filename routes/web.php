@@ -72,6 +72,7 @@ Route::get('/privacy-policy', [PolicyController::class, 'privacyPolicy'])->name(
 Route::get('/terms-and-conditions', [PolicyController::class, 'termsandconditions'])->name('termsandconditions');
 
 Route::get('/voyage-sur-mesure-en-inde', [TailorMadeTripController::class, 'tailormadetrip'])->name('tailormadetrip');
+Route::get('/newLandingPage', [HomeController::class, 'newLandingPage'])->name('newLandingPage');
 Route::get('/landing-page', [HomeController::class, 'landingpage'])->name('landingpage');
 Route::get('admin/login',[AdminController::class,'login'])->name('admin-login');
 Route::post('/admin/login',[AdminController::class,'authenticate']);
