@@ -17,6 +17,9 @@ use App\Http\Controllers\admin\AdminRegionController;
 use App\Http\Controllers\admin\AdminTestimonialController;
 use App\Http\Controllers\admin\AdminTourController;
 use App\Http\Controllers\admin\AdminVideoController;
+use Illuminate\Support\Facades\Artisan;
+
+
 
 /*
 |--------------------------------------------------------------------------

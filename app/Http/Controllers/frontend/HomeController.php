@@ -11,6 +11,7 @@ use App\Models\About;
 use App\Models\Region;
 use App\Models\Tour;
 use App\Models\Video;
+use App\Models\Rating;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,7 @@ class HomeController extends Controller
         $about= About::orderBy('id','desc')->first();
         return view('frontend.index',compact('blogs','test','banners','about','regions','tours','videos'));
     }
-    
+
      public function landingpage(){
         $banners= Banner::where('name','LIKE','%home%')->get();
         $blogs = Blog::where('status','Active')->paginate(3);
@@ -40,9 +41,16 @@ class HomeController extends Controller
         $about= About::orderBy('id','desc')->first();
         return view('frontend.about-us',compact('banner','about'));
     }
-    public function newLandingPage(){
+    public function newLandingPage() {
+
         $banner= [];
-        return view('frontend.newLandingPage',compact('banner'));
+        $blogs = Blog::where('status','Active')->paginate(3);
+        $test = Testimonial::latest()->take(3)->get();
+        $regions = Region::orderBy('region')->get();
+        $tours = Tour::orderBy('id','desc')->get();
+        $videos = Video::orderBy('id','desc')->get();
+        $about= About::orderBy('id','desc')->first();
+        return view('frontend.newLandingPage',compact('blogs','test','banner','about','regions','tours','videos'));
     }
 
 }
