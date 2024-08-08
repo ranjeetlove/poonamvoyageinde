@@ -85,33 +85,36 @@
             <div class="container-fluid">
                 <div class="headerMenuWrapper">
                     <div class="headerLeftMenu">
-                        <a href="{{ route('index') }}" class="headerLefta">
-                            <img src="{{ asset('frontend/assets/img/logo/mlogo.jpg') }}" alt=""
-                                class="headerLogo">
+                        <a href="{{route('index') }}" class="headerLefta">
+                        <img src="{{asset('frontend/assets/img/logo/mlogo.jpg') }}" alt="" class="headerLogo">
                         </a>
+                        <a href="javascript:void(0)" class="headerMenuIcon menuCLick"><i class="bx bx-menu-alt-right"></i></a>
                     </div>
                     <div class="headerRightMenu">
                         <ul class="list-unstyled flexItem headerMenuList">
                             <li>
-                                <a href="#" class="headerMenuLinks">Welcome</a>
+                                <a href="javascript:void(0)" class="headerMenuLinks"><i class="bx bxs-x-circle menuCLick"></i></a>
                             </li>
                             <li>
-                                <a href="#" class="headerMenuLinks">Who are we</a>
+                                <a href="{{route('index') }}" class="headerMenuLinks">Welcome</a>
+                            </li>
+                            <li>
+                                <a href="{{route('aboutus') }}" class="headerMenuLinks">Who are we</a>
                             </li>
                             <li>
                                 <a href="#" class="headerMenuLinks">Destinations</a>
                             </li>
                             <li>
-                                <a href="#" class="headerMenuLinks">Tailer-Made trip to India</a>
+                                <a href="{{route('tailormadetrip') }}" class="headerMenuLinks">Tailer-Made trip to India</a>
                             </li>
                             <li>
-                                <a href="#" class="headerMenuLinks">Comments</a>
+                                <a href="{{route('comments') }}" class="headerMenuLinks">Comments</a>
                             </li>
                             <li>
-                                <a href="#" class="headerMenuLinks">Blogs</a>
+                                <a href="{{route('blog') }}" class="headerMenuLinks">Blogs</a>
                             </li>
                             <li>
-                                <a href="#" class="headerMenuLinks">Contact Us</a>
+                                <a href="{{route('contactus') }}" class="headerMenuLinks">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -253,13 +256,13 @@
                     <div class="row">
                         @foreach ($regions as $region)
                             <div class="col-md-2">
-                                <div class="destinationsCard">
+                                <a href="{{route('destinationlist',$region->slug) }}" class="destinationsCard">
                                     <div class="destinationImgae"><img
                                             src="{{ asset('/uploads/regions/' . $region->image) }}"
                                             alt="{{ $region->region }}"></div>
                                     <p>{{ $region->region }}</p>
                                     {{-- <span>2 Tour</span> --}}
-                                </div>
+                                </a>
                             </div>
                         @endforeach
 
@@ -295,7 +298,7 @@
                                     <?php if ($region->id == 3) {
                                         continue;
                                     } ?>
-                                    <div class="col-md-3 col-sm 6 col-xs 6 filtr-item"
+                                    <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item"
                                         data-category="{{ $key + 1 }}" data-sort="value">
                                         <div class="tabGroupCard">
                                             <div class="tabGroupImageCard">
@@ -303,21 +306,19 @@
                                                     alt="">
                                             </div>
                                             <div class="tabGroupContentWrapper">
-                                                <p class="headingtab">
-                                                    @php
+                                            <a class="headingtab" href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}">@php
                                                         $checkTitle = strip_tags($tour->title);
                                                     @endphp
-                                                    {{ \Illuminate\Support\Str::limit($checkTitle, 20) }}
-                                                </p>
+                                                    {{ \Illuminate\Support\Str::limit($checkTitle, 60) }}</a>
                                                 <p class="descriptiontab">@php
                                                     $check = strip_tags($tour->content);
                                                 @endphp
-                                                    {{ \Illuminate\Support\Str::limit($check, 20) }}
+                                                    {{ \Illuminate\Support\Str::limit($check, 60) }}
                                                 </p>
                                                 <div class="tabStar">
-                                                    <span class="stars">
+                                                    <span class="starColor">
                                                         @for ($i = 1; $i <= 5; $i++)
-                                                            <i class="bx {{ $i <= $averageRating ? 'bxs-star' : 'bx-star' }}"></i>
+                                                            <i class="bx {{ $i <= $averageRating ? 'bxs-star text-warning' : 'bx-star' }}"></i>
                                                         @endfor
                                                     </span>
                                                     <span class="dayNight">
@@ -326,8 +327,7 @@
                                                 </div>
                                                 <div class="tabMore">
                                                     <a href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}"
-                                                        class="tabMoreLink">More Information <i
-                                                            class="bx bx-star"></i></a>
+                                                        class="tabMoreLink">More Information <i class="rotateIcon bx bx-arrow-back"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -383,7 +383,7 @@
                             @foreach ($test as $item)
                                 <div class="testimonialsItem">
                                     <p class="testmonialsText">{!! Str::limit($item->comment_content, 200) !!} <a
-                                            href ='{{ route('commentsdetails', $item->slug) }}'>Read More</a></p>
+                                            href ='{{ route("commentsdetails", $item->slug) }}'>Read More</a></p>
                                     @php
                                         $imagePath =
                                             !empty($item->image) &&
@@ -393,36 +393,135 @@
                                     @endphp
                                     <img src="{{ $imagePath }}" class="testimonialsImage"
                                         alt="{{ $testimonials->name ?? 'Testimonial Image' }}">
-                                    <p class="testmonialsName">{{ !empty($item->name) ? $item->name : '' }}</p>
+                                        <p class="testmonialsName">{{!empty($item->name) ? $item->name : ''}}</p>
                                     <p class="testmonialsName">{{ !empty($item->country) ? $item->country : '' }}</p>
                                 </div>
                             @endforeach
-                            {{-- <div class="testimonialsItem">
-                                <p class="testmonialsText">"Our tour with Bexper was just fantastic. We learnt so much about Vietnam history, culture and food, and of course tasted some amazing dishes along the way...”</p>
-
-                                    <img class="testimonialsImage" src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/avatar-2.jpg" alt="">
-                                    <p class="testmonialsName">Richel Thomson</p>
-                                    <p class="testmonialsName">Nevada, Paris</p>
-                                </div> --}}
-                            {{-- <div class="testimonialsItem">
-                                <p class="testmonialsText">"Our tour with Bexper was just fantastic. We learnt so much about Vietnam history, culture and food, and of course tasted some amazing dishes along the way...”</p>
-
-                                    <img class="testimonialsImage" src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/avatar-3.jpg" alt="">
-                                    <p class="testmonialsName">Richel Thomson</p>
-                                    <p class="testmonialsName">Nevada, Paris</p>
-                                </div> --}}
+                            
                         </div>
                     </div>
                     <div class="col-md-6 text-center">
                         <div class="flexItem testimonialsImages">
-                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/about-images-8.jpg"
+                        @php
+                                        $imagePaths =
+                                            !empty($test[0]->image) &&
+                                            file_exists(public_path('uploads/testimonials/' . $test[0]->image))
+                                                ? asset('uploads/testimonials/' . $test[0]->image)
+                                                : asset('uploads/testimonials/user.png');
+                                                $imagePath1 =
+                                            !empty($test[2]->image) &&
+                                            file_exists(public_path('uploads/testimonials/' . $test[2]->image))
+                                                ? asset('uploads/testimonials/' . $test[2]->image)
+                                                : asset('uploads/testimonials/user.png');
+                                    @endphp
+                            <img src="{{ $imagePaths }}"
                                 alt="">
-                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/about-images-1.jpg"
+                            <img src="{{$imagePath1}}"
                                 alt="">
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="TabGroupsFilterWrapper">
+                    <div class="container">
+                    <div class="text-center">
+                            <h3 class="h3Heading">Our Top Rated Blogs</h3>
+                            <p class="headingPara">Traveling has helped us understand the meaning of life and helped us become better people. Every time we travel, we see the world with new eyes.</p>
+                            
+                        </div>
+                        <div class="tabGroupCardWrapper mt-4">
+                            <div class="row filtr-container">
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="tabGroupCard blogCard">
+                                        <div class="tabGroupImageCard blogCardImage">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper blogCardContent">
+                                            <span class="tagBlog">
+                                            <i class="bx bxs-map"></i> 
+                                            <span>North India</span>
+                                            </span>
+                                            <a class="headingtab" href="#">A tourist guide for French people exploring the hidden gems of India</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="flexItem gap-3">
+                                                <span class="tagBlog">
+                                                    <i class="bx bxs-pen"></i> 
+                                                    <span>By Auther</span>
+                                                </span>
+                                                <span class="tagBlog">
+                                                <i class="bx bxs-calendar-alt"></i> 
+                                                <span>25 July, 2024</span>
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="" class="readMoreBtn">Read More <i class="bx bx-arrow-back rotateIcon"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="tabGroupCard blogCard">
+                                        <div class="tabGroupImageCard blogCardImage">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper blogCardContent">
+                                            <span class="tagBlog">
+                                            <i class="bx bxs-map"></i> 
+                                            <span>North India</span>
+                                            </span>
+                                            <a class="headingtab" href="#">A tourist guide for French people exploring the hidden gems of India</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="flexItem gap-3">
+                                                <span class="tagBlog">
+                                                    <i class="bx bxs-pen"></i> 
+                                                    <span>By Auther</span>
+                                                </span>
+                                                <span class="tagBlog">
+                                                <i class="bx bxs-calendar-alt"></i> 
+                                                <span>25 July, 2024</span>
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="" class="readMoreBtn">Read More <i class="bx bx-arrow-back rotateIcon"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="tabGroupCard blogCard">
+                                        <div class="tabGroupImageCard blogCardImage">
+                                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg" alt="">
+                                        </div>
+                                        <div class="tabGroupContentWrapper blogCardContent">
+                                            <span class="tagBlog">
+                                            <i class="bx bxs-map"></i> 
+                                            <span>North India</span>
+                                            </span>
+                                            <a class="headingtab" href="#">A tourist guide for French people exploring the hidden gems of India</a>
+                                            <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <div class="flexItem gap-3">
+                                                <span class="tagBlog">
+                                                    <i class="bx bxs-pen"></i> 
+                                                    <span>By Auther</span>
+                                                </span>
+                                                <span class="tagBlog">
+                                                <i class="bx bxs-calendar-alt"></i> 
+                                                <span>25 July, 2024</span>
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="" class="readMoreBtn">Read More <i class="bx bx-arrow-back rotateIcon"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="viewAllBtn text-center">
+                                <a href="" class="readMoreBtn px-5 py-3">View All <i class="bx bx-arrow-back rotateIcon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <div class="padding30 aboutWrapper">
                 <div class="container">
                     <div class="row">
@@ -449,7 +548,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <footer class="mainFooterWrapper">
             <div class="container">
@@ -466,8 +564,8 @@
                             <li>
                                 <h4>Our Company</h4>
                             </li>
-                            <li><a href="#" class="footerLinks">About Us</a></li>
-                            <li><a href="#" class="footerLinks">Contact US</a></li>
+                            <li><a href="{{route('aboutus') }}" class="footerLinks">About Us</a></li>
+                            <li><a href="{{route('contactus') }}" class="footerLinks">Contact US</a></li>
                             <li><a href="#" class="footerLinks">Privacy Policy</a></li>
                             <li><a href="#" class="footerLinks">Terms & Conditions</a></li>
                         </ul>
@@ -477,10 +575,10 @@
                             <li>
                                 <h4>Quick Links</h4>
                             </li>
-                            <li><a href="#" class="footerLinks">Comments</a></li>
-                            <li><a href="#" class="footerLinks">Blogs</a></li>
-                            <li><a href="#" class="footerLinks">Who we are</a></li>
-                            <li><a href="#" class="footerLinks">Enquire Now</a></li>
+                            <li><a href="{{route('comments') }}" class="footerLinks">Comments</a></li>
+                            <li><a href="{{route('blog') }}" class="footerLinks">Blogs</a></li>
+                            <li><a href="{{route('aboutus') }}" class="footerLinks">Who we are</a></li>
+                            <li><a href="{{route('contactus') }}" class="footerLinks">Enquire Now</a></li>
                         </ul>
                     </div>
                     <div class="col-md-2">
@@ -488,10 +586,9 @@
                             <li>
                                 <h4>Tour Destinations</h4>
                             </li>
-                            <li><a href="#" class="footerLinks">Gujrat</a></li>
-                            <li><a href="#" class="footerLinks">Ladakh</a></li>
-                            <li><a href="#" class="footerLinks">South India</a></li>
-                            <li><a href="#" class="footerLinks">North India</a></li>
+                            @foreach ($regions as $region)
+                            <li><a href="{{route('destinationlist',$region->slug) }}" class="footerLinks">{{ $region->region }}</a></li>
+                        @endforeach
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -499,10 +596,10 @@
                             <li>
                                 <h4>Contact Us</h4>
                             </li>
-                            <li><a href="#" class="footerLinks"><i class="bx bx-phone"></i> +91 -
-                                    9764315202</a></li>
-                            <li><a href="#" class="footerLinks"><i class="bx bx-envelope"></i>
-                                    mailTo:-developer@website.com</a> </li>
+                            <li><a href="tel:+919818153249" class="footerLinks"><i class="bx bx-phone"></i> +91 -
+                            9818153249</a></li>
+                            <li><a href="mailto:poonamvoyageinde@gmail.com" class="footerLinks"><i class="bx bx-envelope"></i>
+                                    mailTo:- poonamvoyageinde@gmail.coms</a> </li>
                             <li><a href="#" class="footerLinks"><i class="bx bx-map"></i> 4,Rathore-Bhawan
                                     Prithipura Rasala Road Jodhpur-342001 Rajasthan</a></li>
                         </ul>
