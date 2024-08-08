@@ -226,7 +226,7 @@ a {
     pointer-events: none;
 }
 .shape-mockup img{
-    width: 50%;
+    width: 60%;
 }
 .movingCar {
     -webkit-animation: movingCar 25s linear infinite;
@@ -618,11 +618,11 @@ a {
     transform: scale(0);
 }
 .popup-image img, .gallery-box{
-    transition: all 1s ease;
+    transition: all .5s ease;
     
 }
 .gallery-box:hover{
-    transform: skewY(2deg);
+    transform: skewY(4deg);
 }
 .gallery-img.global-img:hover .icon-btn, .gallery-img.global-img:hover .popup-image:after{
     opacity: 1;
