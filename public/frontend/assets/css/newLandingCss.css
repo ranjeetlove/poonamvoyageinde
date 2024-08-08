@@ -775,12 +775,12 @@ a {
 }
 
 .tabGroupCard.blogCard {
-    border-radius: 0;
+    border-radius: 7px;
     padding: 2px;
 }
 
 .tabGroupImageCard.blogCardImage {
-    border-radius: 0;
+    border-radius: 7px;
 }
 
 .readMoreBtn,
@@ -793,6 +793,7 @@ a {
     margin-top: 10px;
     padding: 8px 14px;
     border-radius: 5px;
+    font-size: 11px;
 }
 
 .rotateIcon {
