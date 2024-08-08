@@ -189,6 +189,13 @@ a {
     font-size: 14px;
     color: #999;
 }
+.BannerFormInput span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;    
+}
 
 .nice-select:after {
     content: unset;
@@ -626,6 +633,7 @@ a {
     visibility: hidden;
     color: #fff;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .go-top.active {
