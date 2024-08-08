@@ -220,7 +220,7 @@
                                 <div class="input-group">
                                     <select class="form-select form-control BannerFormInput" name="children"
                                         aria-label="Default select example">
-                                        <option selected>Sélectionnez Les Enfants</option>
+                                        <option selected>Nombre de personnes</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -322,7 +322,7 @@
                                     <div class="tabGroupCard">
                                         <div class="tabGroupImageCard">
                                             <img src="{{ file_exists(public_path('uploads/tour/image/' . $tour->image)) ? asset('uploads/tour/image/' . $tour->image) : asset('uploads/tour/image/no-image.jpg') }}"
-                                                alt="">
+                                                alt="{{ $tour->title }}">
                                         </div>
                                         <div class="tabGroupContentWrapper">
                                             <a class="headingtab"
@@ -452,105 +452,44 @@
                 </div>
                 <div class="tabGroupCardWrapper mt-4">
                     <div class="row filtr-container">
+                        @foreach ($blogs as $key=>$item)
                         <div class="col-md-4 col-sm-6 col-xs-6">
                             <div class="tabGroupCard blogCard">
                                 <div class="tabGroupImageCard blogCardImage">
-                                    <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg"
-                                        alt="">
+                                <img src="{{ file_exists(public_path('uploads/blog/' . $item->image)) ? asset('uploads/blog/' . $item->image) : asset('uploads/tour/image/no-image.jpg') }}"
+                                                alt="{{ $item->title }}">
                                 </div>
                                 <div class="tabGroupContentWrapper blogCardContent">
                                     <span class="tagBlog">
                                         <i class="bx bxs-map"></i>
-                                        <span>North India</span>
+                                        <span>{{ $item->category }}</span>
                                     </span>
-                                    <a class="headingtab" href="#">A tourist guide for French people exploring
-                                        the hidden gems of India</a>
-                                    <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <a class="headingtab" href="{{route('blogdetails',$item->slug) }}">{{ $item->title }}</a>
+                                    <p class="descriptiontab"> {!! Str::limit(strip_tags($item->content), 150) !!}
                                     </p>
                                     <div class="flexItem gap-3">
                                         <span class="tagBlog">
                                             <i class="bx bxs-pen"></i>
-                                            <span>By Auther</span>
+                                            <span>By {{ $item->posted_by }}</span>
                                         </span>
                                         <span class="tagBlog">
                                             <i class="bx bxs-calendar-alt"></i>
-                                            <span>25 July, 2024</span>
+                                            <span>{{ $item->posted_date }}</span>
                                         </span>
                                     </div>
                                     <div class="text-end">
-                                        <a href="" class="readMoreBtn">Read More <i
+                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">Read More <i
                                                 class="bx bx-arrow-back rotateIcon"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6">
-                            <div class="tabGroupCard blogCard">
-                                <div class="tabGroupImageCard blogCardImage">
-                                    <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg"
-                                        alt="">
-                                </div>
-                                <div class="tabGroupContentWrapper blogCardContent">
-                                    <span class="tagBlog">
-                                        <i class="bx bxs-map"></i>
-                                        <span>North India</span>
-                                    </span>
-                                    <a class="headingtab" href="#">A tourist guide for French people exploring
-                                        the hidden gems of India</a>
-                                    <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    </p>
-                                    <div class="flexItem gap-3">
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-pen"></i>
-                                            <span>By Auther</span>
-                                        </span>
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-calendar-alt"></i>
-                                            <span>25 July, 2024</span>
-                                        </span>
-                                    </div>
-                                    <div class="text-end">
-                                        <a href="" class="readMoreBtn">Read More <i
-                                                class="bx bx-arrow-back rotateIcon"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6">
-                            <div class="tabGroupCard blogCard">
-                                <div class="tabGroupImageCard blogCardImage">
-                                    <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg"
-                                        alt="">
-                                </div>
-                                <div class="tabGroupContentWrapper blogCardContent">
-                                    <span class="tagBlog">
-                                        <i class="bx bxs-map"></i>
-                                        <span>North India</span>
-                                    </span>
-                                    <a class="headingtab" href="#">A tourist guide for French people exploring
-                                        the hidden gems of India</a>
-                                    <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    </p>
-                                    <div class="flexItem gap-3">
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-pen"></i>
-                                            <span>By Auther</span>
-                                        </span>
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-calendar-alt"></i>
-                                            <span>25 July, 2024</span>
-                                        </span>
-                                    </div>
-                                    <div class="text-end">
-                                        <a href="" class="readMoreBtn">Read More <i
-                                                class="bx bx-arrow-back rotateIcon"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        @endforeach
+
                     </div>
                     <div class="viewAllBtn text-center">
-                        <a href="" class="readMoreBtn px-5 py-3">View All <i
+                        <a href="{{ route('blog') }}" class="readMoreBtn px-5 py-3">View All <i
                                 class="bx bx-arrow-back rotateIcon"></i></a>
                     </div>
                 </div>
