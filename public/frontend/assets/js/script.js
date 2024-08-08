@@ -3,6 +3,17 @@ jQuery(function ($) {
    $('.mean-menu').meanmenu({
       meanScreenWidth: '1199',
    });
+   $('.menuCLick').on('click',function(){
+      let menu = $(document).find('.headerRightMenu');
+      let body = $('body')
+      if(menu.hasClass('openMenu')){
+         body.removeClass('menuOpen')
+         menu.removeClass('openMenu')
+      }else{
+         body.addClass('menuOpen')
+         menu.addClass('openMenu')
+      }
+   })
    $(window).on('scroll', function () {
       $(window).scrollTop() >= 200 ? $('.main-navbar-area').addClass('stickyadd') : $('.main-navbar-area').removeClass('stickyadd');
       $(window).scrollTop() >= 200 ? $('.mainHeaderWrapper').addClass('stickyadd') : $('.mainHeaderWrapper').removeClass('stickyadd');
@@ -229,6 +240,7 @@ function toggleTheme() {
       setTheme('theme-dark');
    }
 }
+
 (function () {
    if (localStorage.getItem('jaunt_theme') === 'theme-dark') {
       setTheme('theme-dark');
