@@ -45,7 +45,7 @@ class HomeController extends Controller
     public function newLandingPage() {
 
         $banner= [];
-        $blogs = Blog::where('status','Active')->paginate(3);
+        $blogs = Blog::where('status','Active')->limit(4)->get();
         $test = Testimonial::latest()->take(3)->get();
         $regions = Region::orderBy('region')->get();
         $tours = Tour::orderBy('id','desc')->get();
