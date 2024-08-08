@@ -45,7 +45,7 @@ class HomeController extends Controller
     public function newLandingPage() {
 
         $banner= [];
-        $blogs = Blog::where('status','Active')->paginate(3);
+        $blogs = Blog::where('status','Active')->limit(4)->get();
         $test = Testimonial::latest()->take(3)->get();
         $regions = Region::orderBy('region')->get();
         $tours = Tour::orderBy('id','desc')->get();
@@ -70,22 +70,28 @@ class HomeController extends Controller
         ]);
 
          Contact::create($validatedData);
-         if (strpos($validatedData['email'], '@gmail.com') !== false) {
-            Mail::send('frontend.enquery1', [
-                'region' => $request->region,
-                'interest' => $request->interest,
-                'accommodation' => $request->accommodation,
-                'budget' => $request->budget,
-                'children' => $request->children,
-                'departure_date' => $request->departure_date,
-                'return_date' => $request->return_date,
-                'email' => $request->email,
-                'phone' => $request->phone
-            ], function($message) use($request) {
+        $emailData = [
+            'region' => $request->region,
+            'interest' => $request->interest,
+            'accommodation' => $request->accommodation,
+            'budget' => $request->budget,
+            'children' => $request->children,
+            'departure_date' => $request->departure_date,
+            'return_date' => $request->return_date,
+            'email' => $request->email,
+            'phone' => $request->phone
+        ];
+        Mail::send('frontend.enquery1', $emailData, function ($message) {
+            $message->subject('Enquiry Mail');
+            $message->to('info@poonamvoyageinde.com');
+        });
+        if (strpos($validatedData['email'], '@gmail.com') !== false) {
+            Mail::send('frontend.enquery1', $emailData, function ($message) use ($validatedData) {
                 $message->subject('Enquiry Mail');
-                $message->to('info@poonamvoyageinde.com');
+                $message->to('poonamvoyageinde@gmail.com');
             });
         }
+
         return redirect()->back()->with('success', 'Your request has been submitted successfully!');
     }
 
