@@ -83,12 +83,12 @@ class HomeController extends Controller
         ];
         Mail::send('frontend.enquery1', $emailData, function ($message) {
             $message->subject('Enquiry Mail');
-            $message->to('poonamvoyageinde@gmail.com');
+            $message->to('info@poonamvoyageinde.com');
         });
         if (strpos($validatedData['email'], '@gmail.com') !== false) {
             Mail::send('frontend.enquery1', $emailData, function ($message) use ($validatedData) {
                 $message->subject('Enquiry Mail');
-                $message->to('singhr495@gmail.com');
+                $message->to('poonamvoyageinde@gmail.com');
             });
         }
 
