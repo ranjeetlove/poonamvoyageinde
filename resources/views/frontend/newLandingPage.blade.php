@@ -535,14 +535,9 @@
                                 file_exists(public_path('uploads/testimonials/' . $test[0]->image))
                                     ? asset('uploads/testimonials/' . $test[0]->image)
                                     : asset('uploads/testimonials/user.png');
-                            $imagePath1 =
-                                !empty($test[2]->image) &&
-                                file_exists(public_path('uploads/testimonials/' . $test[2]->image))
-                                    ? asset('uploads/testimonials/' . $test[2]->image)
-                                    : asset('uploads/testimonials/user.png');
                         @endphp
                         <img src="{{ $imagePaths }}" alt="">
-                        <img src="{{ $imagePath1 }}" alt="">
+                        <img src="{{ asset('uploads/testimonials/testimonialsImage.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -559,7 +554,7 @@
                 <div class="tabGroupCardWrapper mt-4">
                     <div class="row filtr-container">
                         @foreach ($blogs as $key=>$item)
-                        <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="tabGroupCard blogCard">
                                 <div class="tabGroupImageCard blogCardImage">
                                 <img src="{{ file_exists(public_path('uploads/blog/' . $item->image)) ? asset('uploads/blog/' . $item->image) : asset('uploads/tour/image/no-image.jpg') }}"
@@ -584,8 +579,7 @@
                                         </span>
                                     </div>
                                     <div class="text-end">
-                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">Read More <i
-                                                class="bx bx-arrow-back rotateIcon"></i></a>
+                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -595,7 +589,7 @@
 
                     </div>
                     <div class="viewAllBtn text-center">
-                        <a href="{{ route('blog') }}" class="readMoreBtn px-5 py-3">View All <i
+                        <a href="{{ route('blog') }}" class="readMoreBtn px-4 py-2">View All <i
                                 class="bx bx-arrow-back rotateIcon"></i></a>
                     </div>
                 </div>
