@@ -402,9 +402,21 @@
                     </div>
                     <div class="col-md-6 text-center">
                         <div class="flexItem testimonialsImages">
-                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/about-images-8.jpg"
+                        @php
+                                        $imagePaths =
+                                            !empty($test[0]->image) &&
+                                            file_exists(public_path('uploads/testimonials/' . $test[0]->image))
+                                                ? asset('uploads/testimonials/' . $test[0]->image)
+                                                : asset('uploads/testimonials/user.png');
+                                                $imagePath1 =
+                                            !empty($test[2]->image) &&
+                                            file_exists(public_path('uploads/testimonials/' . $test[2]->image))
+                                                ? asset('uploads/testimonials/' . $test[2]->image)
+                                                : asset('uploads/testimonials/user.png');
+                                    @endphp
+                            <img src="{{ $imagePaths }}"
                                 alt="">
-                            <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/about-images-1.jpg"
+                            <img src="{{$imagePath1}}"
                                 alt="">
                         </div>
                     </div>
