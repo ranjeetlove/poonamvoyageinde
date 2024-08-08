@@ -322,7 +322,7 @@
                                     <div class="tabGroupCard">
                                         <div class="tabGroupImageCard">
                                             <img src="{{ file_exists(public_path('uploads/tour/image/' . $tour->image)) ? asset('uploads/tour/image/' . $tour->image) : asset('uploads/tour/image/no-image.jpg') }}"
-                                                alt="">
+                                                alt="{{ $tour->title }}">
                                         </div>
                                         <div class="tabGroupContentWrapper">
                                             <a class="headingtab"
@@ -453,12 +453,11 @@
                 <div class="tabGroupCardWrapper mt-4">
                     <div class="row filtr-container">
                         @foreach ($blogs as $key=>$item)
-                        @if ($key==0)
                         <div class="col-md-4 col-sm-6 col-xs-6">
                             <div class="tabGroupCard blogCard">
                                 <div class="tabGroupImageCard blogCardImage">
                                 <img src="{{ file_exists(public_path('uploads/blog/' . $item->image)) ? asset('uploads/blog/' . $item->image) : asset('uploads/tour/image/no-image.jpg') }}"
-                                                alt="">
+                                                alt="{{ $item->title }}">
                                 </div>
                                 <div class="tabGroupContentWrapper blogCardContent">
                                     <span class="tagBlog">
@@ -466,7 +465,7 @@
                                         <span>{{ $item->category }}</span>
                                     </span>
                                     <a class="headingtab" href="{{route('blogdetails',$item->slug) }}">{{ $item->title }}</a>
-                                    <p class="descriptiontab">  {!!Str::limit($item->content, 150)  !!}
+                                    <p class="descriptiontab"> {!! Str::limit(strip_tags($item->content), 150) !!}
                                     </p>
                                     <div class="flexItem gap-3">
                                         <span class="tagBlog">
@@ -485,7 +484,6 @@
                                 </div>
                             </div>
                         </div>
-                        @endif
 
                         @endforeach
 
