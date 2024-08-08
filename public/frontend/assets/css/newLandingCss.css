@@ -617,9 +617,12 @@ a {
     transition: all .3s ease;
     transform: scale(0);
 }
-.popup-image img{
+.popup-image img, .gallery-box{
     transition: all 1s ease;
     
+}
+.gallery-box:hover{
+    transform: skewY(2deg);
 }
 .gallery-img.global-img:hover .icon-btn, .gallery-img.global-img:hover .popup-image:after{
     opacity: 1;
