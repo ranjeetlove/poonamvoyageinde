@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\frontend;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
@@ -12,6 +11,8 @@ use App\Models\Region;
 use App\Models\Tour;
 use App\Models\Video;
 use App\Models\Rating;
+use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -51,6 +52,41 @@ class HomeController extends Controller
         $videos = Video::orderBy('id','desc')->get();
         $about= About::orderBy('id','desc')->first();
         return view('frontend.newLandingPage',compact('blogs','test','banner','about','regions','tours','videos'));
+    }
+
+    public function store(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'region' => 'required|string|max:255',
+            'interest' => 'required|string|max:255',
+            'accommodation' => 'required|string|max:255',
+            'budget' => 'required|string|max:255',
+            'children' => 'required|integer',
+            'departure_date' => 'required|date',
+            'return_date' => 'required|date',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:15',
+        ]);
+
+         Contact::create($validatedData);
+         if (strpos($validatedData['email'], '@gmail.com') !== false) {
+            Mail::send('frontend.enquery1', [
+                'region' => $request->region,
+                'interest' => $request->interest,
+                'accommodation' => $request->accommodation,
+                'budget' => $request->budget,
+                'children' => $request->children,
+                'departure_date' => $request->departure_date,
+                'return_date' => $request->return_date,
+                'email' => $request->email,
+                'phone' => $request->phone
+            ], function($message) use($request) {
+                $message->subject('Enquiry Mail');
+                $message->to('info@poonamvoyageinde.com');
+            });
+        }
+        return redirect()->back()->with('success', 'Your request has been submitted successfully!');
     }
 
 }
