@@ -394,7 +394,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="col-lg-6 col-md-4 col-sm-6 col-12">
                         <div class="gallery-box style2">
                             <div class="gallery-img global-img">
                                 <a href="{{ asset('uploads/testimonials/Notre Séjour en Inde avec Poonam Voyage Inde 18 jours au RAJASTHAN 2 - Copy.jpeg') }}" class="popup-image">
@@ -414,7 +414,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="col-lg-6 col-md-4 col-sm-6 col-12">
                         <div class="gallery-box-wrapp">
                             <div class="gallery-box style2">
                                 <div class="gallery-img global-img">
@@ -438,7 +438,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="gallery-box style2">
                             <div class="gallery-box style2">
                                 <div class="gallery-img global-img">
@@ -461,7 +461,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
