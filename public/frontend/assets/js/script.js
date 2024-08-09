@@ -14,6 +14,9 @@ jQuery(function ($) {
          menu.addClass('openMenu')
       }
    })
+   $('.destinationHever').on('click',function(){
+      $('.dropMenuInner').toggleClass('openMenuHover')
+   })
    $(window).on('scroll', function () {
       $(window).scrollTop() >= 200 ? $('.main-navbar-area').addClass('stickyadd') : $('.main-navbar-area').removeClass('stickyadd');
       $(window).scrollTop() >= 200 ? $('.mainHeaderWrapper').addClass('stickyadd') : $('.mainHeaderWrapper').removeClass('stickyadd');
@@ -25,6 +28,10 @@ jQuery(function ($) {
    $('#control li').on('click', function () {
       $(this).addClass('active').siblings().removeClass('active');
    });
+   $(document).ready(function() {
+      // $('.image-link').magnificPopup({type:'image'});
+      $(".popup-image").magnificPopup({type:"image",mainClass:"mfp-zoom-in",removalDelay:260,gallery:{enabled:!0}})
+    });
    $('.youtube-popup').magnificPopup({
       disableOn: 320,
       type: 'iframe',
