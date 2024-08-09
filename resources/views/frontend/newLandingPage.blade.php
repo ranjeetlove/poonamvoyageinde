@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/meanmenu.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/theme-dark.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css">
     <link rel="icon" href="{{ asset('frontend/assets/img/favicon.png') }}" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="alternate" href="https://poonamvoyageinde.com/" hreflang="fr-fr" />
@@ -68,15 +69,15 @@
                         </div>
                     </div>
                     <div class="headerTopRightMenu flexItem">
-                        <a href="" class="headerSocial">Follow Us:- </a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-facebook'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-twitter'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-instagram'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-youtube'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-pinterest'></i></a>
+                        <a href="javascript:void(0)" class="headerSocial">Follow Us:- </a>
+                        <a href="https://www.facebook.com/profile.php?id=100086158731809" class="headerSocial"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://twitter.com/poonamvoyage" class="headerSocial"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://www.instagram.com/poonamvoyageinde90/" class="headerSocial"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.youtube.com/channel/UCy77dsmJ9dLPeCIQB5eVAdg" class="headerSocial"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" class="headerSocial"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://in.pinterest.com/poonamvoyageinde90/" class="headerSocial"><i class='bx bxl-pinterest'></i></a>
                         <span class="headerSap">|</span>
-                        <a href="javascript:void(0)" class="inquaryBtn">Inquare Now</a>
+                        <a href="{{route('contactus') }}" class="inquaryBtn">Inquare Now</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +96,7 @@
                     <div class="headerRightMenu">
                         <ul class="list-unstyled flexItem headerMenuList">
                             <li>
-                                <a href="javascript:void(0)" class="headerMenuLinks"><i
+                                <a href="javascript:void(0)" class="headerMenuLinks closeMenu"><i
                                         class="bx bxs-x-circle menuCLick"></i></a>
                             </li>
                             <li>
@@ -104,8 +105,13 @@
                             <li>
                                 <a href="{{ route('aboutus') }}" class="headerMenuLinks">Who are we</a>
                             </li>
-                            <li>
+                            <li class="destinationHever">
                                 <a href="#" class="headerMenuLinks">Destinations</a>
+                                <ul class="list-unstyled dropMenuInner">
+                                        @foreach ($regions as $region)
+                                            <li><a href="{{ route('destinationlist', $region->slug) }}">{{ $region->region }}</a></li>
+                                        @endforeach
+                                </ul>
                             </li>
                             <li>
                                 <a href="{{ route('tailormadetrip') }}" class="headerMenuLinks">Tailer-Made trip to
@@ -360,6 +366,105 @@
                 </div>
             </div>
         </div>
+        <div class="gellaryWrapper">
+            <div class="container">
+            <div class="text-center">
+                    <h3 class="h3Heading">Recent Gallery</h3>
+                    <p class="headingPara">Traveling has helped us understand the meaning of life and helped us
+                        become better people. Every time we travel, we see the world with new eyes.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/WhatsApp Image 2023-03-24 at 3.12.30 PM.jpeg') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/WhatsApp Image 2023-03-24 at 3.12.30 PM.jpeg') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/rajasthan tour.JPG') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/rajasthan tour.JPG') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/Notre Séjour en Inde avec Poonam Voyage Inde 18 jours au RAJASTHAN 2 - Copy.jpeg') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/Notre Séjour en Inde avec Poonam Voyage Inde 18 jours au RAJASTHAN 2 - Copy.jpeg') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/newtest1.jpg') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/newtest1.jpg') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box-wrapp">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/new-comment.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/new-comment.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/image_50413569.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/image_50413569.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/image_50386689.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/image_50386689.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/image_50405377.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/image_50405377.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
         <div class="aboutWrapper">
             <div class="container">
                 <div class="row">
@@ -430,17 +535,13 @@
                                 file_exists(public_path('uploads/testimonials/' . $test[0]->image))
                                     ? asset('uploads/testimonials/' . $test[0]->image)
                                     : asset('uploads/testimonials/user.png');
-                            $imagePath1 =
-                                !empty($test[2]->image) &&
-                                file_exists(public_path('uploads/testimonials/' . $test[2]->image))
-                                    ? asset('uploads/testimonials/' . $test[2]->image)
-                                    : asset('uploads/testimonials/user.png');
                         @endphp
                         <img src="{{ $imagePaths }}" alt="">
-                        <img src="{{ $imagePath1 }}" alt="">
+                        <img src="{{ asset('uploads/testimonials/testimonialsImage.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
+            <div class="shape-mockup movingCar d-none d-lg-block" style="right: 2%; bottom: 0%;"><img src="{{ asset('frontend/assets/img/logo/car_1.png') }}" alt="shape"></div>
         </div>
         <div class="TabGroupsFilterWrapper">
             <div class="container">
@@ -453,7 +554,7 @@
                 <div class="tabGroupCardWrapper mt-4">
                     <div class="row filtr-container">
                         @foreach ($blogs as $key=>$item)
-                        <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="tabGroupCard blogCard">
                                 <div class="tabGroupImageCard blogCardImage">
                                 <img src="{{ file_exists(public_path('uploads/blog/' . $item->image)) ? asset('uploads/blog/' . $item->image) : asset('uploads/tour/image/no-image.jpg') }}"
@@ -478,8 +579,7 @@
                                         </span>
                                     </div>
                                     <div class="text-end">
-                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">Read More <i
-                                                class="bx bx-arrow-back rotateIcon"></i></a>
+                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -489,7 +589,7 @@
 
                     </div>
                     <div class="viewAllBtn text-center">
-                        <a href="{{ route('blog') }}" class="readMoreBtn px-5 py-3">View All <i
+                        <a href="{{ route('blog') }}" class="readMoreBtn px-4 py-2">View All <i
                                 class="bx bx-arrow-back rotateIcon"></i></a>
                     </div>
                 </div>
@@ -600,6 +700,7 @@
     <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
     <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/jquery.filterizr.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
