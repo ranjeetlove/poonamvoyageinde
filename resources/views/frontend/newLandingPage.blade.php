@@ -77,7 +77,7 @@
                         <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" class="headerSocial"><i class='bx bxl-linkedin'></i></a>
                         <a href="https://in.pinterest.com/poonamvoyageinde90/" class="headerSocial"><i class='bx bxl-pinterest'></i></a>
                         <span class="headerSap">|</span>
-                        <a href="{{route('contactus') }}" class="inquaryBtn">Inquare Now</a>
+                        <a href="{{route('contactus') }}" class="inquaryBtn">Renseignez-vous maintenant</a>
                     </div>
                 </div>
             </div>
@@ -100,10 +100,10 @@
                                         class="bx bxs-x-circle menuCLick"></i></a>
                             </li>
                             <li>
-                                <a href="{{ route('index') }}" class="headerMenuLinks">Welcome</a>
+                                <a href="{{ route('index') }}" class="headerMenuLinks">Accueil</a>
                             </li>
                             <li>
-                                <a href="{{ route('aboutus') }}" class="headerMenuLinks">Who are we</a>
+                                <a href="{{ route('aboutus') }}" class="headerMenuLinks">Qui sommes nous</a>
                             </li>
                             <li class="destinationHever">
                                 <a href="#" class="headerMenuLinks">Destinations</a>
@@ -114,17 +114,16 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="{{ route('tailormadetrip') }}" class="headerMenuLinks">Tailer-Made trip to
-                                    India</a>
+                                <a href="{{ route('tailormadetrip') }}" class="headerMenuLinks">Voyage sur mesure en inde</a>
                             </li>
                             <li>
-                                <a href="{{ route('comments') }}" class="headerMenuLinks">Comments</a>
+                                <a href="{{ route('comments') }}" class="headerMenuLinks">Commentaires</a>
                             </li>
                             <li>
                                 <a href="{{ route('blog') }}" class="headerMenuLinks">Blogs</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactus') }}" class="headerMenuLinks">Contact Us</a>
+                                <a href="{{ route('contactus') }}" class="headerMenuLinks">Contactez Nous</a>
                             </li>
                         </ul>
                     </div>
@@ -138,10 +137,10 @@
                         <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/des-single-01.jpg"
                             alt="" class="bannerHome">
                         <div class="bannerTextWrapper">
-                            <h2>Tour Guide Agency in India</h2>
-                            <p class="bannerTextTop">our dedicated team of local professionals will accompany you
-                                throughout your trip, sharing cultural insights, historical anecdotes and practical tips
-                                to make your experience authentic and enriching.</p>
+                            <h2>Agence de guides touristiques en Inde</h2>
+                            <p class="bannerTextTop">notre équipe dévouée de professionnels locaux vous accompagnera
+                                tout au long de votre voyage, partageant des idées culturelles, des anecdotes historiques et des conseils pratiques
+                                pour rendre votre expérience authentique et enrichissante.</p>
                         </div>
                     </div>
                 </div>
@@ -277,7 +276,7 @@
         </div>
         <div class="container-fluid padding30 topDestinationMainWrapper">
             <div class="TopDestinations">
-                <h3 class="h3Heading">We Provide Top Destinations</h3>
+                <h3 class="h3Heading text-center">Nous proposons les meilleures destinations</h3>
             </div>
             <div class="TopDestinationsWrapper">
                 <div class="row">
@@ -299,9 +298,9 @@
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="text-center">
-                    <h3 class="h3Heading">Popular Featured Destinations</h3>
-                    <p class="headingPara">Traveling has helped us understand the meaning of life and helped us
-                        become better people. Every time we travel, we see the world with new eyes.</p>
+                    <h3 class="h3Heading">Destinations populaires en vedette</h3>
+                    <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
+                    devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
                     <ul id="control" class="list-unstyled TabGroupsFilterUl">
                         <li class="active" data-filter="all">All</li>
                         @foreach ($regions as $key => $region)
@@ -371,9 +370,9 @@
         <div class="gellaryWrapper">
             <div class="container">
             <div class="text-center">
-                    <h3 class="h3Heading">Recent Gallery</h3>
-                    <p class="headingPara">Traveling has helped us understand the meaning of life and helped us
-                        become better people. Every time we travel, we see the world with new eyes.</p>
+                    <h3 class="h3Heading">Galerie récente</h3>
+                    <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
+                    devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -471,16 +470,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
-                        <p class="toarPara">Poonam Voyage is a travel agency specializing in organizing tailor-made
-                            tours in India, with particular expertise in Rajasthan tours. As a Tour Operator in
-                            India , we are committed to providing unique and memorable experiences to our clients,
-                            exploring the cultural, historical and natural treasures of this fascinating region.</p>
-                        <p class="toarPara">Our tailor-made Rajasthan tours are designed to capture the essence of
-                            this land steeped in history and splendor. Whether it is a visit to the majestic palaces
-                            of Jaipur, a camel ride through the golden dunes of the Thar Desert, or a discovery of
-                            the bustling markets of Jodhpur, each itinerary is carefully crafted to satisfy the most
-                            discerning expectations of travelers.</p>
+                        <h3 class="h3Heading">Tour Opérateur en Inde | Circuits sur mesure en Inde</h3>
+                        <p class="toarPara">Poonam Voyage est une agence de voyages spécialisée dans l'organisation de voyages sur mesure
+                            circuits en Inde, avec une expertise particulière dans les circuits au Rajasthan. En tant que voyagiste en
+                            Inde, nous nous engageons à offrir des expériences uniques et mémorables à nos clients,
+                            explorer les trésors culturels, historiques et naturels de cette région fascinante.</p>
+                        <p class="toarPara">Nos circuits sur mesure au Rajasthan sont conçus pour capturer l'essence de
+                            cette terre chargée d'histoire et de splendeur. Qu'il s'agisse d'une visite des palais majestueux
+                            de Jaipur, une balade à dos de chameau à travers les dunes dorées du désert du Thar, ou encore une découverte de
+                            les marchés animés de Jodhpur, chaque itinéraire est soigneusement élaboré pour satisfaire le plus
+                            attentes exigeantes des voyageurs.</p>
                     </div>
                     <div class="col-md-7">
                         <div class="aboutRight">
@@ -495,24 +494,24 @@
             <div class="row position-relative">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 text-center">
-                    <h3 class="h3Heading text-white">Best India Tours and Travels. Explore Amazing India Tour
-                        Packages</h3>
-                    <p class="toarPara text-white">Poonamvoyageinde is the right choice for tourism in India.
-                        Specialized for tours in Rajasthan, Gujarat, Kashmir and North India. We provide you with a
-                        travel guide in French to enhance your trip.</p>
+                    <h3 class="h3Heading text-white">Meilleurs circuits et voyages en Inde. Explorez l'incroyable tournée en Inde
+                    Forfaits</h3>
+                    <p class="toarPara text-white">Poonamvoyageinde est le bon choix pour le tourisme en Inde.
+                        Spécialisé pour les circuits au Rajasthan, au Gujarat, au Cachemire et en Inde du Nord. Nous mettons à votre disposition un
+                        guide de voyage en français pour agrémenter votre voyage.</p>
                 </div>
             </div>
         </div>
         <div class="container-fluid padding30 testimonialsWrapper">
             <div class="row position-relative">
                 <div class="col-md-6">
-                    <h3 class="h3Heading mb-2">Travelers love our locals</h3>
-                    <p class="toarPara">Poonamvoyageinde is the right choice for tourism in India.</p>
+                    <h3 class="h3Heading mb-2">Les voyageurs aiment nos locaux</h3>
+                    <p class="toarPara">Poonamvoyageinde est le bon choix pour le tourisme en Inde.</p>
                     <div class="testimonialsSliderWrapper owl-carousel testimonialSlider">
                         @foreach ($test as $item)
                             <div class="testimonialsItem">
                                 <p class="testmonialsText">{!! Str::limit($item->comment_content, 200) !!} <a
-                                        href ='{{ route("commentsdetails", $item->slug) }}'>Read More</a></p>
+                                        href ='{{ route("commentsdetails", $item->slug) }}'>En savoir plus</a></p>
                                 @php
                                     $imagePath =
                                         !empty($item->image) &&
@@ -548,9 +547,9 @@
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="text-center">
-                    <h3 class="h3Heading">Our Top Rated Blogs</h3>
-                    <p class="headingPara">Traveling has helped us understand the meaning of life and helped us become
-                        better people. Every time we travel, we see the world with new eyes.</p>
+                    <h3 class="h3Heading">Nos blogs les mieux notés</h3>
+                    <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés à devenir
+                    de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
 
                 </div>
                 <div class="tabGroupCardWrapper mt-4">
@@ -581,7 +580,7 @@
                                         </span>
                                     </div>
                                     <div class="text-end">
-                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">Read More</a>
+                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">En savoir plus</a>
                                     </div>
                                 </div>
                             </div>
@@ -591,7 +590,7 @@
 
                     </div>
                     <div class="viewAllBtn text-center">
-                        <a href="{{ route('blog') }}" class="readMoreBtn px-4 py-2">View All <i
+                        <a href="{{ route('blog') }}" class="readMoreBtn px-4 py-2">Tout afficher <i
                                 class="bx bx-arrow-back rotateIcon"></i></a>
                     </div>
                 </div>
@@ -606,18 +605,18 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
-                        <p class="toarPara">As a Tour Guide Agency in India , our dedicated team of local
-                            professionals will accompany you throughout your trip, sharing cultural insights,
-                            historical anecdotes and practical tips to make your experience authentic and enriching.
+                        <h3 class="h3Heading">Tour Opérateur en Inde | Circuits sur mesure en Inde</h3>
+                        <p class="toarPara">En tant qu'agence de guides touristiques en Inde, notre équipe dévouée de guides locaux
+                            des professionnels vous accompagneront tout au long de votre voyage, partageant des éclairages culturels,
+                            anecdotes historiques et conseils pratiques pour rendre votre expérience authentique et enrichissante.
                         </p>
-                        <p class="toarPara">At Poonam Voyage, we focus on customization, allowing our clients to
-                            choose and combine activities according to their preferences. Whether you are interested
-                            in architecture, local cuisine, colorful festivals or rural life, we create trips that
-                            match your passions.</p>
-                        <p class="toarPara">Choose Poonam Voyage to experience an exceptional adventure in the
-                            heart of India, exploring Rajasthan with an agency that truly understands the needs and
-                            aspirations of travelers eager for unique and authentic discoveries.</p>
+                        <p class="toarPara">Chez Poonam Voyage, nous nous concentrons sur la personnalisation, permettant à nos clients de
+                            choisir et combiner les activités selon ses préférences. Que vous soyez intéressé
+                            dans l'architecture, la cuisine locale, les festivals colorés ou la vie rurale, nous créons des voyages qui
+                            correspondre à vos passions.</p>
+                        <p class="toarPara">Choisissez Poonam Voyage pour vivre une aventure exceptionnelle dans le
+                            cœur de l'Inde, explorant le Rajasthan avec une agence qui comprend vraiment les besoins et
+                            aspirations des voyageurs avides de découvertes uniques et authentiques.</p>
                     </div>
 
                 </div>
@@ -630,19 +629,19 @@
                 <div class="col-md-3">
                     <div class="footerTextWrapper">
                         <img src="{{ asset('frontend/assets/img/logo/mlogo.jpg') }}" alt="">
-                        <p class="footerText">Poonam Voyage India "- is a local agency based in India (New Delhi)
-                            specialized in tailor-made trips to Rajasthan with Private Driver and Guide.</p>
+                        <p class="footerText">Poonam Voyage India "- est une agence locale basée en Inde (New Delhi)
+                        spécialisé dans les voyages sur mesure au Rajasthan avec Chauffeur et Guide Privés.</p>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <ul class="list-unstyled footerUlWrapper">
                         <li>
-                            <h4>Our Company</h4>
+                            <h4>Notre entreprise</h4>
                         </li>
-                        <li><a href="{{ route('aboutus') }}" class="footerLinks">About Us</a></li>
-                        <li><a href="{{ route('contactus') }}" class="footerLinks">Contact US</a></li>
-                        <li><a href="#" class="footerLinks">Privacy Policy</a></li>
-                        <li><a href="#" class="footerLinks">Terms & Conditions</a></li>
+                        <li><a href="{{ route('aboutus') }}" class="footerLinks">À propos de nous</a></li>
+                        <li><a href="{{ route('contactus') }}" class="footerLinks">Contactez-nous</a></li>
+                        <li><a href="#" class="footerLinks">politique de confidentialité</a></li>
+                        <li><a href="#" class="footerLinks">Conditions générales</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
@@ -650,16 +649,16 @@
                         <li>
                             <h4>Quick Links</h4>
                         </li>
-                        <li><a href="{{ route('comments') }}" class="footerLinks">Comments</a></li>
+                        <li><a href="{{ route('comments') }}" class="footerLinks">Commentaires</a></li>
                         <li><a href="{{ route('blog') }}" class="footerLinks">Blogs</a></li>
-                        <li><a href="{{ route('aboutus') }}" class="footerLinks">Who we are</a></li>
-                        <li><a href="{{ route('contactus') }}" class="footerLinks">Enquire Now</a></li>
+                        <li><a href="{{ route('aboutus') }}" class="footerLinks">Qui nous sommes</a></li>
+                        <li><a href="{{ route('contactus') }}" class="footerLinks">Renseignez-vous maintenant</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
                     <ul class="list-unstyled footerUlWrapper">
                         <li>
-                            <h4>Tour Destinations</h4>
+                            <h4>Destinations touristiques</h4>
                         </li>
                         @foreach ($regions as $region)
                             <li><a href="{{ route('destinationlist', $region->slug) }}"
@@ -670,7 +669,7 @@
                 <div class="col-md-3">
                     <ul class="list-unstyled footerUlWrapper">
                         <li>
-                            <h4>Contact Us</h4>
+                            <h4>Contactez-nous</h4>
                         </li>
                         <li><a href="tel:+919818153249" class="footerLinks"><i class="bx bx-phone"></i> +91 -
                                 9818153249</a></li>
