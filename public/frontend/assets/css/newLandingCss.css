@@ -930,7 +930,8 @@ a {
         flex: 0 0 auto;
     }
     .bannerTextWrapper p {
-        font-size: 14px;
+        font-size: 15px;
+        margin-bottom: 0;
     }
     .bannerTextWrapper {
         position: absolute;
@@ -939,7 +940,7 @@ a {
         width: 85%;
     }
     .bannerTextWrapper h2 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .themeBtn, .themeBtn:hover {
         padding: 15px;
@@ -952,7 +953,7 @@ a {
         width: 120px;
         height: 120px;
     }
-    .TabGroupsFilterWrapper , .aboutWrapper {
+    .TabGroupsFilterWrapper , .aboutWrapper,.gellaryWrapper,.toarPara {
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -1033,7 +1034,7 @@ a {
     .headerMenuList .closeMenu {
         text-align: right;
         display: block;
-        font-size: 22px;
+        font-size: 36px;
     }
     .mainContentWrapper{
         margin-top: 0;
@@ -1047,4 +1048,23 @@ a {
         position: unset;
         box-shadow: unset;
     }
+    .bannerBox .bannerHome {
+        max-height: 200px;
+    }
+    .BannerFormInput span, .themeBtn,.headingPara,.TabGroupsFilterUl li,.descriptiontab,.tagBlog,.readMoreBtn ,.footerText,.footerUlWrapper li a,.testimonialsItem p{
+        font-size: 16px;
+    }
+    .BannerFormInput {
+        font-size: 16px;
+        padding-left: 18px;
+    }
+    .h3Heading{text-align: center;font-size: 24px;}
+    .tabGroupContentWrapper .headingtab{
+        font-size: 20px;
+    }
+    .testimonialsImage {
+        width: 150px !important;
+        height: 150px;
+    }
+    .headerMenuList .headerMenuLinks,.dropMenuInner li a{font-size: 18px;}
 }
