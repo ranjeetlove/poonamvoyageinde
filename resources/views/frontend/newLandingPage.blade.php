@@ -280,7 +280,7 @@
             <div class="TopDestinationsWrapper">
                 <div class="row">
                     @foreach ($regions as $region)
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-2 col-sm-2 col-6">
                             <a href="{{ route('destinationlist', $region->slug) }}" class="destinationsCard">
                                 <div class="destinationImgae"><img
                                         src="{{ asset('/uploads/regions/' . $region->image) }}"
@@ -310,8 +310,8 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="tabGroupCardWrapper">
-                    <div class="row filtr-container">
+                <div class="tabGroupCardWrapper filtr-container">
+                    <div class="row ">
                         @foreach ($regions as $key => $region)
                             @php
                                 $tours = App\Models\Tour::where('region_id', $region->id)->get();
@@ -323,7 +323,7 @@
                                 <?php if ($region->id == 3) {
                                     continue;
                                 } ?>
-                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item"
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item col-12"
                                     data-category="{{ $key + 1 }}" data-sort="value">
                                     <div class="tabGroupCard">
                                         <div class="tabGroupImageCard">
@@ -510,7 +510,7 @@
                         @foreach ($test as $item)
                             <div class="testimonialsItem">
                                 <p class="testmonialsText">{!! Str::limit($item->comment_content, 200) !!} <a
-                                        href ='{{ route('commentsdetails', $item->slug) }}'>Read More</a></p>
+                                        href ='{{ route("commentsdetails", $item->slug) }}'>Read More</a></p>
                                 @php
                                     $imagePath =
                                         !empty($item->image) &&
