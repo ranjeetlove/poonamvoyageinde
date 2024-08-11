@@ -240,14 +240,16 @@
                             <div class="bannerFormInputsWrapper">
                                 <!-- <label>Date de départ </label> -->
                                 <div class="input-group">
-                                    <input type="date" class="form-control BannerFormInput" name="departure_date"
+                                    <input type="text" placeholder="Select Departure date" onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" class="form-control BannerFormInput" name="departure_date"
                                         required="required" />
                                 </div>
                             </div>
                             <div class="bannerFormInputsWrapper">
                                 <!-- <label>Date de retour</label> -->
                                 <div class="input-group">
-                                    <input type="date" class="form-control BannerFormInput" name="return_date"
+                                    <input type="text" placeholder="Select Return date"  onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" class="form-control BannerFormInput" name="return_date"
                                         required="required" />
                                 </div>
                             </div>
