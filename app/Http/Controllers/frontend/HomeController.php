@@ -48,6 +48,7 @@ class HomeController extends Controller
         $blogs = Blog::where('status','Active')->limit(4)->get();
         $test = Testimonial::latest()->take(3)->get();
         $regions = Region::orderBy('region')->get();
+        $regions = $regions->reverse();
         $tours = Tour::orderBy('id','desc')->get();
         $videos = Video::orderBy('id','desc')->get();
         $about= About::orderBy('id','desc')->first();
