@@ -239,7 +239,7 @@
                             <div class="bannerFormInputsWrapper">
                                 <!-- <label>Date de départ </label> -->
                                 <div class="input-group">
-                                    <input type="text" placeholder="Select Departure date" onfocus="(this.type='date')"
+                                    <input type="text" placeholder="Sélectionnez la date de départ" onfocus="(this.type='date')"
                                     onblur="(this.type='text')" class="form-control BannerFormInput" name="departure_date"
                                         required="required" />
                                 </div>
@@ -247,7 +247,7 @@
                             <div class="bannerFormInputsWrapper">
                                 <!-- <label>Date de retour</label> -->
                                 <div class="input-group">
-                                    <input type="text" placeholder="Select Return date"  onfocus="(this.type='date')"
+                                    <input type="text" placeholder="Sélectionnez la date de retour"  onfocus="(this.type='date')"
                                     onblur="(this.type='text')" class="form-control BannerFormInput" name="return_date"
                                         required="required" />
                                 </div>
@@ -268,7 +268,7 @@
                             </div>
                             <div class="bannerFormInputsWrapper">
                                 {{-- <a href="#" class="themeBtn">Request a Quate</a> --}}
-                                <button type="submit" class="themeBtn">Request a Quote</button>
+                                <button type="submit" class="themeBtn">Demander un devis</button>
                             </div>
                     </form>
                 </div>
@@ -350,12 +350,12 @@
                                                     @endfor
                                                 </span>
                                                 <span class="dayNight">
-                                                    {{ $tour->day ?? 0 }} Days / {{ $tour->night ?? 0 }} Nights
+                                                    {{ $tour->day ?? 0 }} Jours / {{ $tour->night ?? 0 }} Nuits
                                                 </span>
                                             </div>
                                             <div class="tabMore">
                                                 <a href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}"
-                                                    class="tabMoreLink">More Information <i
+                                                    class="tabMoreLink">Plus d'informations <i
                                                         class="rotateIcon bx bx-arrow-back"></i></a>
                                             </div>
                                         </div>
