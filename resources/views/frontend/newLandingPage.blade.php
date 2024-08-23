@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="@yield('keywords')" />
-    <meta name="description" content="@yield('description')" />
-    <title>@yield('title') </title>
+	<meta name="keywords" content="touropérateurenInde,circuitaurajasthanenInde,voyagesurmesureenInde,guidefrancophoneagencedevoyage" />
+    <meta name="description" content="Tour opérateur spécialiste des circuits au Rajasthan &amp; gujarat, Inde du sud .Le guide Francophone pour organiser votre voyage facilement et rapidement, circuit en petits groupes et organise des excursions d une journée et des voyages personnalisés en Inde , 
+" />
+    <title>Tour Opérateur en Inde | Voyage sur Mesure au Rajasthan | Agence de Guide Touristique En Inde
+ </title>
     <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome.min.css') }}" />
@@ -18,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/meanmenu.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/theme-dark.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css">
     <link rel="icon" href="{{ asset('frontend/assets/img/favicon.png') }}" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="alternate" href="https://poonamvoyageinde.com/" hreflang="fr-fr" />
@@ -47,9 +50,31 @@
     //  echo $link;
     ?>
     <link rel="canonical" href="<?php echo $link; ?>" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KDBHWMTK');</script>
+    <!-- End Google Tag Manager -->
+
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDBHWMTK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5HH4YKZ90"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S5HH4YKZ90');
+</script>
     <div class="mainBodyWrapper">
         <div class="headerTopWrapper">
             <div class="container-fluid">
@@ -68,15 +93,15 @@
                         </div>
                     </div>
                     <div class="headerTopRightMenu flexItem">
-                        <a href="" class="headerSocial">Follow Us:- </a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-facebook'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-twitter'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-instagram'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-youtube'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#" class="headerSocial"><i class='bx bxl-pinterest'></i></a>
+                        <a href="javascript:void(0)" class="headerSocial">Follow Us:- </a>
+                        <a href="https://www.facebook.com/profile.php?id=100086158731809" class="headerSocial"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://twitter.com/poonamvoyage" class="headerSocial"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://www.instagram.com/poonamvoyageinde90/" class="headerSocial"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.youtube.com/channel/UCy77dsmJ9dLPeCIQB5eVAdg" class="headerSocial"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" class="headerSocial"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://in.pinterest.com/poonamvoyageinde90/" class="headerSocial"><i class='bx bxl-pinterest'></i></a>
                         <span class="headerSap">|</span>
-                        <a href="javascript:void(0)" class="inquaryBtn">Inquare Now</a>
+                        <a href="{{route('contactus') }}" class="inquaryBtn">Renseignez-vous maintenant</a>
                     </div>
                 </div>
             </div>
@@ -95,30 +120,34 @@
                     <div class="headerRightMenu">
                         <ul class="list-unstyled flexItem headerMenuList">
                             <li>
-                                <a href="javascript:void(0)" class="headerMenuLinks"><i
+                                <a href="javascript:void(0)" class="headerMenuLinks closeMenu"><i
                                         class="bx bxs-x-circle menuCLick"></i></a>
                             </li>
                             <li>
-                                <a href="{{ route('index') }}" class="headerMenuLinks">Welcome</a>
+                                <a href="{{ route('index') }}" class="headerMenuLinks">Accueil</a>
                             </li>
                             <li>
-                                <a href="{{ route('aboutus') }}" class="headerMenuLinks">Who are we</a>
+                                <a href="{{ route('aboutus') }}" class="headerMenuLinks">Qui sommes nous</a>
                             </li>
-                            <li>
+                            <li class="destinationHever">
                                 <a href="#" class="headerMenuLinks">Destinations</a>
+                                <ul class="list-unstyled dropMenuInner">
+                                        @foreach ($regions as $region)
+                                            <li><a href="{{ route('destinationlist', $region->slug) }}">{{ $region->region }}</a></li>
+                                        @endforeach
+                                </ul>
                             </li>
                             <li>
-                                <a href="{{ route('tailormadetrip') }}" class="headerMenuLinks">Tailer-Made trip to
-                                    India</a>
+                                <a href="{{ route('tailormadetrip') }}" class="headerMenuLinks">Voyage sur mesure en inde</a>
                             </li>
                             <li>
-                                <a href="{{ route('comments') }}" class="headerMenuLinks">Comments</a>
+                                <a href="{{ route('comments') }}" class="headerMenuLinks">Commentaires</a>
                             </li>
                             <li>
                                 <a href="{{ route('blog') }}" class="headerMenuLinks">Blogs</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactus') }}" class="headerMenuLinks">Contact Us</a>
+                                <a href="{{ route('contactus') }}" class="headerMenuLinks">Contactez Nous</a>
                             </li>
                         </ul>
                     </div>
@@ -132,10 +161,8 @@
                         <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/des-single-01.jpg"
                             alt="" class="bannerHome">
                         <div class="bannerTextWrapper">
-                            <h2>Tour Guide Agency in India</h2>
-                            <p class="bannerTextTop">our dedicated team of local professionals will accompany you
-                                throughout your trip, sharing cultural insights, historical anecdotes and practical tips
-                                to make your experience authentic and enriching.</p>
+                            <h2>Explorez l'Inde : Voyages inoubliables à des prix irrésistibles !</h2>
+                            <p class="bannerTextTop">Laissez-vous guider par nos experts francophones à travers l'Inde. Ils vous dévoileront des trésors culturels, partageront des récits historiques fascinants, et offriront des conseils pratiques pour faire de votre aventure un souvenir inoubliable.</p>
                         </div>
                     </div>
                 </div>
@@ -220,7 +247,7 @@
                                 <div class="input-group">
                                     <select class="form-select form-control BannerFormInput" name="children"
                                         aria-label="Default select example">
-                                        <option selected>Sélectionnez Les Enfants</option>
+                                        <option selected>Nombre de personnes</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -234,14 +261,16 @@
                             <div class="bannerFormInputsWrapper">
                                 <!-- <label>Date de départ </label> -->
                                 <div class="input-group">
-                                    <input type="date" class="form-control BannerFormInput" name="departure_date"
+                                    <input type="text" placeholder="Sélectionnez la date de départ." onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" class="form-control BannerFormInput" name="departure_date"
                                         required="required" />
                                 </div>
                             </div>
                             <div class="bannerFormInputsWrapper">
                                 <!-- <label>Date de retour</label> -->
                                 <div class="input-group">
-                                    <input type="date" class="form-control BannerFormInput" name="return_date"
+                                    <input type="text" placeholder="Sélectionnez la date de retour"  onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" class="form-control BannerFormInput" name="return_date"
                                         required="required" />
                                 </div>
                             </div>
@@ -261,7 +290,7 @@
                             </div>
                             <div class="bannerFormInputsWrapper">
                                 {{-- <a href="#" class="themeBtn">Request a Quate</a> --}}
-                                <button type="submit" class="themeBtn">Request a Quote</button>
+                                <button type="submit" class="themeBtn">Demander un devis</button>
                             </div>
                     </form>
                 </div>
@@ -269,12 +298,12 @@
         </div>
         <div class="container-fluid padding30 topDestinationMainWrapper">
             <div class="TopDestinations">
-                <h3 class="h3Heading">We Provide Top Destinations</h3>
+                <h3 class="h3Heading text-center">Nous proposons les meilleures destinations</h3>
             </div>
             <div class="TopDestinationsWrapper">
                 <div class="row">
                     @foreach ($regions as $region)
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-2 col-sm-2 col-6">
                             <a href="{{ route('destinationlist', $region->slug) }}" class="destinationsCard">
                                 <div class="destinationImgae"><img
                                         src="{{ asset('/uploads/regions/' . $region->image) }}"
@@ -291,9 +320,9 @@
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="text-center">
-                    <h3 class="h3Heading">Popular Featured Destinations</h3>
-                    <p class="headingPara">Traveling has helped us understand the meaning of life and helped us
-                        become better people. Every time we travel, we see the world with new eyes.</p>
+                    <h3 class="h3Heading">Destinations populaires en vedette</h3>
+                    <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
+                    devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
                     <ul id="control" class="list-unstyled TabGroupsFilterUl">
                         <li class="active" data-filter="all">All</li>
                         @foreach ($regions as $key => $region)
@@ -304,8 +333,8 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="tabGroupCardWrapper">
-                    <div class="row filtr-container">
+                <div class="tabGroupCardWrapper filtr-container">
+                    <div class="row ">
                         @foreach ($regions as $key => $region)
                             @php
                                 $tours = App\Models\Tour::where('region_id', $region->id)->get();
@@ -317,12 +346,12 @@
                                 <?php if ($region->id == 3) {
                                     continue;
                                 } ?>
-                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item"
+                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item col-12"
                                     data-category="{{ $key + 1 }}" data-sort="value">
                                     <div class="tabGroupCard">
                                         <div class="tabGroupImageCard">
                                             <img src="{{ file_exists(public_path('uploads/tour/image/' . $tour->image)) ? asset('uploads/tour/image/' . $tour->image) : asset('uploads/tour/image/no-image.jpg') }}"
-                                                alt="">
+                                                alt="{{ $tour->title }}">
                                         </div>
                                         <div class="tabGroupContentWrapper">
                                             <a class="headingtab"
@@ -343,12 +372,12 @@
                                                     @endfor
                                                 </span>
                                                 <span class="dayNight">
-                                                    {{ $tour->day ?? 0 }} Days / {{ $tour->night ?? 0 }} Nights
+                                                    {{ $tour->day ?? 0 }} Jours / {{ $tour->night ?? 0 }} Nuits
                                                 </span>
                                             </div>
                                             <div class="tabMore">
                                                 <a href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}"
-                                                    class="tabMoreLink">More Information <i
+                                                    class="tabMoreLink">Plus d'informations <i
                                                         class="rotateIcon bx bx-arrow-back"></i></a>
                                             </div>
                                         </div>
@@ -360,20 +389,119 @@
                 </div>
             </div>
         </div>
+        <div class="gellaryWrapper">
+            <div class="container">
+            <div class="text-center">
+                    <h3 class="h3Heading">Galerie récente</h3>
+                    <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
+                    devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/WhatsApp Image 2023-03-24 at 3.12.30 PM.jpeg') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/WhatsApp Image 2023-03-24 at 3.12.30 PM.jpeg') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/rajasthan tour.JPG') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/rajasthan tour.JPG') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/Notre Séjour en Inde avec Poonam Voyage Inde 18 jours au RAJASTHAN 2 - Copy.jpeg') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/Notre Séjour en Inde avec Poonam Voyage Inde 18 jours au RAJASTHAN 2 - Copy.jpeg') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/newtest1.jpg') }}" class="popup-image">
+                                <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                <img src="{{ asset('uploads/testimonials/newtest1.jpg') }}" alt="gallery image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box-wrapp">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/new-comment.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/new-comment.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/image_50413569.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/image_50413569.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/image_50386689.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/image_50386689.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallery-box style2">
+                            <div class="gallery-box style2">
+                                <div class="gallery-img global-img">
+                                <a href="{{ asset('uploads/testimonials/image_50405377.JPG') }}" class="popup-image">
+                                    <div class="icon-btn"><i class="fa fa-search-plus"></i></div>
+                                    <img src="{{ asset('uploads/testimonials/image_50405377.JPG') }}" alt="gallery image">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
         <div class="aboutWrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
-                        <p class="toarPara">Poonam Voyage is a travel agency specializing in organizing tailor-made
-                            tours in India, with particular expertise in Rajasthan tours. As a Tour Operator in
-                            India , we are committed to providing unique and memorable experiences to our clients,
-                            exploring the cultural, historical and natural treasures of this fascinating region.</p>
-                        <p class="toarPara">Our tailor-made Rajasthan tours are designed to capture the essence of
-                            this land steeped in history and splendor. Whether it is a visit to the majestic palaces
-                            of Jaipur, a camel ride through the golden dunes of the Thar Desert, or a discovery of
-                            the bustling markets of Jodhpur, each itinerary is carefully crafted to satisfy the most
-                            discerning expectations of travelers.</p>
+                        <h3 class="h3Heading">Tour Opérateur en Inde | Circuits sur mesure en Inde</h3>
+                        <p class="toarPara">Poonam Voyage est une agence de voyages spécialisée dans l'organisation de voyages sur mesure
+                            circuits en Inde, avec une expertise particulière dans les circuits au Rajasthan. En tant que voyagiste en
+                            Inde, nous nous engageons à offrir des expériences uniques et mémorables à nos clients,
+                            explorer les trésors culturels, historiques et naturels de cette région fascinante.</p>
+                        <p class="toarPara">Nos circuits sur mesure au Rajasthan sont conçus pour capturer l'essence de
+                            cette terre chargée d'histoire et de splendeur. Qu'il s'agisse d'une visite des palais majestueux
+                            de Jaipur, une balade à dos de chameau à travers les dunes dorées du désert du Thar, ou encore une découverte de
+                            les marchés animés de Jodhpur, chaque itinéraire est soigneusement élaboré pour satisfaire le plus
+                            attentes exigeantes des voyageurs.</p>
                     </div>
                     <div class="col-md-7">
                         <div class="aboutRight">
@@ -388,24 +516,21 @@
             <div class="row position-relative">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 text-center">
-                    <h3 class="h3Heading text-white">Best India Tours and Travels. Explore Amazing India Tour
-                        Packages</h3>
-                    <p class="toarPara text-white">Poonamvoyageinde is the right choice for tourism in India.
-                        Specialized for tours in Rajasthan, Gujarat, Kashmir and North India. We provide you with a
-                        travel guide in French to enhance your trip.</p>
+                    <h3 class="h3Heading text-white">L'Inde vous attend : des forfaits touristiques abordables et exceptionnels, conçus spécialement pour vous !</h3>
+                    <p class="toarPara text-white">Notre guide francophone, dévoué et expert local, vous accompagnera tout au long de votre voyage, partageant avec vous des connaissances culturelles, des anecdotes historiques, et des conseils pratiques pour rendre votre expérience authentique et enrichissante.</p>
                 </div>
             </div>
         </div>
         <div class="container-fluid padding30 testimonialsWrapper">
             <div class="row position-relative">
                 <div class="col-md-6">
-                    <h3 class="h3Heading mb-2">Travelers love our locals</h3>
-                    <p class="toarPara">Poonamvoyageinde is the right choice for tourism in India.</p>
+                    <h3 class="h3Heading mb-2">Les voyageurs aiment nos locaux</h3>
+                    <p class="toarPara">Poonamvoyageinde est le bon choix pour le tourisme en Inde.</p>
                     <div class="testimonialsSliderWrapper owl-carousel testimonialSlider">
                         @foreach ($test as $item)
                             <div class="testimonialsItem">
                                 <p class="testmonialsText">{!! Str::limit($item->comment_content, 200) !!} <a
-                                        href ='{{ route('commentsdetails', $item->slug) }}'>Read More</a></p>
+                                        href ='{{ route("commentsdetails", $item->slug) }}'>En savoir plus</a></p>
                                 @php
                                     $imagePath =
                                         !empty($item->image) &&
@@ -430,127 +555,61 @@
                                 file_exists(public_path('uploads/testimonials/' . $test[0]->image))
                                     ? asset('uploads/testimonials/' . $test[0]->image)
                                     : asset('uploads/testimonials/user.png');
-                            $imagePath1 =
-                                !empty($test[2]->image) &&
-                                file_exists(public_path('uploads/testimonials/' . $test[2]->image))
-                                    ? asset('uploads/testimonials/' . $test[2]->image)
-                                    : asset('uploads/testimonials/user.png');
                         @endphp
                         <img src="{{ $imagePaths }}" alt="">
-                        <img src="{{ $imagePath1 }}" alt="">
+                        <img src="{{ asset('uploads/testimonials/testimonialsImage.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
+            <div class="shape-mockup movingCar d-none d-lg-block" style="right: 2%; bottom: 0%;"><img src="{{ asset('frontend/assets/img/logo/car_1.png') }}" alt="shape"></div>
         </div>
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="text-center">
-                    <h3 class="h3Heading">Our Top Rated Blogs</h3>
-                    <p class="headingPara">Traveling has helped us understand the meaning of life and helped us become
-                        better people. Every time we travel, we see the world with new eyes.</p>
+                    <h3 class="h3Heading">Nos blogs les mieux notés</h3>
+                    <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés à devenir
+                    de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
 
                 </div>
                 <div class="tabGroupCardWrapper mt-4">
                     <div class="row filtr-container">
-                        <div class="col-md-4 col-sm-6 col-xs-6">
+                        @foreach ($blogs as $key=>$item)
+                        <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="tabGroupCard blogCard">
                                 <div class="tabGroupImageCard blogCardImage">
-                                    <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg"
-                                        alt="">
+                                <img src="{{ file_exists(public_path('uploads/blog/' . $item->image)) ? asset('uploads/blog/' . $item->image) : asset('uploads/tour/image/no-image.jpg') }}"
+                                                alt="{{ $item->title }}">
                                 </div>
                                 <div class="tabGroupContentWrapper blogCardContent">
                                     <span class="tagBlog">
                                         <i class="bx bxs-map"></i>
-                                        <span>North India</span>
+                                        <span>{{ $item->category }}</span>
                                     </span>
-                                    <a class="headingtab" href="#">A tourist guide for French people exploring
-                                        the hidden gems of India</a>
-                                    <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <a class="headingtab" href="{{route('blogdetails',$item->slug) }}">{{ $item->title }}</a>
+                                    <p class="descriptiontab"> {!! Str::limit(strip_tags($item->content), 150) !!}
                                     </p>
                                     <div class="flexItem gap-3">
                                         <span class="tagBlog">
                                             <i class="bx bxs-pen"></i>
-                                            <span>By Auther</span>
+                                            <span>By {{ $item->posted_by }}</span>
                                         </span>
                                         <span class="tagBlog">
                                             <i class="bx bxs-calendar-alt"></i>
-                                            <span>25 July, 2024</span>
+                                            <span>{{ $item->posted_date }}</span>
                                         </span>
                                     </div>
                                     <div class="text-end">
-                                        <a href="" class="readMoreBtn">Read More <i
-                                                class="bx bx-arrow-back rotateIcon"></i></a>
+                                        <a href="{{route('blogdetails',$item->slug) }}" class="readMoreBtn">En savoir plus</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6">
-                            <div class="tabGroupCard blogCard">
-                                <div class="tabGroupImageCard blogCardImage">
-                                    <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg"
-                                        alt="">
-                                </div>
-                                <div class="tabGroupContentWrapper blogCardContent">
-                                    <span class="tagBlog">
-                                        <i class="bx bxs-map"></i>
-                                        <span>North India</span>
-                                    </span>
-                                    <a class="headingtab" href="#">A tourist guide for French people exploring
-                                        the hidden gems of India</a>
-                                    <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    </p>
-                                    <div class="flexItem gap-3">
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-pen"></i>
-                                            <span>By Auther</span>
-                                        </span>
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-calendar-alt"></i>
-                                            <span>25 July, 2024</span>
-                                        </span>
-                                    </div>
-                                    <div class="text-end">
-                                        <a href="" class="readMoreBtn">Read More <i
-                                                class="bx bx-arrow-back rotateIcon"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6">
-                            <div class="tabGroupCard blogCard">
-                                <div class="tabGroupImageCard blogCardImage">
-                                    <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/tour-06.jpg"
-                                        alt="">
-                                </div>
-                                <div class="tabGroupContentWrapper blogCardContent">
-                                    <span class="tagBlog">
-                                        <i class="bx bxs-map"></i>
-                                        <span>North India</span>
-                                    </span>
-                                    <a class="headingtab" href="#">A tourist guide for French people exploring
-                                        the hidden gems of India</a>
-                                    <p class="descriptiontab">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    </p>
-                                    <div class="flexItem gap-3">
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-pen"></i>
-                                            <span>By Auther</span>
-                                        </span>
-                                        <span class="tagBlog">
-                                            <i class="bx bxs-calendar-alt"></i>
-                                            <span>25 July, 2024</span>
-                                        </span>
-                                    </div>
-                                    <div class="text-end">
-                                        <a href="" class="readMoreBtn">Read More <i
-                                                class="bx bx-arrow-back rotateIcon"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        @endforeach
+
                     </div>
                     <div class="viewAllBtn text-center">
-                        <a href="" class="readMoreBtn px-5 py-3">View All <i
+                        <a href="{{ route('blog') }}" class="readMoreBtn px-4 py-2">Tout afficher <i
                                 class="bx bx-arrow-back rotateIcon"></i></a>
                     </div>
                 </div>
@@ -565,18 +624,18 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="h3Heading">Tour Operator in India | Tailor - made Tours in India</h3>
-                        <p class="toarPara">As a Tour Guide Agency in India , our dedicated team of local
-                            professionals will accompany you throughout your trip, sharing cultural insights,
-                            historical anecdotes and practical tips to make your experience authentic and enriching.
+                        <h3 class="h3Heading">Tour Opérateur en Inde | Circuits sur mesure en Inde</h3>
+                        <p class="toarPara">En tant qu'agence de guides touristiques en Inde, notre équipe dévouée de guides locaux
+                            des professionnels vous accompagneront tout au long de votre voyage, partageant des éclairages culturels,
+                            anecdotes historiques et conseils pratiques pour rendre votre expérience authentique et enrichissante.
                         </p>
-                        <p class="toarPara">At Poonam Voyage, we focus on customization, allowing our clients to
-                            choose and combine activities according to their preferences. Whether you are interested
-                            in architecture, local cuisine, colorful festivals or rural life, we create trips that
-                            match your passions.</p>
-                        <p class="toarPara">Choose Poonam Voyage to experience an exceptional adventure in the
-                            heart of India, exploring Rajasthan with an agency that truly understands the needs and
-                            aspirations of travelers eager for unique and authentic discoveries.</p>
+                        <p class="toarPara">Chez Poonam Voyage, nous nous concentrons sur la personnalisation, permettant à nos clients de
+                            choisir et combiner les activités selon ses préférences. Que vous soyez intéressé
+                            dans l'architecture, la cuisine locale, les festivals colorés ou la vie rurale, nous créons des voyages qui
+                            correspondre à vos passions.</p>
+                        <p class="toarPara">Choisissez Poonam Voyage pour vivre une aventure exceptionnelle dans le
+                            cœur de l'Inde, explorant le Rajasthan avec une agence qui comprend vraiment les besoins et
+                            aspirations des voyageurs avides de découvertes uniques et authentiques.</p>
                     </div>
 
                 </div>
@@ -589,19 +648,19 @@
                 <div class="col-md-3">
                     <div class="footerTextWrapper">
                         <img src="{{ asset('frontend/assets/img/logo/mlogo.jpg') }}" alt="">
-                        <p class="footerText">Poonam Voyage India "- is a local agency based in India (New Delhi)
-                            specialized in tailor-made trips to Rajasthan with Private Driver and Guide.</p>
+                        <p class="footerText">Poonam Voyage India "- est une agence locale basée en Inde (New Delhi)
+                        spécialisé dans les voyages sur mesure au Rajasthan avec Chauffeur et Guide Privés.</p>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <ul class="list-unstyled footerUlWrapper">
                         <li>
-                            <h4>Our Company</h4>
+                            <h4>Notre entreprise</h4>
                         </li>
-                        <li><a href="{{ route('aboutus') }}" class="footerLinks">About Us</a></li>
-                        <li><a href="{{ route('contactus') }}" class="footerLinks">Contact US</a></li>
-                        <li><a href="#" class="footerLinks">Privacy Policy</a></li>
-                        <li><a href="#" class="footerLinks">Terms & Conditions</a></li>
+                        <li><a href="{{ route('aboutus') }}" class="footerLinks">À propos de nous</a></li>
+                        <li><a href="{{ route('contactus') }}" class="footerLinks">Contactez-nous</a></li>
+                        <li><a href="#" class="footerLinks">politique de confidentialité</a></li>
+                        <li><a href="#" class="footerLinks">Conditions générales</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
@@ -609,16 +668,16 @@
                         <li>
                             <h4>Quick Links</h4>
                         </li>
-                        <li><a href="{{ route('comments') }}" class="footerLinks">Comments</a></li>
+                        <li><a href="{{ route('comments') }}" class="footerLinks">Commentaires</a></li>
                         <li><a href="{{ route('blog') }}" class="footerLinks">Blogs</a></li>
-                        <li><a href="{{ route('aboutus') }}" class="footerLinks">Who we are</a></li>
-                        <li><a href="{{ route('contactus') }}" class="footerLinks">Enquire Now</a></li>
+                        <li><a href="{{ route('aboutus') }}" class="footerLinks">Qui nous sommes</a></li>
+                        <li><a href="{{ route('contactus') }}" class="footerLinks">Renseignez-vous maintenant</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
                     <ul class="list-unstyled footerUlWrapper">
                         <li>
-                            <h4>Tour Destinations</h4>
+                            <h4>Destinations touristiques</h4>
                         </li>
                         @foreach ($regions as $region)
                             <li><a href="{{ route('destinationlist', $region->slug) }}"
@@ -629,7 +688,7 @@
                 <div class="col-md-3">
                     <ul class="list-unstyled footerUlWrapper">
                         <li>
-                            <h4>Contact Us</h4>
+                            <h4>Contactez-nous</h4>
                         </li>
                         <li><a href="tel:+919818153249" class="footerLinks"><i class="bx bx-phone"></i> +91 -
                                 9818153249</a></li>
@@ -661,6 +720,7 @@
     <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
     <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/jquery.filterizr.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
