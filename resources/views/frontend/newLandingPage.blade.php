@@ -640,7 +640,7 @@
                         </li>
                         <li><a href="{{ route('aboutus') }}" class="footerLinks">À propos de nous</a></li>
                         <li><a href="{{ route('contactus') }}" class="footerLinks">Contactez-nous</a></li>
-                        <li><a href="#" class="footerLinks">politique de confidentialité</a></li>
+                        <li><a href="{{ route('privacyPolicy')}}" class="footerLinks">politique de confidentialité</a></li>
                         <li><a href="#" class="footerLinks">Conditions générales</a></li>
                     </ul>
                 </div>
