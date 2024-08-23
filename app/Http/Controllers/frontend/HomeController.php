@@ -92,7 +92,7 @@ class HomeController extends Controller
             });
         }
 
-        return redirect()->back()->with('success', 'Your request has been submitted successfully!');
+        return redirect()->route('thankyou')->with('success', 'Your request has been submitted successfully!');
     }
 
 }

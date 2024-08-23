@@ -81,6 +81,9 @@ Route::post('/contact',[HomeController::class,'store'])->name('store');
 Route::get('admin/login',[AdminController::class,'login'])->name('admin-login');
 Route::post('/admin/login',[AdminController::class,'authenticate']);
 Route::get('/logout',[AdminController::class,'logout'])->name('admin-logout');
+Route::get('/thankyou', function () {
+    return view('frontend.thankyou');
+})->name('thankyou');
 
 
 Route::group(['prefix' => 'admin'], function () {
