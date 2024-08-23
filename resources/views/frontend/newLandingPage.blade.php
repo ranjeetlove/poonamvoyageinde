@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="@yield('keywords')" />
-    <meta name="description" content="@yield('description')" />
-    <title>@yield('title') </title>
+	<meta name="keywords" content="touropérateurenInde,circuitaurajasthanenInde,voyagesurmesureenInde,guidefrancophoneagencedevoyage" />
+    <meta name="description" content="Tour opérateur spécialiste des circuits au Rajasthan &amp; gujarat, Inde du sud .Le guide Francophone pour organiser votre voyage facilement et rapidement, circuit en petits groupes et organise des excursions d une journée et des voyages personnalisés en Inde , 
+" />
+    <title>Tour Opérateur en Inde | Voyage sur Mesure au Rajasthan | Agence de Guide Touristique En Inde
+ </title>
     <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome.min.css') }}" />
@@ -48,9 +50,31 @@
     //  echo $link;
     ?>
     <link rel="canonical" href="<?php echo $link; ?>" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KDBHWMTK');</script>
+    <!-- End Google Tag Manager -->
+
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDBHWMTK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5HH4YKZ90"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S5HH4YKZ90');
+</script>
     <div class="mainBodyWrapper">
         <div class="headerTopWrapper">
             <div class="container-fluid">
@@ -137,10 +161,8 @@
                         <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/des-single-01.jpg"
                             alt="" class="bannerHome">
                         <div class="bannerTextWrapper">
-                            <h2>Découvrez des forfaits de voyage incroyables en Inde.</h2>
-                            <p class="bannerTextTop">notre équipe dévouée de professionnels locaux vous accompagnera
-                                tout au long de votre voyage, partageant des idées culturelles, des anecdotes historiques et des conseils pratiques
-                                pour rendre votre expérience authentique et enrichissante.</p>
+                            <h2>Explorez l'Inde : Voyages inoubliables à des prix irrésistibles !</h2>
+                            <p class="bannerTextTop">Laissez-vous guider par nos experts francophones à travers l'Inde. Ils vous dévoileront des trésors culturels, partageront des récits historiques fascinants, et offriront des conseils pratiques pour faire de votre aventure un souvenir inoubliable.</p>
                         </div>
                     </div>
                 </div>
@@ -494,11 +516,8 @@
             <div class="row position-relative">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 text-center">
-                    <h3 class="h3Heading text-white">Meilleurs circuits et voyages en Inde. Explorez l'incroyable tournée en Inde
-                    Forfaits</h3>
-                    <p class="toarPara text-white">Poonamvoyageinde est le bon choix pour le tourisme en Inde.
-                        Spécialisé pour les circuits au Rajasthan, au Gujarat, au Cachemire et en Inde du Nord. Nous mettons à votre disposition un
-                        guide de voyage en français pour agrémenter votre voyage.</p>
+                    <h3 class="h3Heading text-white">L'Inde vous attend : des forfaits touristiques abordables et exceptionnels, conçus spécialement pour vous !</h3>
+                    <p class="toarPara text-white">Notre guide francophone, dévoué et expert local, vous accompagnera tout au long de votre voyage, partageant avec vous des connaissances culturelles, des anecdotes historiques, et des conseils pratiques pour rendre votre expérience authentique et enrichissante.</p>
                 </div>
             </div>
         </div>

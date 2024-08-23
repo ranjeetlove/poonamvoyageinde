@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function newLandingPage(){
         $banners= Banner::where('name','LIKE','%home%')->get();
         $blogs = Blog::where('status','Active')->paginate(3);
         $test = Testimonial::get();
@@ -42,8 +42,7 @@ class HomeController extends Controller
         $about= About::orderBy('id','desc')->first();
         return view('frontend.about-us',compact('banner','about'));
     }
-    public function newLandingPage() {
-
+    public function index() {
         $banner= [];
         $blogs = Blog::where('status','Active')->limit(4)->get();
         $test = Testimonial::latest()->take(3)->get();
