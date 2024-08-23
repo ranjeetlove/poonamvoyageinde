@@ -84,6 +84,7 @@ a {
     position: relative;
     transition: all .3s ease;
     padding: 15px 0;
+    display: inline-block;
 }
 
 .headerMenuLinks:after {
@@ -174,6 +175,11 @@ a {
     width: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.BannerFormInput:focus {
+    box-shadow: unset;
 }
 
 .bannerFormInputsWrapper {
@@ -186,8 +192,79 @@ a {
     border: none;
     border-bottom: 1px solid #f6f6f6;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 16px;
     color: #999;
+    border-radius: 0;
+}
+.BannerFormInput span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;    
+    line-height: 21px;
+    font-size: 16px;
+}
+.dropMenuInner {
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    left: 0;
+    top: 100%;
+    box-shadow: 0 0 10px -6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    padding: 15px 0;
+    height: 0;
+    overflow: hidden;
+    min-width: 160px;
+}
+.shape-mockup {
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+}
+.shape-mockup img{
+    width: 60%;
+}
+.movingCar {
+    -webkit-animation: movingCar 25s linear infinite;
+    animation: movingCar 25s linear infinite;
+}
+@keyframes movingCar {
+    0% {
+        -webkit-transform: translateX(0) rotateY(0deg);
+        transform: translateX(0) rotateY(0deg);
+    }
+    
+    50% {
+        -webkit-transform: translateX(calc(100vw* -1 + 108%));
+        transform: translateX(calc(100vw* -1 + 108%));
+    }
+    51% {
+        -webkit-transform: translateX(calc(100vw* -1 + 108%)) rotateY(180deg);
+        transform: translateX(calc(100vw* -1 + 108%)) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: translateX(0) rotateY(180deg);
+        transform: translateX(0) rotateY(180deg);
+    }
+}
+.destinationHever{
+    position: relative;
+}
+.dropMenuInner li a {
+    color: #002248;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.destinationHever .openMenuHover.dropMenuInner{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    overflow: auto;
 }
 
 .nice-select:after {
@@ -204,6 +281,10 @@ a {
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
 }
 
 .destinationsCard span {
@@ -355,10 +436,13 @@ a {
     margin-bottom: 30px;
 }
 
-.TabGroupsFilterWrapper {
+.TabGroupsFilterWrapper,.gellaryWrapper {
     background: #f7f7f7;
     padding-top: 80px;
     padding-bottom: 80px;
+}
+.gellaryWrapper{
+    background:#fff;
 }
 
 .tabGroupCard {
@@ -493,12 +577,66 @@ a {
     position: absolute;
 }
 
+.gallery-img.global-img {
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+.gallery-img.global-img img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px;
+}
+.icon-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+    z-index: 3;
+    transition: all .3s ease;
+    opacity: 0;
+}
+.popup-image:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    background: #0022485c;
+    width: 100%;height: 100%;
+    opacity: 0;
+    transition: all .3s ease;
+    transform: scale(0);
+}
+.popup-image img, .gallery-box{
+    transition: all .5s ease;
+    
+}
+.gallery-box:hover{
+    transform: skewY(4deg);
+}
+.gallery-img.global-img:hover .icon-btn, .gallery-img.global-img:hover .popup-image:after{
+    opacity: 1;
+    transform: scale(1);
+}
+.gallery-img.global-img:hover .popup-image img{
+    transform: scale(1.2);
+}
 .testimonialsWrapper {
     background-image: url('https://demo2.themelexus.com/bexper/wp-content/uploads/2023/07/about-bg-right.png');
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 80px 60px;
+    padding: 80px 60px 100px;
     position: relative;
     text-align: center;
 }
@@ -627,6 +765,7 @@ a {
     visibility: hidden;
     color: #fff;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .go-top.active {
@@ -636,12 +775,12 @@ a {
 }
 
 .tabGroupCard.blogCard {
-    border-radius: 0;
+    border-radius: 7px;
     padding: 2px;
 }
 
 .tabGroupImageCard.blogCardImage {
-    border-radius: 0;
+    border-radius: 7px;
 }
 
 .readMoreBtn,
@@ -654,6 +793,7 @@ a {
     margin-top: 10px;
     padding: 8px 14px;
     border-radius: 5px;
+    font-size: 11px;
 }
 
 .rotateIcon {
@@ -674,7 +814,7 @@ a {
     font-size: 2rem;
     display: none;
 }
-.headerMenuList li:nth-child(1){
+.headerMenuList .closeMenu{
     display: none;
 }
 .headerMenuList li:nth-child(1) a:hover{
@@ -734,7 +874,7 @@ a {
         width: 100px;
         height: 100px;
     }
-    .TabGroupsFilterWrapper , .aboutWrapper {
+    .TabGroupsFilterWrapper , .aboutWrapper, .gellaryWrapper {
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -790,7 +930,8 @@ a {
         flex: 0 0 auto;
     }
     .bannerTextWrapper p {
-        font-size: 14px;
+        font-size: 15px;
+        margin-bottom: 0;
     }
     .bannerTextWrapper {
         position: absolute;
@@ -799,7 +940,7 @@ a {
         width: 85%;
     }
     .bannerTextWrapper h2 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .themeBtn, .themeBtn:hover {
         padding: 15px;
@@ -812,7 +953,7 @@ a {
         width: 120px;
         height: 120px;
     }
-    .TabGroupsFilterWrapper , .aboutWrapper {
+    .TabGroupsFilterWrapper , .aboutWrapper,.gellaryWrapper,.toarPara {
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -887,19 +1028,43 @@ a {
     .headerRightMenu.openMenu .headerMenuList {
         display: block;
     }
-    .headerRightMenu.openMenu .headerMenuList li {
-        padding: 12px 20px;
-    }
     .headerMenuList li:nth-child(1){
         display: block;
     }
-    .headerMenuList li:nth-child(1) a {
+    .headerMenuList .closeMenu {
         text-align: right;
         display: block;
-        padding: 0;
-        font-size: 22px;
+        font-size: 36px;
     }
     .mainContentWrapper{
         margin-top: 0;
     }
+    .destinationHever .openMenuHover.dropMenuInner{
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        overflow: auto;
+        min-width: 100%;
+        position: unset;
+        box-shadow: unset;
+    }
+    .bannerBox .bannerHome {
+        max-height: 200px;
+    }
+    .BannerFormInput span, .themeBtn,.headingPara,.TabGroupsFilterUl li,.descriptiontab,.tagBlog,.readMoreBtn ,.footerText,.footerUlWrapper li a,.testimonialsItem p{
+        font-size: 16px;
+    }
+    .BannerFormInput {
+        font-size: 16px;
+        padding-left: 18px;
+    }
+    .h3Heading{text-align: center;font-size: 24px;}
+    .tabGroupContentWrapper .headingtab{
+        font-size: 20px;
+    }
+    .testimonialsImage {
+        width: 150px !important;
+        height: 150px;
+    }
+    .headerMenuList .headerMenuLinks,.dropMenuInner li a{font-size: 18px;}
 }
