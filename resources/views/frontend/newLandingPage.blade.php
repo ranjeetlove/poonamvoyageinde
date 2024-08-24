@@ -158,8 +158,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="">
                 <div class="bannerWrapper">
                     <div class="bannerBox">
-                        <img src="https://demo2.themelexus.com/bexper/wp-content/uploads/2023/08/des-single-01.jpg"
-                            alt="" class="bannerHome">
+                        <!-- <img src="{{ asset('frontend/assets/img/logo/mlogo.jpg') }}"
+                            alt="" class="bannerHome"> -->
+                            <video autoplay muted loop class="bannerHome">
+                                <source src="{{ asset('frontend/assets/videos/XWLA8902.MP4') }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>    
                         <div class="bannerTextWrapper">
                             <h2>Explorez l'Inde : Voyages inoubliables à des prix irrésistibles !</h2>
                             <p class="bannerTextTop">Laissez-vous guider par nos experts francophones à travers l'Inde. Ils vous dévoileront des trésors culturels, partageront des récits historiques fascinants, et offriront des conseils pratiques pour faire de votre aventure un souvenir inoubliable.</p>
