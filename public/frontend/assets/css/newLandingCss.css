@@ -158,14 +158,16 @@ a {
 
 .bannerBox:after {
     content: '';
-    background-color: #002248c2;
+    background-color: #00224899;
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
 }
-
+.bannerFormInputsWrapper .input-group .form-select {
+    color: #6c757d;
+}
 .bannerFormWrapper {
     background: #fff;
     position: absolute;
