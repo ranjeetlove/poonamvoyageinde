@@ -321,6 +321,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
+        <div class="w-100">
+            <img src="{{ asset('frontend/assets/img/banners/offer-banner.jpg') }}" width="100%">
+        </div>
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="text-center">

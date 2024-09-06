@@ -37,26 +37,7 @@
                           <!--<div class="image">
                                      <img src="{{asset('/uploads/abouts/ab2.jpeg') }}" alt="Demo Image">
                           </div>-->
-						   <p>Explorez l'Inde avec Poonam Voyage Inde, une agence de voyage locale agréée située à Jodhpur. Plongez dans une aventure sur mesure, découvrez la vie quotidienne des villages, ou offrez-vous le luxe ultime lors de nos circuits haut de gamme, le tout à des tarifs attractifs.<Br><Br>
-
-Admirez l'éblouissant Taj Mahal, plongez-vous dans l'histoire du Palais des vents de Jaipur et vivez l'effervescence de New Delhi, Bombay et Calcutta. De Goa et ses plages baignées de soleil à Varanasi, Puri et Haridwar, villes sacrées aux charmes envoûtants, chaque destination vous réserve une expérience unique.<Br><Br>
-
-Nos voyages sur mesure s'adaptent à tous les groupes, même les plus petits, que vous voyagiez en solo, en couple, en famille ou en équipe. Choisissez entre le luxe des hôtels prestigieux ou l'authenticité des séjours confortables, tout en personnalisant chaque détail de votre voyage.<Br><Br>
-
-En tant qu'agence locale, nous faisons partie d'une famille mondiale, garantissant ainsi une logistique claire, une fiabilité inégalée et une expérience incomparable pour chaque voyageur. Découvrez l'Inde avec les meilleurs du secteur, et laissez-nous transformer vos rêves de voyage en réalité."<Br><Br>
-Khusipal Singh Propriétaire et PDG de Poonam Voyage India – Personne de contact et responsable de tous les voyages<Br><Br>
-
-							   <b>Khusipal Singh</b> Né dans un petit village au cœur du Rajasthan, j'ai fait mes armes dans l'industrie du voyage en tant qu'employé à temps partiel. Au fur et à mesure que ma connaissance du Rajasthan et de l’Inde du Nord grandissait, mon amour pour cette activité grandissait également. Mes dix années de carrière, dont quatre chez All Sights Travel, m'ont convaincu qu'une carrière dans ce domaine était écrite pour moi. J’ai extrêmement de chance, de chance et de bonheur de dire que « j’aime mon travail ».<Br><Br>
-J'ai acquis l'expertise et pratique avec passion l'élaboration de voyages « sur mesure » incluant le déploiement de mes équipes à chacun de vos points d'arrivée, incluant votre prise en charge en véhicule privé, la réservation de votre hébergement, conformément avec vos souhaits et le déroulement de votre visite culturelle.<Br><Br>
-Du Cachemire à l’extrême nord de l’Inde jusqu’au Kerala à l’extrême sud, l’architecture, les coutumes et les langues à travers la géographie du sous-continent racontent la riche histoire de l’Inde. Le Népal est également au programme de mon agence.<Br><Br>
- Mon destin me faisant appartenir à la caste des brahmanes m'a permis depuis ma petite enfance d'acquérir une connaissance très approfondie de la religion hindoue, berceau de la civilisation indienne et de ses rituels, ayant eu accès aux textes sacrés. Cela permet de mieux comprendre l’émergence d’autres courants religieux dans ce pays, tout au long de son histoire jusqu’à aujourd’hui.<Br><Br>
-L’Inde n’est pas seulement constituée de monuments mais possède également un patrimoine naturel enviable. Aussi, se détendre quelques jours à la montagne, à la campagne ou à la plage est aussi une option que je me ferai un plaisir d'organiser pour vous.<Br><Br>
-Titulaire du diplôme de guide francophone, je développe mon activité d'agent de voyages avec l'appui des références de mes clients depuis 2017 ce qui, selon moi, est un signe de leur satisfaction et de leur confiance dans mes services. L'agence est située dans la ville de Jodhpur.<Br>
- Je personnalise votre voyage après avoir discuté de votre vision et proposé toutes les options disponibles, pas seulement une offre pré-emballée, pour faire de vos vacances ou de votre voyage de rêve une réalité. La gamme est assez large.<Br><Br>
-
-À chaque voyage que j’organise, j’accorde une attention particulière à ce que recherchent mes clients et à ce qui est important pour eux. visite culturelle ? Activités? Bonne nourriture? Relaxation? Faites-le moi savoir et je vous parlerai du sable du désert de Jaisalmer, je vous décrirai la saveur des épices indiennes utilisées selon chaque région du pays, du thé Masala inventé à Jodhpur et utilisé dans toute la République. Je peux vous dire à quel point le coucher de soleil est incroyable sur Jaisalmer au Rajasthan et le lever du soleil est tout aussi éblouissant de splendeur lorsqu'il illumine le Taj Mahal.<Br><Br>
-						   </p>
-                          <!--<p>{!!$about->about_content!!}</p>-->
+                          <p>{!!$about->about_content!!}</p>
                        </div>
                     </div>
 
