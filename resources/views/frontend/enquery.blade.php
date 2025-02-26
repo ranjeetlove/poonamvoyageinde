@@ -65,6 +65,14 @@ a:hover {
 													<td style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)"> Email:</td>
 													<td style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">{{$email}}</td>
 												</tr>
+												<tr>
+													<td style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)"> Mobile:</td>
+													<td style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">{{$mobile}}</td>
+												</tr>
+												<tr>
+													<td style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)"> Whatsapp:</td>
+													<td style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">{{$whatsapp}}</td>
+												</tr>
                                                 <tr>
 													<td style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)"> Subject :</td>
 													<td style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;"> {{$subject}} </td>
