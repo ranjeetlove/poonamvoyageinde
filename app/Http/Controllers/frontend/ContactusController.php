@@ -19,7 +19,7 @@ class ContactusController extends Controller
     public function mail(Request $request)
     {
      // dd($request->all());
-        Mail::send('frontend.enquery',  ['name' => $request->Name,'email' => $request->email,
+        Mail::send('frontend.enquery',  ['name' => $request->Name,'email' => $request->email,'mobile' => $request->mobile,'whatsapp' => $request->whatsapp,
         'subject' =>$request->subject,'messagess'=>$request->message],function($message) use($request)
             {
 

@@ -81,6 +81,20 @@
                            <div class="help-block with-errors"></div>
                         </div>
                      </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <div class="input-icon"><i class='bx bx-mobile'></i></div>
+                           <input type="text" name="mobile" class="form-control" id="mobile" required="" data-error="Please enter your mobile" placeholder="Mobile" />
+                           <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <div class="input-icon"><i class='bx bx-chat'></i></div>
+                           <input type="text" name="whatsapp" class="form-control" id="whatsapp" required="" data-error="Please enter your whatsapp" placeholder="Whatsapp" />
+                           <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
                      <div class="col-md-12">
                         <div class="form-group">
                            <div class="input-icon"><i class='bx bx-comment-detail'></i></div>
