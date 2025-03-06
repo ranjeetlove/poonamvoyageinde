@@ -17,6 +17,7 @@ use App\Http\Controllers\admin\AdminRegionController;
 use App\Http\Controllers\admin\AdminTestimonialController;
 use App\Http\Controllers\admin\AdminTourController;
 use App\Http\Controllers\admin\AdminVideoController;
+use App\Http\Controllers\admin\ContactController;
 use Illuminate\Support\Facades\Artisan;
 
 
@@ -155,6 +156,9 @@ Route::post('/video/store',[AdminVideoController::class,'store']);
 Route::get('/video/edit',[AdminVideoController::class,'edit'])->name('video-edit');
 Route::post('/video/edit',[AdminVideoController::class,'update']);
 Route::post('/video/destroy',[AdminVideoController::class,'destroy'])->name('video-destroy');
+
+Route::get('/contact',[ContactController::class,'index'])->name('contact');
+Route::post('/contact/delete',[ContactController::class,'delete'])->name('contact-delete');
 
 });
 });

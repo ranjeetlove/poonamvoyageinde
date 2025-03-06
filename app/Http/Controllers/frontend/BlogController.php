@@ -18,7 +18,7 @@ class BlogController extends Controller
     public function blogdetails($slug){
         $banner= Banner::where('name','LIKE','%blog%')->first();
         $blog= Blog::where('slug',$slug)->first();
-        $blogs= Blog::get();
+        $blogs = Blog::orderBy('created_at', 'desc')->limit(6)->get();
         return view('frontend.blog-details',compact('blog','blogs','banner'));
     }
 }

@@ -44,6 +44,7 @@
 
 
                <div class="col-lg-4 col-md-12">
+                @include('frontend.layout.side-form')
                   <aside class="widget-area">
                      <div class="widget widget-article mb-30">
                         <h3 class="sub-title">Recent Blog</h3>
