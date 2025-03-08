@@ -324,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="{{ asset('frontend/assets/img/banners/SUMMER_HOLIDAYS.png') }}" width="100%">
         </div>
         <div class="w-100 offer-div">
-            <a href="#" class="btn offer-more-info-btn">plus d’informations <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+            <a href="https://www.poonamvoyageinde.com/destination-details/north-india/circuit-au-rajasthan-et-agra-taj-mahal-avec" class="btn offer-more-info-btn">plus d’informations <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
         </div>    
         <div class="TabGroupsFilterWrapper">
             <div class="container">
@@ -335,9 +335,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul id="control" class="list-unstyled TabGroupsFilterUl">
                         <li class="active" data-filter="all">All</li>
                         @foreach ($regions as $key => $region)
-                            <?php if ($region->id == 3) {
-                                continue;
-                            } ?>
                             <li data-filter="{{ $key + 1 }}">{{ $region->region }}</li>
                         @endforeach
                     </ul>
@@ -346,15 +343,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="row ">
                         @foreach ($regions as $key => $region)
                             @php
-                                $tours = App\Models\Tour::where('region_id', $region->id)->get();
+                            $tours = App\Models\Tour::where('region_id', $region->id)
+                                    ->orderBy('id', 'desc')
+                                    ->get();
                             @endphp
                             @foreach ($tours as $tour)
                                 @php
                                     $averageRating = App\Models\Rating::where('tour_id', $tour->id)->avg('rating') ?: 0;
                                 @endphp
-                                <?php if ($region->id == 3) {
-                                    continue;
-                                } ?>
                                 <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item col-12"
                                     data-category="{{ $key + 1 }}" data-sort="value">
                                     <div class="tabGroupCard">

@@ -1210,7 +1210,8 @@ textarea.form-control {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 20px;
-	padding-right: 10px
+	padding-right: 10px;
+	width:100%;
 }
 
 .home-banner-area .search-form .select-box .nice-select .list .option.selected {
@@ -6591,4 +6592,39 @@ section.tour-travel{
     border: 5px solid #fff;
     -webkit-box-shadow: 0 0 29px 0 rgba(102, 102, 102, .1);
     box-shadow: 0 0 29px 0 rgba(102, 102, 102, .1);
+}
+
+.destination-details-desc .content-title h2{
+	color: #fd5056;
+}
+
+.pakage-details-page-form .nice-select:after{
+	display: none !important;
+}
+
+.pakage-details-page-form  label {
+	margin-bottom: 5px;
+    font-size: 15px;
+    color: #fd5056;
+    font-weight: 500;
+}
+
+.pakage-details-page-form .col-sm-12{
+	margin-bottom: 15px;
+}
+
+.pakage-details-page-form .form-control{
+	height: 45px;
+}
+
+.pagk-details .article-item .content h6, .pagk-details .article-item .content p{
+	text-align: left !important;
+}
+
+.pagk-details .article-item .content{
+	margin-bottom: 0px !important;
+}
+
+.pagk-details .article-item{
+	background-color: #fff !important;
 }

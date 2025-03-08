@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Mail;
 use App\Models\Banner;
 use App\Models\ContactUs;
+use App\Models\Contact;
 
 
 class ContactusController extends Controller
@@ -55,7 +56,30 @@ class ContactusController extends Controller
     }
 	public function mail1(Request $request)
     {
-        //dd($request->all());
+        $validatedData = $request->validate([
+            'region' => 'required|string|max:255',
+            'interest' => 'required|string|max:255',
+            'accommodation' => 'required|string|max:255',
+            'budget' => 'required|string|max:255',
+            'children' => 'required|integer',
+            'departure_date' => 'required|date',
+            'return_date' => 'required|date',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:15',
+        ]);
+
+         Contact::create($validatedData);
+         $emailData = [
+            'region' => $request->region,
+            'interest' => $request->interest,
+            'accommodation' => $request->accommodation,
+            'budget' => $request->budget,
+            'children' => $request->children,
+            'departure_date' => $request->departure_date,
+            'return_date' => $request->return_date,
+            'email' => $request->email,
+            'phone' => $request->phone
+        ];
         Mail::send('frontend.enquery1',  ['region' => $request->region,'interest' => $request->interest,
         'accommodation' =>$request->accommodation,'budget'=>$request->budget,'children'=>$request->children,
         'departure_date'=>$request->departure_date,'return_date'=>$request->return_date,'email'=>$request->email,

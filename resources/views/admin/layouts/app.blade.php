@@ -71,7 +71,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ url('admin/home') }}" class="brand-link">
-      <img src="{{asset('assets/images/logo.png')}}" alt="AdminLTE Logo" class="brand-image";>
+      <img src="{{asset('admin/images/logo.jpg')}}" alt="AdminLTE Logo" class="brand-image";>
       <span class="brand-text font-weight-light">Admin Panel</span>
     </a>
 
@@ -94,15 +94,25 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{url('admin/home')}}" class="nav-link {{ request()->is('admin/home') ? 'active' : '' }}">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-warehouse"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+                <a href="{{url('admin/leads')}}" class="nav-link {{ request()->is('admin/leads') ? 'active' : '' }}">
+                  <i class="nav-icon far fa-chart-bar" aria-hidden="true"></i>
+                  <p>
+                    Leads
+                  </p>
+                </a>
+          </li>
+
           <li class="nav-item">
               <a href="{{url('admin/banners')}}" class="nav-link {{ request()->is('admin/banners') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-th"></i>
+                <i class="nav-icon fas fa-image"></i>
                 <p>
                   Banners
                 </p>
@@ -117,16 +127,8 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('admin/about')}}" class="nav-link {{ request()->is('admin/about') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-th"></i>
-                  <p>
-                   About Us
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="{{url('admin/region')}}" class="nav-link {{ request()->is('admin/region') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-th"></i>
+                  <i class="nav-icon fas fa-globe"></i>
                   <p>
                    Region
                   </p>
@@ -134,7 +136,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{url('admin/tour')}}" class="nav-link {{ request()->is('admin/tour') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-th"></i>
+                  <i class="nav-icon fas fa-plane"></i>
                   <p>
                   Tour
                   </p>
@@ -142,7 +144,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{url('admin/testimonial')}}" class="nav-link {{ request()->is('admin/testimonial') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-th"></i>
+                  <i class="nav-icon fas fa-users"></i>
                   <p>
                     Testimonial
                   </p>
@@ -150,7 +152,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{url('admin/video')}}" class="nav-link {{ request()->is('admin/video') ? 'active' : '' }}">
-                  <i class="nav-icon fas fa-th"></i>
+                  <i class="nav-icon fas fa-video"></i>
                   <p>
                     Video
                   </p>
@@ -162,6 +164,15 @@
                   <i class="nav-icon far fa-envelope"></i>
                   <p>
                     Contact Us
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{url('admin/about')}}" class="nav-link {{ request()->is('admin/about') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-user"></i>
+                  <p>
+                   About Us
                   </p>
                 </a>
               </li>

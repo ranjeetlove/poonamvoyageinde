@@ -15,7 +15,12 @@ class DestinationController extends Controller
         // dd($slug2);
         $tour=Tour::where('slug',$slug2)->first();
         $regions=Region::where('status','Active')->get();
-        return view('frontend.destination-details',compact('tour','regions'));
+        $relatedDestination = Tour::where('region_id',$tour->region_id)->with('region:id,slug')->orderBy('created_at', 'desc')->limit(6)->get();
+        // echo '<pre>';
+        // print_r($relatedDestination->toArray());
+        // echo '</pre>';
+        // die;
+        return view('frontend.destination-details',compact('tour','regions', 'relatedDestination'));
     }
     public function destinationlist($slug){
         $region = Region::where('slug', $slug)->first();
