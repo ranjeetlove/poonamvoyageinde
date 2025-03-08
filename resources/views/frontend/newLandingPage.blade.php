@@ -321,8 +321,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         <div class="w-100">
-            <img src="{{ asset('frontend/assets/img/banners/offer-banner-2.jpeg') }}" width="100%">
+            <img src="{{ asset('frontend/assets/img/banners/SUMMER_HOLIDAYS.png') }}" width="100%">
         </div>
+        <div class="w-100 offer-div">
+            <a href="#" class="btn offer-more-info-btn">plus d’informations <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </div>    
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="text-center">

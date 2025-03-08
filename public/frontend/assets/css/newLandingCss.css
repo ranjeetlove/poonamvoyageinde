@@ -1070,3 +1070,22 @@ a {
     }
     .headerMenuList .headerMenuLinks,.dropMenuInner li a{font-size: 18px;}
 }
+
+.offer-div{
+	background-color: #000000;
+	text-align: center;
+}
+
+.offer-more-info-btn{ 
+	font-size: 24px;
+    text-transform: capitalize;
+    background-color: #910c00;
+    color: #fff;
+    padding: 5px 45px 6px;
+    margin: -5px 0px 30px 0px;
+}
+
+.offer-more-info-btn:hover{
+    background-color: #fff;
+    color: #000000;
+}

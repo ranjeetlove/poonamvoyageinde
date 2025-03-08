@@ -159,6 +159,6 @@ Route::post('/video/destroy',[AdminVideoController::class,'destroy'])->name('vid
 
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::post('/contact/delete',[ContactController::class,'delete'])->name('contact-delete');
-
+Route::get('/contact/{id}', [ContactController::class, 'contactDetails'])->name('contact-details');
 });
 });
