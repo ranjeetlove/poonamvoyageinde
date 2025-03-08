@@ -47,16 +47,17 @@
                       <td>{{$row->email}}</td>
                       <td>{{$row->mobile}}</td>
                       <td>{{$row->whatsapp}}</td>
-                      <td>{{$row->subject}}</td>
-                      <td>{{$row->message}}</td>
-                      <!-- <td>
+                      <td>{{ Str::limit($row->subject, 20) }}</td>
+                      <!-- <td>{{$row->message}}</td> -->
+                      <td style="min-width:100px">
                         <span class="short-message">{{ Str::limit($row->message, 20) }}</span>
                         @if(strlen($row->message) > 20)
                             <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#messageModal" data-message="{{ $row->message }}" class="read-more"><small>Read More</small></a>
                         @endif
-                      </td> -->
-                      <td>{{$row->created_at}}</td>
-                      <td>
+                      </td>
+                      <td style="min-width:160px">{{$row->created_at}}</td>
+                      <td style="min-width:100px">
+                        <a href="{{ route('contact-details', $row->id) }}" class="btn bg-gradient-primary btn-sm" ><i style="color: white;" class="fas fa-eye"></i></a>
                         <button class="btn bg-gradient-danger btn-sm" form="resource-delete-{{$row->id}}"><i style="color: white;" class="fas fa-trash-alt"></i></button>
                         <form id="resource-delete-{{$row->id}}" action="{{ route('contact-delete', ['id'=>$row->id]) }}" style="display: inline-block;" onSubmit="return confirm('Are you sure you want to delete this item?');" method="POST">
                           @csrf
@@ -80,18 +81,3 @@
     </section> 
   
 @endsection      
-
-  <!-- Bootstrap Modal -->
-  <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="messageModalLabel">Full Message</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modalMessage">
-                    <!-- Full message will be inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>

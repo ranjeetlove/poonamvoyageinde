@@ -22,4 +22,10 @@ class ContactController extends Controller
         return back()->with('flash_success', 'contact Deleted  Successfully!');
 
     }
+
+    public function contactDetails($id)
+    {
+        $data = ContactUs::where('id',$id)->first();
+        return view('admin.contact.contact-details',compact('data'));
+    }
 }    
