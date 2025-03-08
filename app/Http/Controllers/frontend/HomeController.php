@@ -51,6 +51,10 @@ class HomeController extends Controller
         $tours = Tour::orderBy('id','desc')->get();
         $videos = Video::orderBy('id','desc')->get();
         $about= About::orderBy('id','desc')->first();
+        // echo '<pre>';
+        // print_r($regions->toArray());
+        // echo '</pre>';
+        // die;
         return view('frontend.newLandingPage',compact('blogs','test','banner','about','regions','tours','videos'));
     }
 
@@ -70,7 +74,7 @@ class HomeController extends Controller
         ]);
 
          Contact::create($validatedData);
-        $emailData = [
+         $emailData = [
             'region' => $request->region,
             'interest' => $request->interest,
             'accommodation' => $request->accommodation,
