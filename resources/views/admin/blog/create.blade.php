@@ -91,6 +91,28 @@
                       </div>
 
                       <div class="form-group mt-2">
+                        <label for="">Meta Description</label>
+                            <input type="text" name="title" class="form-control" id=""value="{{old('meta_description')}}" required>
+                              @if ($errors->has('meta_description'))
+                                  <span class="required">
+                                      <strong>{{ $errors->first('meta_description') }}</strong>
+                                  </span>
+                              @endif
+
+                      </div>
+
+                      <div class="form-group mt-2">
+                        <label for="">Meta Keywords</label>
+                            <input type="text" name="meta_keywords" class="form-control" id=""value="{{old('meta_keywords')}}" required>
+                              @if ($errors->has('meta_keywords'))
+                                  <span class="required">
+                                      <strong>{{ $errors->first('meta_keywords') }}</strong>
+                                  </span>
+                              @endif
+
+                      </div>
+
+                      <div class="form-group mt-2">
                         <label for="">Content</label>
                         <textarea rows="5" class="form-control" id="content" name="content" required></textarea>
                               @if ($errors->has('content'))

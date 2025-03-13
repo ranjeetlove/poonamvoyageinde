@@ -27,7 +27,7 @@
                  <div class="row">
                     <div class="col-sm-12">
                           <div class="form-group mt-2">
-                            <input type="hidden" name="id" value="{{$data->id}}" class="form-control" id="text">
+                              <input type="hidden" name="id" value="{{$data->id}}" class="form-control" id="text">
                               <input type="text" class="form-control" name='posted_by' value="{{$data->posted_by}}" ><br>
                               <input type="text" class="form-control" name='posted_date' value="{{$data->posted_date}}" ><br>
                               <label for="image">Update Image</label>
@@ -42,6 +42,8 @@
                         </div>
                               <input type="text" class="form-control" name='category' value="{{$data->category}}" ><br>
                               <input type="text" class="form-control" name='title' value="{{$data->title}}" ><br>
+                              <input type="text" placeholder="meta description" class="form-control" name='meta_description' value="{{$data->meta_description}}"><br>
+                              <input type="text" placeholder="meta keywords" class="form-control" name='meta_keywords' value="{{$data->meta_keywords}}" ><br>
                               <textarea rows="20" class="form-control" name="content" required>{{$data->content}}</textarea>
 
                           <label for="chkYes">

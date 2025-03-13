@@ -67,6 +67,8 @@ class AdminBlogController extends Controller
 
         $blog->category= $request->category;
         $blog->title= $request->title;
+        $blog->meta_description= $request->meta_description;
+        $blog->meta_keywords= $request->meta_keywords;
         $blog->slug= $slug;
         $blog->content= $request->content;
         $blog->status= $request->status;
@@ -133,6 +135,8 @@ class AdminBlogController extends Controller
         $blog->category= $request->category;
 		$blog->slug= $slug;
         $blog->title= $request->title;
+        $blog->meta_description= $request->meta_description;
+        $blog->meta_keywords= $request->meta_keywords;
         $blog->content= $request->content;
         $blog->status= $request->status;
 
