@@ -19,7 +19,10 @@ class CommentsController extends Controller
     public function commentsdetails($slug){
         $banner= Banner::where('name','LIKE','%comments%')->first();
         $testimonials= Testimonial::where('slug',$slug)->first();
+        $pageTitle = $testimonials->comment_head;
+        $pageDescription = $testimonials->meta_description;
+        $pageKeywords = $testimonials->meta_keywords;
         // dd($testimonials);
-        return view('frontend.comments-details',compact('testimonials','banner'));
+        return view('frontend.comments-details',compact('testimonials','banner','pageTitle','pageDescription','pageKeywords'));
     }
 }

@@ -92,7 +92,7 @@
 
                       <div class="form-group mt-2">
                         <label for="">Meta Description</label>
-                            <input type="text" name="title" class="form-control" id=""value="{{old('meta_description')}}" required>
+                            <input type="text" name="meta_description" class="form-control" id=""value="{{old('meta_description')}}" required>
                               @if ($errors->has('meta_description'))
                                   <span class="required">
                                       <strong>{{ $errors->first('meta_description') }}</strong>
