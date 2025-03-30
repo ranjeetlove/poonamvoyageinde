@@ -48,7 +48,7 @@
                       <!-- <td>{!!$row->content!!}</td> -->
                       {{-- <td><img src="{{ URL::to('/') }}/uploads/banners/{{ $row->image }}" alt="" class="img-responsive" width="100%" /></td> --}}
                       <td>{{$row->status}}</td>
-                      <td>
+                      <td style="min-width:100px">
                         <a href="{{route('blog-edit', ['id'=>$row->id]) }}" class="btn bg-gradient-primary btn-sm"><i class="fas fa-edit"></i></a>
                         <button class="btn bg-gradient-danger btn-sm" form="resource-delete-{{$row->id}}"><i class="fas fa-trash-alt"></i></button>
                         <form id="resource-delete-{{$row->id}}" action="{{ route('blog-destroy', ['id'=>$row->id]) }}" style="display: inline-block;" onSubmit="return confirm('Are you sure you want to delete this item?');" method="POST">

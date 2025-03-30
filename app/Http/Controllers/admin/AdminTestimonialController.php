@@ -55,6 +55,8 @@ class AdminTestimonialController extends Controller
                 $testimonial->country= $request->country;
                 $testimonial->designation= $request->designation;
                 $testimonial->comment_head= $request->comment_head;
+                $testimonial->meta_description= $request->meta_description;
+                $testimonial->meta_keywords= $request->meta_keywords;
                 $testimonial->comment_content= $request->comment_content;
                 $testimonial->rating= $request->rating;
                 $testimonial->status= $request->status;
@@ -119,6 +121,8 @@ class AdminTestimonialController extends Controller
         $testimonial->name= $request->name;
         $testimonial->country= $request->country;
         $testimonial->designation= $request->designation;
+        $testimonial->meta_description= $request->meta_description;
+        $testimonial->meta_keywords= $request->meta_keywords;
         $testimonial->comment_head= $request->comment_head;
         $testimonial->comment_content= $request->comment_content;
         $testimonial->rating= $request->rating;

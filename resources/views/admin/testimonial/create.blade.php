@@ -71,6 +71,30 @@
                                   </span>
                               @endif
                       </div>
+
+                      <div class="form-group mt-2">
+                        <label for="">Meta Keywords</label>
+                            <input type="text" name="meta_keywords" class="form-control" id=""value="{{old('meta_keywords')}}" required>
+                              @if ($errors->has('meta_keywords'))
+                                  <span class="required">
+                                      <strong>{{ $errors->first('meta_keywords') }}</strong>
+                                  </span>
+                              @endif
+
+                      </div>
+
+                      <div class="form-group mt-2">
+                        <label for="">Meta Description</label>
+                            <input type="text" name="meta_description" class="form-control" id=""value="{{old('meta_description')}}" required>
+                              @if ($errors->has('meta_description'))
+                                  <span class="required">
+                                      <strong>{{ $errors->first('meta_description') }}</strong>
+                                  </span>
+                              @endif
+
+                      </div>
+
+
                       <div class="form-group mt-2">
                         <label for="bannername">Comment Heading</label>
                              <input type="text" name="comment_head" class="form-control" id=""value="{{old('comment_head')}}" >
