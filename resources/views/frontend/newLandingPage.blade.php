@@ -328,68 +328,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>    
         <div class="TabGroupsFilterWrapper">
             <div class="container">
-                <div class="text-center">
-                    <h3 class="h3Heading">Destinations populaires en vedette</h3>
-                    <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
-                    devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
-                    <ul id="control" class="list-unstyled TabGroupsFilterUl">
-                        <li class="active" data-filter="all">All</li>
-                        @foreach ($regions as $key => $region)
-                            <li data-filter="{{ $key + 1 }}">{{ $region->region }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                <div class="tabGroupCardWrapper filtr-container">
-                    <div class="row ">
-                        @foreach ($regions as $key => $region)
-                            @php
-                            $tours = App\Models\Tour::where('region_id', $region->id)
-                                    ->orderBy('id', 'desc')
-                                    ->get();
-                            @endphp
-                            @foreach ($tours as $tour)
-                                @php
-                                    $averageRating = App\Models\Rating::where('tour_id', $tour->id)->avg('rating') ?: 0;
-                                @endphp
-                                <div class="col-md-4 col-sm-6 col-xs-6 col-lg-3 filtr-item col-12"
-                                    data-category="{{ $key + 1 }}" data-sort="value">
-                                    <div class="tabGroupCard">
-                                        <div class="tabGroupImageCard">
-                                            <img src="{{ file_exists(public_path('uploads/tour/image/' . $tour->image)) ? asset('uploads/tour/image/' . $tour->image) : asset('uploads/tour/image/no-image.jpg') }}"
-                                                alt="{{ $tour->title }}">
-                                        </div>
-                                        <div class="tabGroupContentWrapper">
-                                            <a class="headingtab"
-                                                href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}">@php
-                                                    $checkTitle = strip_tags($tour->title);
-                                                @endphp
-                                                {{ \Illuminate\Support\Str::limit($checkTitle, 60) }}</a>
-                                            <p class="descriptiontab">@php
-                                                $check = strip_tags($tour->content);
-                                            @endphp
-                                                {{ \Illuminate\Support\Str::limit($check, 60) }}
-                                            </p>
-                                            <div class="tabStar">
-                                                <span class="starColor">
-                                                    @for ($i = 1; $i <= 5; $i++)
-                                                        <i
-                                                            class="bx {{ $i <= $averageRating ? 'bxs-star text-warning' : 'bx-star' }}"></i>
-                                                    @endfor
-                                                </span>
-                                                <span class="dayNight">
-                                                    {{ $tour->day ?? 0 }} Jours / {{ $tour->night ?? 0 }} Nuits
-                                                </span>
+                <div class="row">
+                    <div class="col-sm-4">
+                    <div class="text-left content-left-pakage contentTabSec">
+                            <h1 class="h3Heading">Poonam Voyage Inde – Tour opérateur en Inde et au Népal</h1>
+                            <p>
+                            Khusipal Singh est un guide francophone expérimenté avec plus de dix ans d’expérience dans le tourisme. Il est à la tête de deux agences de voyage, spécialisées dans l’organisation de circuits sur mesure en Inde et au Népal.</p>
+                            
+                            <h6>1. Poonam Voyage Inde –<a target="_blank" href="https://www.poonamvoyageinde.com/"> Tour opérateur en Inde et au Népal </a></h6>
+
+                            <p>Poonam Voyage Inde est un tour opérateur proposant des voyages à travers toute l’Inde et le Népal. L’agence organise des circuits personnalisés, adaptés aux envies des voyageurs, allant des forts et palais du Rajasthan aux montagnes de l’Himalaya, en passant par le Kerala, le Gujarat, le Cachemire, le Ladakh, le Madhya Pradesh et le Bengale. Elle propose également des expériences immersives telles que des safaris animaliers, des retraites spirituelles à Varanasi, des séjours chez l’habitant et des explorations des temples et monastères du Népal.</p>
+
+                            <h6>2. Rajasthan avec Khusipal – Spécialiste du Rajasthan</h6>
+
+                            <p> <a target="_blank" href="https://www.poonamvoyageinde.com/destination-list/rajasthan">Rajasthan avec Khusipal</a> est une agence dédiée à la découverte du Rajasthan, la terre des Maharajas. Spécialisée dans cette région, elle propose des circuits exclusifs pour explorer les forts majestueux, les palais royaux, les villages traditionnels et les marchés animés. Grâce à une connaissance approfondie du Rajasthan et une passion pour l’histoire et la culture, Khusipal Singh crée des expériences uniques et authentiques pour chaque voyageur.</p>
+                            <h2>Pourquoi choisir Poonam Voyage Inde & Rajasthan avec Khusipal ?</h2>
+                            <ul class="listOfQues">
+                                <li><h3>Plus de 10 ans d’expérience dans l’organisation de voyages</h3></li>
+                                <li><h3>Guides francophones experts et une équipe locale professionnelle</h3></li>
+                                <li><h3>Circuits sur mesure adaptés aux envies et au budget des voyageurs</h3></li>
+                                <li><h3>Expériences authentiques, de l’héritage royal du Rajasthan aux paysages mystiques du Népal</h3></li>
+                                <li><h3>Accompagnement personnalisé pour garantir un voyage inoubliable</h3></li>
+                            </ul>
+                            <p>
+                            Pour plus d’informations et pour organiser votre voyage en Inde ou au Népal, <a href="https://www.poonamvoyageinde.com/contactez-nous" target="_blank"> contactez Poonam Voyage Inde</a> ou Rajasthan avec Khusipal via leurs sites web officiels.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="text-left">
+                            <h3 class="h3Heading">Destinations populaires en vedette</h3>
+                            <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
+                            devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
+                            <ul id="control" class="list-unstyled TabGroupsFilterUl">
+                                <li class="active" data-filter="all">All</li>
+                                @foreach ($regions as $key => $region)
+                                    <li data-filter="{{ $key + 1 }}">{{ $region->region }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div class="tabGroupCardWrapper filtr-container">
+                                @foreach ($regions as $key => $region)
+                                    @php
+                                    $tours = App\Models\Tour::where('region_id', $region->id)
+                                            ->orderBy('id', 'desc')
+                                            ->get();
+
+                                    @endphp
+                                    @foreach ($tours as $tour)
+                                        @php
+                                            $averageRating = App\Models\Rating::where('tour_id', $tour->id)->avg('rating') ?: 0;
+                                        @endphp
+                                        <div class="col-md-4 col-sm-6 col-xs-6 col-lg-4 filtr-item col-12"
+                                            data-category="{{ $key + 1 }}" data-sort="value">
+                                            <div class="tabGroupCard">
+                                                <div class="tabGroupImageCard">
+                                                    <img src="{{ file_exists(public_path('uploads/tour/image/' . $tour->image)) ? asset('uploads/tour/image/' . $tour->image) : asset('uploads/tour/image/no-image.jpg') }}"
+                                                        alt="{{ $tour->title }}">
+                                                </div>
+                                                <div class="tabGroupContentWrapper">
+                                                    <a class="headingtab"
+                                                        href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}">@php
+                                                            $checkTitle = strip_tags($tour->title);
+                                                        @endphp
+                                                        {{ \Illuminate\Support\Str::limit($checkTitle, 60) }}</a>
+                                                    <p class="descriptiontab">@php
+                                                        $check = strip_tags($tour->content);
+                                                    @endphp
+                                                        {{ \Illuminate\Support\Str::limit($check, 60) }}
+                                                    </p>
+                                                    <div class="tabStar">
+                                                        <span class="starColor">
+                                                            @for ($i = 1; $i <= 5; $i++)
+                                                                <i
+                                                                    class="bx {{ $i <= $averageRating ? 'bxs-star text-warning' : 'bx-star' }}"></i>
+                                                            @endfor
+                                                        </span>
+                                                        <span class="dayNight">
+                                                            {{ $tour->day ?? 0 }} Jours / {{ $tour->night ?? 0 }} Nuits
+                                                        </span>
+                                                    </div>
+                                                    <div class="tabMore">
+                                                        <a href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}"
+                                                            class="tabMoreLink">Plus d'informations <i
+                                                                class="rotateIcon bx bx-arrow-back"></i></a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="tabMore">
-                                                <a href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}"
-                                                    class="tabMoreLink">Plus d'informations <i
-                                                        class="rotateIcon bx bx-arrow-back"></i></a>
-                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endforeach
+                                    @endforeach
+                                @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
