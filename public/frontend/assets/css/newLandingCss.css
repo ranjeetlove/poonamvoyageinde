@@ -395,16 +395,16 @@ a {
 
 .TabGroupsFilterUl {
     display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 20px;
+    gap: 15px;
+    justify-content: left;
+    margin-bottom: 23px;
     flex-wrap: wrap;
 }
 
 .TabGroupsFilterUl li {
     cursor: pointer;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 24px;
     background-color: #c6c6c6;
     color: #002248;
     border-radius: 0px;
@@ -430,9 +430,16 @@ a {
     color: #fff;
 }
 
+.listOfQues li h3{
+    font-size: 16px !important;
+}
+
+.contentTabSec h2{
+    font-size: 20px !important;
+    font-weight: 600;
+}
+
 .headingPara {
-    width: 54%;
-    margin: 0 auto;
     font-size: 15px;
     color: #888;
     margin-bottom: 30px;
@@ -454,6 +461,11 @@ a {
     overflow: hidden;
     padding: 5px;
     margin-bottom: 25px;
+    margin: 0px 10px 10px 0px;
+}
+
+.TabGroupsFilterWrapper p, .TabGroupsFilterWrapper ul li{
+    font-size: 15px;
 }
 
 .tabGroupImageCard {
