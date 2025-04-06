@@ -733,6 +733,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Prithipura Rasala Road Jodhpur-342001 Rajasthan</a></li>
                     </ul>
                 </div>
+                <div class="col-12">
+                <p class="copyBottomLinks">
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/destination-details/north-india/circuit-au-rajasthan-et-agra-taj-mahal-avec">Circuit 15 jour au Rajasthan Inde du nord</a>
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/destination-details/rajasthan/sejour-en-inde-du-nord-circuit-au-rajasthan" >Circuit Rajasthan 15 jours</a>
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/qui-sommes-nous">Agence locale francophone Inde</a></p>
+                </div>
             </div>
         </div>
     </footer>

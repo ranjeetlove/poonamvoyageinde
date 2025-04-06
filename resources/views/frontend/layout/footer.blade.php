@@ -139,6 +139,10 @@
                     <p>
                        Copyright @ <script>document.write(new Date().getFullYear())</script> Poonam Voyage Inde. 
                     </p>
+                    <p class="copyBottomLinks">
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/destination-details/north-india/circuit-au-rajasthan-et-agra-taj-mahal-avec">Circuit 15 jour au Rajasthan Inde du nord</a>
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/destination-details/rajasthan/sejour-en-inde-du-nord-circuit-au-rajasthan" >Circuit Rajasthan 15 jours</a>
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/qui-sommes-nous">Agence locale francophone Inde</a></p>
                  </div>
               </div>
            </div>
