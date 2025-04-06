@@ -720,7 +720,7 @@ a {
 
 .mainFooterWrapper {
     background: #002248;
-    padding: 80px 0;
+    padding: 80px 0px 35px 0px;
     border-radius: 25px 25px 0 0;
 }
 
@@ -1100,4 +1100,13 @@ a {
 .offer-more-info-btn:hover{
     background-color: #fff;
     color: #000000;
+}
+
+.copyBottomLinks{
+    text-align: center;
+}
+
+.copyBottomLinks a {
+    padding: 15px 15px 0px 15px;
+    color: #fd5056;
 }

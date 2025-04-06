@@ -6627,3 +6627,10 @@ section.tour-travel{
 .pagk-details .article-item{
 	background-color: #fff !important;
 }
+
+.copyBottomLinks{
+	margin: 25px  0px!important;
+}
+.copyBottomLinks a{
+	padding: 15px 25px;
+}
