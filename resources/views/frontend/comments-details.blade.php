@@ -29,7 +29,7 @@
                                 <div class="row">
                                     <div class="col-lg-8 col-sm-6 col-md-6">
                                         <div class="item-single mb-30">
-                                            <div class="image">
+                                            <div class="image img-comment-details">
                                                 {{-- <img src="{{asset('uploads/testimonials/'.$testimonials->image) }}" alt="Demo Image"> --}}
                                                 @php
                                                     $imagePath =
