@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- Google Tag Manager -->
@@ -12,11 +12,41 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="fr" />
 	<meta name="title" content="Explorez l'Inde avec le Meilleur Tour Opérateur - Poonam Voyage">
     <meta name="description" content="Partez à la découverte de l'Inde avec Poonam Voyage, votre agence de voyage indienne de confiance. Circuits organisés, voyages sur mesure et exploration des meilleures destinations. Réservez votre aventure dès aujourd'hui!">
     <meta name="keywords" content="tour opérateur en inde, agence de voyage indienne, inde agence de voyage, agence de voyage inde, agence de voyage locale en inde, Voyage en Inde, Circuit en Inde, Tourisme en Inde, Inde voyage organisé, Visiter l'Inde">
     <title>Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant !</title>
     <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Poonam Voyage Inde - Tour opérateur en Inde",
+        "description": "Tour opérateur francophone basé à Jodhpur, Rajasthan. Spécialisé dans les circuits privés et sur mesure en Inde.",
+        "image": "https://www.poonamvoyageinde.com/frontend/assets/img/logo/mlogo.jpg",
+        "@id": "https://www.poonamvoyageinde.com",
+        "url": "https://www.poonamvoyageinde.com",
+        "telephone": "+91-9818153249",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4, Rathore-Bhawan Prithipura Rasala Road",
+            "addressLocality": "Jodhpur",
+            "addressRegion": "Rajasthan",
+            "postalCode": "342001",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.2389,
+            "longitude": 73.0243
+        },
+        "openingHours": "Mo-Sa 10:00-19:00",
+        "sameAs": [
+            "https://www.facebook.com/poonamvoyageinde/"
+        ]
+    }
+  </script>
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/boxicons.min.css') }}">
@@ -30,8 +60,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css">
     <link rel="icon" href="{{ asset('frontend/assets/img/favicon.png') }}" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="alternate" href="https://poonamvoyageinde.com/" hreflang="fr-fr" />
-    <link rel="alternate" href="https://poonamvoyageinde.com/" hreflang="x-default" />
+    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="fr-fr" />
+    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="x-default" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
