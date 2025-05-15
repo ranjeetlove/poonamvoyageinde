@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
    <head>
        <!-- Google Tag Manager -->
@@ -11,6 +11,7 @@
         <!-- End Google Tag Manager -->
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="Content-Language" content="fr" />
 	  <meta name="keywords" content="{!! $pageKeywords ?? 'Meilleure agence de voyage en Inde, Meilleur tour opérateur en Inde, Les meilleurs forfaits touristiques en Inde, Forfaits de voyage en Inde, Poonam Voyage Inde,Guides experts en Inde, Réservez dès maintenant vos circuits en Inde' !!}" />
       <meta name="description" content="{!! $pageDescription ?? 'Vous recherchez une agence de voyage ou un tour opérateur en Inde ? Poonam Voyage Inde propose les meilleurs forfaits touristiques, des guides experts et des expériences de voyage inoubliables. Réservez maintenant!' !!}" />
       <title>{{ $pageTitle ?? 'Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant!' }}</title>
@@ -31,8 +32,8 @@
 
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	   
-	   <link rel="alternate" href="https://poonamvoyageinde.com/" hreflang="fr-fr" />
-    <link rel="alternate" href="https://poonamvoyageinde.com/" hreflang="x-default" />
+    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="fr-fr" />
+    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="x-default" />
 
 
 <?php 

@@ -2501,11 +2501,12 @@ textarea.form-control {
 .team-section .item-single .image {
 	width: 100%;
     overflow: hidden;
+	height: 300px;
 }
 
 .team-section .item-single .image img{
 	width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -4177,7 +4178,9 @@ textarea.form-control {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 140px;
 	flex: 0 0 140px;
-	overflow: hidden
+	overflow: hidden;
+	max-width: 79px;
+    max-height: 79px;
 }
 
 .blog-details-section .widget-area .widget-article .article-item .image img {
