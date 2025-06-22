@@ -350,12 +350,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
-        <div class="w-100">
+        <!-- <div class="w-100">
             <img src="{{ asset('frontend/assets/img/banners/SUMMER_HOLIDAYS.png') }}" width="100%">
-        </div>
-        <div class="w-100 offer-div">
+        </div> -->
+        <!-- <div class="w-100 offer-div">
             <a href="https://www.poonamvoyageinde.com/destination-details/north-india/circuit-au-rajasthan-et-agra-taj-mahal-avec" class="btn offer-more-info-btn">plus d’informations <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-        </div>    
+        </div>     -->
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="row">
@@ -393,7 +393,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul id="control" class="list-unstyled TabGroupsFilterUl">
                                 <li class="active" data-filter="all">All</li>
                                 @foreach ($regions as $key => $region)
+                                    @if ($region->region != "Ladakh" && $region->region != "Kashmir")
                                     <li data-filter="{{ $key + 1 }}">{{ $region->region }}</li>
+                                    @endif
                                 @endforeach
                             </ul>
                         </div>
@@ -403,12 +405,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     $tours = App\Models\Tour::where('region_id', $region->id)
                                             ->orderBy('id', 'desc')
                                             ->get();
-
+                                    $sortedTours = $tours->sortBy('day');
                                     @endphp
-                                    @foreach ($tours as $tour)
+                                    @foreach ($sortedTours as $tour)
                                         @php
                                             $averageRating = App\Models\Rating::where('tour_id', $tour->id)->avg('rating') ?: 0;
                                         @endphp
+                                        @if(
+                                        $tour->id != 22 &&
+                                        $tour->id != 20 &&
+                                        $tour->id != 17 &&
+                                        $tour->id != 11 &&
+                                        $tour->id != 10 &&
+                                        $tour->id != 9 &&
+                                        $tour->id != 8 &&
+                                        $tour->id != 23 &&
+                                        $tour->id != 29 &&
+                                        $tour->id != 26 &&
+                                        $tour->id != 27
+                                        )
                                         <div class="col-md-4 col-sm-6 col-xs-6 col-lg-4 filtr-item col-12"
                                             data-category="{{ $key + 1 }}" data-sort="value">
                                             <div class="tabGroupCard">
@@ -446,6 +461,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 </div>
                                             </div>
                                         </div>
+                                        @endif
                                     @endforeach
                                 @endforeach
                         </div>

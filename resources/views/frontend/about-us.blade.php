@@ -29,9 +29,6 @@
                  <div class="about-content">
                     <div class="row">
                        <div class="col-12">
-                          <h2>
-                              Poonam Voyage Inde ??
-                          </h2>
 					
                           <!--<h6>{{$about->about_head}}</h6>-->
                           <!--<div class="image">
@@ -82,17 +79,17 @@
                       <div class="container">
                          <div class="row">
                             <div class="col-lg-8 col-sm-6 col-md-6">
-                              <div class="item-single mb-30">
-                                  <div class="image">
+                              <div class="item-single mb-30" style="height:auto">
+                                  <div class="image" style="height:auto">
                                      <img src="{{asset('/uploads/abouts/'. $about->image) }}" alt="Demo Image">
                                   </div>
-                                  <div class="content">
+                                  <!-- <div class="content">
                                      <div class="title">
                                         <h3>
                                            <a href="#">{{$about->name}}</a>
                                         </h3>
                                         <span>{{$about->designation}}</span>
-                                     </div>
+                                     </div> -->
 
                                      <!-- <div class="social-link">
                                         <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
@@ -100,8 +97,8 @@
                                         <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
                                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                                      </div>-->
-
-                                  </div>
+<!-- 
+                                  </div> -->
                                </div>
 
                             </div>
