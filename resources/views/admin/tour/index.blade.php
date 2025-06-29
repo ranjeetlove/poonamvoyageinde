@@ -27,14 +27,13 @@
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th>Region Name</th>
-                      <th>Tour Title</th>
+                      <th width="150px">Region Name</th>
+                      <th width="180px">Tour Title</th>
                       <th>Banner</th>
                       <th>Day</th>
                       <th>Night</th>
                       <th>Price</th>
                       <th>Image</th>
-                      <th>Content</th>
                       <th>Status</th>
                       <th>Action</th>
                     </tr>
@@ -44,17 +43,17 @@
                     <tr>
                       <td>{{$row->region->region}}</td>
                       <td>{{$row->title}}</td>
-                      <td><img src="{{ URL::to('/') }}/uploads/tour/banner/{{ $row->banner }}" alt="" class="img-responsive" width="100%" /></td>
+                      <td><img src="{{ URL::to('/') }}/uploads/tour/banner/{{ $row->banner }}" alt="" class="img-responsive" width="80px" /></td>
                       
                       <td>{{$row->day}}</td>
                       <td>{{$row->night}}</td>
 						<td>{{$row->price}}</td>
-                      <td><img src="{{ URL::to('/') }}/uploads/tour/image/{{ $row->image }}" alt="" class="img-responsive" width="100%" /></td>
-                      <td>{!!$row->content!!}</td>
+                      <td><img src="{{ URL::to('/') }}/uploads/tour/image/{{ $row->image }}" alt="" class="img-responsive" width="80px" /></td>
+                      <!-- <td>{!!$row->content!!}</td> -->
                       <td>{{$row->status}}</td>
-                      <td>
-                        <a href="{{route('tour-edit', ['id'=>$row->id]) }}" class="btn"><i class="fas fa-edit" style="color: blue;"></i></a>
-                        <button form="resource-delete-{{$row->id}}"><i style="color: red;" class="fas fa-trash-alt"></i></button>
+                      <td style="min-width:100px">
+                        <a href="{{route('tour-edit', ['id'=>$row->id]) }}" class="btn bg-gradient-primary btn-sm"><i class="fas fa-edit"></i></a>
+                        <button form="resource-delete-{{$row->id}}" class="btn bg-gradient-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                         <form id="resource-delete-{{$row->id}}" action="{{ route('tour-destroy', ['id'=>$row->id]) }}" style="display: inline-block;" onSubmit="return confirm('Are you sure you want to delete this item?');" method="POST">
                           @csrf
                           @method('POST')

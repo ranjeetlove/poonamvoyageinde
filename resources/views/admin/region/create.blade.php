@@ -64,11 +64,27 @@
                                   @endif
                           </div>
                           <div class="form-group mt-2">
-                            <label for="heading">Heading</label>
+                            <label for="heading">Banner Heading</label>
                                  <input type="text" name="heading" class="form-control" id=""value="{{old('heading')}}" >
                           </div>
+                           <div class="form-group mt-2">
+                            <label for="heading">Meta title</label>
+                                 <input type="text" name="meta_title" class="form-control" id=""value="{{old('meta_title')}}" >
+                          </div>
+                           <div class="form-group mt-2">
+                            <label for="heading">Meta description</label>
+                                 <input type="text" name="meta_description" class="form-control" id=""value="{{old('meta_description')}}" >
+                          </div>
+                            <div class="form-group mt-2">
+                            <label for="heading">Meta keywords</label>
+                                 <input type="text" name="meta_keywords" class="form-control" id=""value="{{old('meta_keywords')}}" >
+                          </div>
                           <div class="form-group mt-2">
-                            <label for="content">Content</label>
+                            <label for="heading">Title of the page</label>
+                                 <input type="text" name="title" class="form-control" id=""value="{{old('title')}}" >
+                          </div>
+                          <div class="form-group mt-2">
+                            <label for="content">Content of the page</label>
                                  {{-- <input type="text" name="content" class="form-control" id=""value="{{old('content')}}" > --}}
                                  <textarea rows="5" class="form-control" id="content" name="content" ></textarea>
                           </div>

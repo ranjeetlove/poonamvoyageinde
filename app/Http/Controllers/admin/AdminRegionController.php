@@ -67,6 +67,10 @@ class AdminRegionController extends Controller
             $region->image = $filename;
         }
         $region->heading= $request->heading;
+        $region->title= $request->title;
+        $region->meta_title= $request->meta_title;
+        $region->meta_description= $request->meta_description;
+        $region->meta_keywords= $request->meta_keywords;
         $region->content= $request->content;
         $region->rating= $request->rating;
         $region->status= $request->status;
@@ -138,6 +142,10 @@ class AdminRegionController extends Controller
         $region->image = $filename;
     }
     $region->heading= $request->heading;
+    $region->title= $request->title;
+    $region->meta_title= $request->meta_title;
+    $region->meta_description= $request->meta_description;
+    $region->meta_keywords= $request->meta_keywords;
     $region->content= $request->content;
     $region->rating= $request->rating;
     $region->status= $request->status;

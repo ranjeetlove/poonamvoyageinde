@@ -42,9 +42,17 @@
                                           <strong>{{ $errors->first('image') }}</strong>
                                       </span>
                                   @endif
-                            <label for="image">Heading</label>
-                                <input type="text" class="form-control" name='heading' value="{{$data->heading}}" ><br>
-                            <label for="image">Content</label>
+                            <label for="image">Banner Heading</label>
+                                <input type="text" class="form-control" name='heading' value="{{$data->heading}}" ><br>  
+                            <label for="image">Meta Title</label>
+                                <input type="text" class="form-control" name='meta_title' value="{{$data->meta_title}}" ><br>
+                            <label for="image">Meta Description</label>
+                                <input type="text" class="form-control" name='meta_description' value="{{$data->meta_description}}" ><br> 
+                            <label for="image">Meta Keywords</label>
+                                <input type="text" class="form-control" name='meta_keywords' value="{{$data->meta_keywords}}" ><br>     
+                             <label for="image">Title of the page</label>
+                                <input type="text" class="form-control" name='title' value="{{$data->title}}" ><br>            
+                            <label for="image">Content of the page</label>
                                 <textarea rows="20" class="form-control" name="content" >{{$data->content}}</textarea><br>
                             <label for="rating">Rating</label>                           
                               <select name="rating">                                

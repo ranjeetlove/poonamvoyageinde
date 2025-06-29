@@ -31,7 +31,6 @@
                       <th>Banner</th>
                       <th>Thumbnail</th>
                       <th>Heading</th>
-                      <th>Content</th>
                       <th>Rating</th>
                       <th>Status</th>
                       <th>Action</th>
@@ -41,15 +40,14 @@
                     @foreach($data as $row)
                     <tr>
                       <td>{{$row->region}}</td>
-                      <td><img src="{{ URL::to('/') }}/uploads/regions/{{ $row->banner }}" alt="" class="img-responsive" width="100%" /></td>
-                      <td><img src="{{ URL::to('/') }}/uploads/regions/{{ $row->image }}" alt="" class="img-responsive" width="100%" /></td>
+                      <td><img src="{{ URL::to('/') }}/uploads/regions/{{ $row->banner }}" alt="" class="img-responsive" width="150px" /></td>
+                      <td><img src="{{ URL::to('/') }}/uploads/regions/{{ $row->image }}" alt="" class="img-responsive" width="80px" /></td>
                       <td>{{$row->heading}}</td>
-                      <td>{{$row->content}}</td>
                       <td>{{$row->rating}}</td>
                       <td>{{$row->status}}</td>
                       <td>
-                        <a href="{{route('region-edit', ['id'=>$row->id]) }}" class="btn"><i class="fas fa-edit" style="color: blue;"></i></a>
-                        <button form="resource-delete-{{$row->id}}"><i style="color: red;" class="fas fa-trash-alt"></i></button>
+                        <a href="{{route('region-edit', ['id'=>$row->id]) }}" class="btn bg-gradient-primary btn-sm"><i class="fas fa-edit"></i></a>
+                        <button form="resource-delete-{{$row->id}}" class="btn bg-gradient-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                         <form id="resource-delete-{{$row->id}}" action="{{ route('region-destroy', ['id'=>$row->id]) }}" style="display: inline-block;" onSubmit="return confirm('Are you sure you want to delete this item?');" method="POST">
                           @csrf
                           @method('POST')
