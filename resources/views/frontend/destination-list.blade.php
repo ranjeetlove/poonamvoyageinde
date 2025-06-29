@@ -26,10 +26,8 @@
  <section id="destination" class="destination-section pt-100 pb-70 bg-light">
          <div class="container">
             <div class="section-title">
-               <h2>Destinations Populaires Proposées</h2>
-               <p>
-			   Les voyages nous ont aidés à comprendre le sens de la vie et nous ont aidés à devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec de nouveaux yeux.
-			   </p>
+               <h2>{{ $region->title }}</h2>
+               {!! $region->content !!}
             </div>
 
             <div class="row filtr-container">
@@ -180,5 +178,3 @@
 
 	  <!-- Destination End -->
 @endsection
-
-
