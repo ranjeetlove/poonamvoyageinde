@@ -41,6 +41,10 @@
          </div>
       </div>
       <div class="col-lg-4 col-md-12">
+         <div class="pricing-card">
+            <h2 class="price-pack-d">Prix : € {{ $tour->price }} <span> per personnes </span></h2>
+
+         </div>
          <div class="main-form">
             <div class="comment-reply">
                <form class="pakage-details-page-form" action="{{route('mail1') }}"  enctype="multipart/form-data" method="post">
