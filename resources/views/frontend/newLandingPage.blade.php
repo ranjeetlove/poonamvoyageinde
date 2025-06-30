@@ -443,19 +443,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         {{ \Illuminate\Support\Str::limit($check, 60) }}
                                                     </p>
                                                     <div class="tabStar">
+                                                        <p class="price-pack">Prix : € {{ $tour->price }} 
+                                                        <span> per personnes </span></p>
+                                                        <span class="dayNight">
+                                                            {{ $tour->day ?? 0 }} Jours / {{ $tour->night ?? 0 }} Nuits
+                                                        </span>
+                                                    </div>
+                                                    <div class="tabMore">
                                                         <span class="starColor">
                                                             @for ($i = 1; $i <= 5; $i++)
                                                                 <i
                                                                     class="bx {{ $i <= $averageRating ? 'bxs-star text-warning' : 'bx-star' }}"></i>
                                                             @endfor
                                                         </span>
-                                                        <span class="dayNight">
-                                                            {{ $tour->day ?? 0 }} Jours / {{ $tour->night ?? 0 }} Nuits
-                                                        </span>
-                                                    </div>
-                                                    <div class="tabMore">
                                                         <a href="{{ route('destinationdetails', ['slug1' => $tour->region->slug, 'slug2' => $tour->slug]) }}"
-                                                            class="tabMoreLink">Plus d'informations <i
+                                                            class="tabMoreLink">Voir plus <i
                                                                 class="rotateIcon bx bx-arrow-back"></i></a>
                                                     </div>
                                                 </div>

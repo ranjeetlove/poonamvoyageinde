@@ -515,6 +515,20 @@ a {
     margin-top: 10px;
 }
 
+.price-pack {
+    color: #86242e;
+    font-weight: 600;
+}
+
+.price-pack span{
+    color: #525252;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 6px;
+    line-height: 0px;
+    display: block;
+}
+
 .tabStar .dayNight {
     display: inline-block;
     padding: 8px 11px;
@@ -532,6 +546,8 @@ a {
 .tabMore {
     margin-top: 15px;
     text-align: end;
+    display: flex;
+    justify-content: space-between;
 }
 
 .tabMoreLink {
