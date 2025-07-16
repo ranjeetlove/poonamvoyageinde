@@ -4409,7 +4409,7 @@ textarea.form-control {
     border-left: 2px solid #fd505654;
     margin-left: 28.5px;
     padding-left: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
 }
 
 .details-package-title p{
@@ -4483,14 +4483,16 @@ textarea.form-control {
 
 .irritation-img {
     width: 350px;
-    height: 265px;
+    height: 250px;
     overflow: hidden;
+    box-shadow: 1px 2px 9px 1px #000;
 }
 
 .irritation-img img{
 	width: 100%;
 	border-radius: 5px;
 	box-shadow: 1px 2px 9px 1px #000;
+	height:100%;
 }
 
 .tour-details__plan-content{
