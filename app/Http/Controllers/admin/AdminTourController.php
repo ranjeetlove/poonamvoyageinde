@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tour;
 use App\Models\Region;
+use App\Models\Hotal;
 use App\Models\Daychart;
 
 class AdminTourController extends Controller
@@ -29,7 +30,20 @@ class AdminTourController extends Controller
     public function create()
     {
         $regions= Region::orderBy('region')->get();
-        return view('admin.tour.create',compact('regions'));
+        $hotals = \DB::table('hotals')
+            ->join('cities', 'hotals.city_id', '=', 'cities.id')
+            ->select(
+                'hotals.id',
+                'hotals.name',
+                'hotals.image',
+                'hotals.city_id',
+                'hotals.created_at',
+                'hotals.status',
+                'cities.name as city'
+            )
+            ->orderBy('hotals.id')
+            ->get();
+        return view('admin.tour.create',compact('regions', 'hotals'));
     }
 
     /**
@@ -38,76 +52,121 @@ class AdminTourController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //   dd($request->all());
-          $validate = $request->validate([
-            'region_id' => 'required',
-            'status' => 'required',
+
+     public function store(Request $request)
+{
+    try {
+        $validate = $request->validate([
+            'region_id'      => 'required',
+            'title'          => 'required',
+            'slug'           => 'required',
+            'banner'         => 'required|image',
+            'day'            => 'required|numeric',
+            'night'          => 'required|numeric',
+            'image'          => 'required|image',
+            'description'    => 'required',
+            'day_head'       => 'required|array',
+            'dayWiseimage'   => 'required|array',
+            'day_content'    => 'required|array',
+            'status'         => 'required',
+            'price'          => 'required|numeric',
+            'hotals'         => 'required|array',
         ]);
-        // dd($request->all());
-            $slug=str_replace(['/',' ','\\',','],'-',strtolower($request->title));
-            $slug=preg_replace('/-+/', '-', $slug);
-            $existing_tour=Tour::where('slug',$slug)->first();
-            if(!$existing_tour){
-                try{
-                    $tour = new Tour;
-                    $tour->region_id= $request->region_id;
-                    $tour->title= $request->title;
-                    $tour->slug= $slug;
-                    if($request->hasfile('banner'))
-                    {
-                        $file = $request->file('banner');
-                        $filename = $file->getClientOriginalName();
-                        $filePath = 'uploads/tour/banner/' . $filename;
-                        $file->move(public_path('uploads/tour/banner'),$filePath);
-                        //dd($filename);
-                        $tour->banner = $filename;
-                    }
-                    if($request->hasfile('image'))
-                    {
-                        $file = $request->file('image');
-                        $filename = $file->getClientOriginalName();
-                        $filePath = 'uploads/tour/image/' . $filename;
-                        $file->move(public_path('uploads/tour/image'),$filePath);
-                        //dd($filename);
-                        $tour->image = $filename;
-                    }
-                    $tour->price= $request->price;
-                    $tour->day= $request->day;
-                    $tour->night= $request->night;
-                    $tour->content= $request->content;
-                    $tour->status= $request->status;
-        // dd($tour);
-                    $tour->save();
-                    foreach($request->day_head as $key=>$day_head)
-                    {
-                        // dd($day_head);
-                        $day_array[$key]['tour_id']=$tour->id;
-                        $day_array[$key]['day_head'] = $day_head;
-                        $day_array[$key]['day_content'] = $request->day_content[$key];
-                        $day_array[$key]['status']=$tour->status;
 
-                    }
-                    if(count($day_array)>0){
-                        // dd($day_array);
-                     $day= Daychart::insert($day_array);
+        $slug = str_replace(['/',' ','\\',','],'-', strtolower($request->title));
+        $slug = preg_replace('/-+/', '-', $slug);
 
-                    }
-
-                    }
-                    catch(Exception $e){
-                        dd($e);
-                    }
-
-
-
-            return back()->with('success','upload successful');
-
-        }else{
-            return back()->withInput()->with('error','Already tour Name Exists');
+        $existing_tour = Tour::where('slug', $slug)->first();
+        if ($existing_tour) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Tour with this title already exists',
+            ], 409);
         }
+
+        $hotals = implode(',', $request->input('hotals'));
+
+        $tour = new Tour;
+        $tour->region_id       = $request->region_id;
+        $tour->title           = $request->title;
+        $tour->slug            = $slug;
+
+        // Upload banner
+        if ($request->hasFile('banner')) {
+            $file = $request->file('banner');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $file->move(public_path('uploads/tour/banner'), $filename);
+            $tour->banner = $filename;
+        }
+
+        // Upload main image
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $file->move(public_path('uploads/tour/image'), $filename);
+            $tour->image = $filename;
+        }
+
+        $tour->price            = $request->price;
+        $tour->day              = $request->day;
+        $tour->night            = $request->night;
+        $tour->content          = $request->description;
+        $tour->status           = $request->status;
+        $tour->hotals           = $hotals;
+        $tour->meta_title       = $request->metaTitle ?? '';
+        $tour->meta_keywords    = $request->metaKeywords ?? '';
+        $tour->meta_description = $request->metaDescription ?? '';
+        $tour->save();
+
+        // Save day-wise data
+        $day_array = [];
+        $dayHeads       = $request->day_head;
+        $dayContents    = $request->day_content;
+        $dayWiseImages  = $request->file('dayWiseimage');
+
+        foreach ($dayHeads as $key => $day_head) {
+            $dayData = [
+                'tour_id'     => $tour->id,
+                'day_head'    => $day_head,
+                'day_content' => $dayContents[$key] ?? '',
+                'status'      => $tour->status,
+            ];
+
+            if (isset($dayWiseImages[$key])) {
+                $file = $dayWiseImages[$key];
+                $filename = time().'_'.$file->getClientOriginalName();
+                $file->move(public_path('uploads/tour/image'), $filename);
+                $dayData['day_img'] = $filename;
+            } else {
+                $dayData['day_img'] = null;
+            }
+
+            $day_array[] = $dayData;
+        }
+
+        if (!empty($day_array)) {
+            Daychart::insert($day_array);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Tour created successfully',
+            'tour_id' => $tour->id,
+        ]);
+
+    } catch (\Illuminate\Validation\ValidationException $e) {
+        return response()->json([
+            'success' => false,
+            'errors' => $e->errors(),
+        ], 422);
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Something went wrong: ' . $e->getMessage(),
+        ], 500);
     }
+}
+
     /**
      * Display the specified resource.
      *
