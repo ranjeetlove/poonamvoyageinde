@@ -235,6 +235,51 @@ jQuery(function ($) {
    });
 }($));
 
+$(document).ready(function(){
+    $(".hotalsSlider").owlCarousel({
+      items: 3,
+      margin: 10,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+  });
+
+   document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.read-more-toggle').forEach(function (btn) {
+         btn.addEventListener('click', function () {
+            const moreText = this.previousElementSibling;
+            if (moreText.style.display === 'none' || moreText.style.display === '') {
+               moreText.style.display = 'inline';
+               this.textContent = 'Lire moins...';
+            } else {
+               moreText.style.display = 'none';
+               this.textContent = 'Lire plus...';
+            }
+         });
+      });
+   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.read-more-toggle').forEach(function (toggle) {
+      toggle.addEventListener('click', function () {
+        const parent = this.closest('.read-more-text');
+        parent.classList.toggle('expanded');
+
+        if (parent.classList.contains('expanded')) {
+          this.textContent = 'Lire moins...';
+        } else {
+          this.textContent = 'Lire plus...';
+        }
+      });
+    });
+  }); 
+
 function setTheme(themeName) {
    localStorage.setItem('jaunt_theme', themeName);
    document.documentElement.className = themeName;
@@ -257,3 +302,5 @@ function toggleTheme() {
       document.getElementById('slider').checked = true;
    }
 })();
+
+
