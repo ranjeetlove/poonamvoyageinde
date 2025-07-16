@@ -15,6 +15,7 @@ class DestinationController extends Controller
 {
     public function destinationdetails($slug1,$slug2){
         $tour = Tour::where('slug', $slug2)->first();
+        $regions=Region::where('status','Active')->get();
         if (!$tour) {
             return response()->json(['error' => 'Tour not found'], 404);
         }
@@ -43,7 +44,7 @@ class DestinationController extends Controller
         //   print_r($dayCharts->toArray());
         // echo '</pre>';
         // die;
-        return view('frontend.destination-details', compact('tour', 'hotels', 'dayCharts', 'pageTitle', 'pageDescription', 'pageKeywords'));
+        return view('frontend.destination-details', compact('tour', 'hotels', 'dayCharts', 'pageTitle', 'pageDescription', 'pageKeywords', 'regions'));
     }
     public function destinationlist($slug){
         $region = Region::where('slug', $slug)->first();

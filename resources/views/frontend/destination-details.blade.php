@@ -58,7 +58,7 @@
                   <div class="col-lg-6 details-package-title">
                      <h2>Destination</h2>
                      @php
-                     $previewLength = 300;
+                     $previewLength = 400;
                      $fullContent = strip_tags($tour->content);
                      $preview = Str::limit($fullContent, $previewLength);
                      $remaining = Str::substr($fullContent, $previewLength);
@@ -84,7 +84,7 @@
                         </h6>
                      </div>
                      <br>
-                     <button type="submit" class="themeBtn">Demander un devis</button>
+                     <button type="submit" data-bs-toggle="modal" data-bs-target="#contactQuary" class="themeBtn">Demander un devis</button>
                   </div>
                </div>
                <div class="row my-5">
@@ -145,7 +145,7 @@
                   <div class="irritation-content">
                      <h3>Jour {{ $index + 1 }} : {{ $day->day_head }}</h3>
                      @php
-                     $previewLength = 400;
+                     $previewLength = 500;
                      $fullText = strip_tags($day->day_content);
                      $preview = Str::limit($fullText, $previewLength);
                      $remaining = Str::substr($fullText, $previewLength);
@@ -205,5 +205,123 @@
       </div>
    </div>
 </section>
+<div class="modal fade" id="contactQuary" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <h3 class="sub-title">Obtenir Un Devis</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+          <div class="main-form">
+            <div class="comment-reply">
+               <form class="pakage-details-page-form" action="{{route('mail1') }}"  enctype="multipart/form-data" method="post" style="width:100%">
+                  @csrf
+                  <div class="row">
+                     <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Région </label>
+                        <div class="input-group">
+                           <select class="form-select form-control" name="region" aria-label="Default select example">
+                              <option selected>Sélectionner des Régions</option>
+                              @foreach ($regions as $region)
+                              <option value="{{$region->region}}">{{$region->region}}</option>
+                              @endforeach
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Intérêts et activités </label>
+                        <div class="input-group">
+                           <select class="form-select form-control" name="interest" aria-label="Default select example">
+                              <option selected>Sélectionner des Régions</option>
+                              <option value="Aventure">Aventure</option>
+                              <option value="Welfare">Welfare</option>
+                              <option value="Culture">Culture</option>
+                              <option value="En Immersion">En Immersion</option>
+                              <option value="Événement ou Festival">Événement ou Festival</option>
+                              <option value="Famille">Famille</option>
+                              <option value="Randonnée & Trek">Randonnée & Trek</option>
+                              <option value="Voyage Lent">Voyage Lent</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Type d'Hébergement </label>
+                        <div class="input-group">
+                           <select class="form-select form-control" name="accommodation" aria-label="Default select example">
+                              <option selected>Sélectionnez L'Hébergement</option>
+                              <option value="Luxueux">Luxueux</option>
+                              <option value="Charme">Charme</option>
+                              <option value="Maison d'Hôtes">Maison d'Hôtes</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Votre budget par personne (vols compris) </label>
+                        <div class="input-group">
+                           <select class="form-select form-control" name="budget" aria-label="Default select example">
+                              <option selected>Sélectionnez Le Budget</option>
+                              <option value="1000€ - 1500€"> 1000€ - 1500€</option>
+                              <option value="1500€ - 2000€"> 1500€ - 2000€</option>
+                              <option value="2000€ - 2500€"> 2000€ - 2500€</option>
+                              <option value="3000€ - 3500€"> 3000€ - 3500€</option>
+                              <option value="3500€ - 4000€"> 3500€ - 4000€</option>
+                              <option value="Plus de 4000€"> Plus de 4000€</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Enfants-12 ans </label>
+                        <div class="input-group">
+                           <select class="form-select form-control" name="children" aria-label="Default select example">
+                              <option selected>Sélectionnez Les Enfants</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                           </select>
+                        </div>
+                     </div>
+                      <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Courriel </label>
+                        <div class="input-group">
+                           <input type="email" class="form-control" name="email" required="required" placeholder="Courriel"/>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Date de départ </label>
+                        <div class="input-group">
+                           <input type="date" class="form-control" name="departure_date" required="required" />
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-6 col-xs-12">
+                        <label>Date de retour</label>
+                        <div class="input-group">
+                           <input type="date" class="form-control" name="return_date" required="required" />
+                        </div>
+                     </div>
+                    
+                     <div class="col-sm-12 col-md-12 col-xs-12">
+                        <label>Numéro de téléphone</label>
+                        <div class="input-group">
+                           <input type="phone" class="form-control" name="phone" required="required" placeholder="numéro de téléphone"/>
+                        </div>
+                     </div>
+                  </div>
+                  <button type="submit" class="btn-primary custom-btn-blue">
+                  Choix de Votre Destination
+                  </button>
+               </form>
+            </div>
+            <br>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Destination Details End -->
 @endsection
