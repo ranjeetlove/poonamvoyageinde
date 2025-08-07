@@ -8,6 +8,7 @@ use App\Models\Tour;
 use App\Models\Region;
 use App\Models\Hotal;
 use App\Models\Daychart;
+use App\Models\City;
 
 class AdminTourController extends Controller
 {
@@ -30,6 +31,7 @@ class AdminTourController extends Controller
     public function create()
     {
         $regions= Region::orderBy('region')->get();
+        $cities= City::orderBy('id')->get();
         $hotals = \DB::table('hotals')
             ->join('cities', 'hotals.city_id', '=', 'cities.id')
             ->select(
@@ -43,7 +45,27 @@ class AdminTourController extends Controller
             )
             ->orderBy('hotals.id')
             ->get();
-        return view('admin.tour.create',compact('regions', 'hotals'));
+            $cityImages = [];
+            
+            foreach ($cities as $city) {
+                $images = array_filter(explode(',', $city->images));
+
+                foreach ($images as $image) {
+                    $image = trim($image);
+                    if ($image !== '') {
+                        $cityImages[] = [
+                            'label' => $city->name,
+                            'value' => $image,
+                        ];
+                    }
+                }
+            }
+
+            // echo '<pre>';
+            // print_r($cityImages);
+            // echo '</pre>';
+            // die;
+        return view('admin.tour.create',compact('regions', 'hotals', 'cityImages'));
     }
 
     /**
@@ -55,6 +77,11 @@ class AdminTourController extends Controller
 
      public function store(Request $request)
 {
+
+    // echo '<pre>';
+    // print_r($request->toArray());
+    // echo '</pre>';
+    // die;
     try {
         $validate = $request->validate([
             'region_id'      => 'required',
@@ -71,10 +98,15 @@ class AdminTourController extends Controller
             'status'         => 'required',
             'price'          => 'required|numeric',
             'hotals'         => 'required|array',
+            'highlights'     => 'required',
         ]);
 
-        $slug = str_replace(['/',' ','\\',','],'-', strtolower($request->title));
-        $slug = preg_replace('/-+/', '-', $slug);
+        if(!empty($request->slug)){
+             $slug = $request->slug;
+        }else{
+            $slug = str_replace(['/',' ','\\',','],'-', strtolower($request->title));
+            $slug = preg_replace('/-+/', '-', $slug);
+        }
 
         $existing_tour = Tour::where('slug', $slug)->first();
         if ($existing_tour) {
@@ -116,31 +148,23 @@ class AdminTourController extends Controller
         $tour->meta_title       = $request->metaTitle ?? '';
         $tour->meta_keywords    = $request->metaKeywords ?? '';
         $tour->meta_description = $request->metaDescription ?? '';
+        $tour->highlights       = $request->highlights;
         $tour->save();
 
         // Save day-wise data
         $day_array = [];
         $dayHeads       = $request->day_head;
         $dayContents    = $request->day_content;
-        $dayWiseImages  = $request->file('dayWiseimage');
+        $dayWiseImages  = $request->dayWiseimage;
 
         foreach ($dayHeads as $key => $day_head) {
             $dayData = [
                 'tour_id'     => $tour->id,
                 'day_head'    => $day_head,
                 'day_content' => $dayContents[$key] ?? '',
+                'day_img'     => $dayWiseImages[$key] ?? null,
                 'status'      => $tour->status,
             ];
-
-            if (isset($dayWiseImages[$key])) {
-                $file = $dayWiseImages[$key];
-                $filename = time().'_'.$file->getClientOriginalName();
-                $file->move(public_path('uploads/tour/image'), $filename);
-                $dayData['day_img'] = $filename;
-            } else {
-                $dayData['day_img'] = null;
-            }
-
             $day_array[] = $dayData;
         }
 
@@ -148,11 +172,7 @@ class AdminTourController extends Controller
             Daychart::insert($day_array);
         }
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Tour created successfully',
-            'tour_id' => $tour->id,
-        ]);
+        return redirect()->back()->with('success', 'Tour updated successfully');
 
     } catch (\Illuminate\Validation\ValidationException $e) {
         return response()->json([
@@ -185,12 +205,47 @@ class AdminTourController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit()
-    {
-         // $banner= banner::
-      $id = request('id');
-      $data = Tour::find($id);
-      return view('admin.tour.edit',compact('data'));
-    }
+{
+    $id = request('id');
+
+    $data = Tour::with(['region', 'daychart'])->find($id); // Load region & days relationships
+    $cities= City::orderBy('id')->get(); 
+
+    $hotals = \DB::table('hotals')
+            ->join('cities', 'hotals.city_id', '=', 'cities.id')
+            ->select(
+                'hotals.id',
+                'hotals.name',
+                'hotals.image',
+                'hotals.city_id',
+                'hotals.created_at',
+                'hotals.status',
+                'cities.name as city'
+            )
+            ->orderBy('hotals.id')
+            ->get();
+    $cityImages = [];
+            
+            foreach ($cities as $city) {
+                $images = array_filter(explode(',', $city->images));
+
+                foreach ($images as $image) {
+                    $image = trim($image);
+                    if ($image !== '') {
+                        $cityImages[] = [
+                            'label' => $city->name,
+                            'value' => $image,
+                        ];
+                    }
+                }
+            }       
+            //  echo '<pre>';
+            // print_r($cityImages);
+            // echo '</pre>';
+            // die; 
+    return view('admin.tour.edit', compact('data', 'hotals', 'hotals', 'cityImages'));
+}
+
 
     /**
      * Update the specified resource in storage.
@@ -199,41 +254,117 @@ class AdminTourController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+   
     public function update(Request $request)
-    {
-         // dd($request->all());
-       $validate = $request->validate([
-    ]);
-    $id=$request->id;
-    $tour = Tour::find($id);
-    $tour->title= $request->title;
-    if($request->hasfile('banner'))
-    {
-        $file = $request->file('banner');
-        $filename = $file->getClientOriginalName();
-        $filePath = 'uploads/tour/banner/' . $filename;
-        $file->move(public_path('uploads/tour/banner'),$filePath);
-        //dd($filename);
-        $tour->banner = $filename;
+{
+    $id = $request->id;
+    //  echo '<pre>';
+    //     print_r($request->toArray());
+    //     echo '</pre>';
+    //     die;
+    $regionsId = $request->regions_id;
+    try {
+        $validate = $request->validate([
+            //'region_id'      => 'required',
+            'title'          => 'required',
+            'slug'           => 'required',
+            'day'            => 'required|numeric',
+            'night'          => 'required|numeric',
+            'content'        => 'required',
+            'day_head'       => 'required|array',
+            'day_content'    => 'required|array',
+            'status'         => 'required',
+            'price'          => 'required|numeric',
+            'hotals'         => 'required|array',
+            'dayWiseimage'   => 'nullable|array',
+            'banner'         => 'nullable|image',
+            'image'          => 'nullable|image',
+            'highlights'     => 'required',
+        ]);
+
+        $tour = Tour::findOrFail($id);
+
+        if(!empty($request->slug)){
+             $slug = $request->slug;
+        }else{
+            $slug = str_replace(['/',' ','\\',','],'-', strtolower($request->title));
+            $slug = preg_replace('/-+/', '-', $slug);
+        }
+        
+        $existing_tour = Tour::where('title', $request->title)->where('id', '!=', $id)->first();
+        if ($existing_tour) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Another tour with this title already exists',
+            ], 409);
+        }
+
+        $hotals = implode(',', $request->input('hotals'));
+
+        // Update banner image if uploaded
+        if ($request->hasFile('banner')) {
+            $file = $request->file('banner');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $file->move(public_path('uploads/tour/banner'), $filename);
+            $tour->banner = $filename;
+        }
+
+        // Update main image if uploaded
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $file->move(public_path('uploads/tour/image'), $filename);
+            $tour->image = $filename;
+        }
+        $tour->region_id        = $request->region_id;
+        $tour->title            = $request->title;
+        $tour->slug             = $slug;
+        $tour->price            = $request->price;
+        $tour->day              = $request->day;
+        $tour->night            = $request->night;
+        $tour->content          = $request->content;
+        $tour->status           = $request->status;
+        $tour->hotals           = $hotals;
+        $tour->meta_title       = $request->metaTitle;
+        $tour->meta_keywords    = $request->metaKeywords;
+        $tour->meta_description = $request->metaDescription;
+        $tour->highlights       = $request->highlights;
+        $tour->save();
+
+        Daychart::where('tour_id', $tour->id)->delete();
+        $day_array = [];
+        $dayHeads       = $request->day_head;
+        $dayContents    = $request->day_content;
+        $dayWiseImages  = $request->dayWiseimage;
+
+        foreach ($dayHeads as $key => $day_head) {
+            $dayData = [
+                'tour_id'     => $tour->id,
+                'day_head'    => $day_head,
+                'day_content' => $dayContents[$key] ?? '',
+                'day_img'     => $dayWiseImages[$key],
+                'status'      => $tour->status,
+            ];
+            $day_array[] = $dayData;
+        }
+
+        if (!empty($day_array)) {
+            Daychart::insert($day_array);
+        }
+        return redirect()->back()->with('success', 'Tour updated successfully');
+    } catch (\Illuminate\Validation\ValidationException $e) {
+        return response()->json([
+            'success' => false,
+            'errors' => $e->errors(),
+        ], 422);
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Something went wrong: ' . $e->getMessage(),
+        ], 500);
     }
-    if($request->hasfile('image'))
-    {
-        $file = $request->file('image');
-        $filename = $file->getClientOriginalName();
-        $filePath = 'uploads/tour/image/' . $filename;
-        $file->move(public_path('uploads/tour/image'),$filePath);
-        //dd($filename);
-        $tour->image = $filename;
-    }
-    $tour->price= $request->price;
-    $tour->day= $request->day;
-    $tour->night= $request->night;
-    $tour->content= $request->content;
-    $tour->status= $request->status;
-// dd($tour);
-    $tour->save();
-    return redirect()->route('tour')->with('status','Banner Updated Successfully');
-    }
+}
+
 
 
     /**

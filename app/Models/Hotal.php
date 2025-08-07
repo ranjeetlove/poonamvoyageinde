@@ -17,6 +17,11 @@ class Hotal extends Model
     {
         return $this->belongsTo(City::class, 'city_id');
     }
+    
+    public function tours()
+    {
+        return $this->belongsToMany(Tour::class, 'hotal_tour', 'hotal_id', 'tour_id');
+    }
 
 
 }

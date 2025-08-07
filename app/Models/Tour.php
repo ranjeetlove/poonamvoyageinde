@@ -18,4 +18,9 @@ class Tour extends Model
     {
         return $this->hasMany(Daychart::class, 'tour_id','id');
     }
+    public function hotals()
+    {
+        return $this->belongsToMany(Hotal::class, 'tour_hotels', 'tour_id', 'hotal_id');
+    }
+    
 }
