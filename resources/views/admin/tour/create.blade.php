@@ -199,6 +199,17 @@
                               @endif
                            </div>
                         </div>
+                         <div class="col-sm-12">
+                           <div class="form-group mt-2">
+                              <label>Highlight <span style="color:red; font-size:12px">Note: please add highlight with using ; (highlight 1; highlight 2; etc...)</span></label>
+                             <textarea name="highlights" id="highlights" rows="3" class="form-control" value=""></textarea>
+                              @if ($errors->has('highlights'))
+                              <span class="error">
+                              <strong>{{ $errors->first('highlights') }}</strong>
+                              </span>
+                              @endif
+                           </div>
+                        </div>
                         <div class="col-sm-12 add-more-day">
                            <div id="point-div" class="w-100">
                               <div class="form-group mt-2">
@@ -216,7 +227,15 @@
                                        <div class="col-sm-6">
                                           <div class="form-group">
                                              <label for="banner">Day Image</label>
-                                             <input type="file" name="dayWiseimage[]" class="form-control" id="dayWiseimage" >
+
+                                              <select name="dayWiseimage[]" class="form-control">
+                                                <option value="">Select City Image</option>
+                                                @foreach ($cityImages as $option)
+                                                   <option value="{{ $option['value'] }}">{{ $option['label'] }}-{{ $option['value'] }}</option>
+                                                @endforeach
+                                             </select>
+
+                                             <!-- <input type="file" name="dayWiseimage[]" class="form-control" id="dayWiseimage" > -->
                                              @if ($errors->has('dayWiseimage'))
                                              <span class="error">
                                              <strong>{{ $errors->first('dayWiseimage') }}</strong>
@@ -298,8 +317,13 @@ function GetDynamicProductPriceWeight(value) {
          </div>
          <div class="col-sm-6">
             <div class="form-group">
-               <label for="banner">Image</label>
-               <input type="file" name="dayWiseimage[]" class="form-control" id="dayWiseimage">
+               <label for="banner">Day Image</label>
+               <select name="dayWiseimage[]" class="form-control">
+                                                <option value="">Select City Image</option>
+                                                @foreach ($cityImages as $option)
+                                                   <option value="{{ $option['value'] }}">{{ $option['label'] }}</option>
+                                                @endforeach
+                                             </select>
                @if ($errors->has('dayWiseimage'))
                <span class="error">
                   <strong>{{ $errors->first('dayWiseimage') }}</strong>
@@ -353,6 +377,7 @@ $(document).ready(function () {
                 $('#submit').prop('disabled', true).text('Saving...');
             },
             success: function (response) {
+               cosn
                 $('#submit').prop('disabled', false).text('Create tour');
                 $('body').prepend(`<div class="alert alert-success">✔ ${response.message}</div>`);
                 $('#myform')[0].reset();
