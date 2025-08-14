@@ -99,6 +99,8 @@ class AdminTourController extends Controller
             'price'          => 'required|numeric',
             'hotals'         => 'required|array',
             'highlights'     => 'required',
+            'includes'     => 'required',
+            'notIncludes'     => 'required',
         ]);
 
         if(!empty($request->slug)){
@@ -149,6 +151,8 @@ class AdminTourController extends Controller
         $tour->meta_keywords    = $request->metaKeywords ?? '';
         $tour->meta_description = $request->metaDescription ?? '';
         $tour->highlights       = $request->highlights;
+        $tour->includes       = $request->includes;
+        $tour->notIncludes       = $request->notIncludes;
         $tour->save();
 
         // Save day-wise data
@@ -329,6 +333,8 @@ class AdminTourController extends Controller
         $tour->meta_keywords    = $request->metaKeywords;
         $tour->meta_description = $request->metaDescription;
         $tour->highlights       = $request->highlights;
+        $tour->includes         = $request->includes;
+        $tour->notIncludes      = $request->notIncludes;
         $tour->save();
 
         Daychart::where('tour_id', $tour->id)->delete();

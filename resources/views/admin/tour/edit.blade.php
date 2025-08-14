@@ -158,6 +158,17 @@
                      <label>Highlight <span style="color:red; font-size:12px">Note: please add highlight with using ; (highlight 1; highlight 2; etc...)</span></label>
                      <textarea name="highlights" id="highlights" rows="5" class="form-control" value="{{$data->highlights}}">{!! $data->highlights !!}</textarea>
                   </div>
+                  
+                  <div class="col-sm-6 mt-2">
+                     <label>includes <span style="color:red; font-size:12px">Note: please add includes with using ; (includes 1; includes 2; etc...)</span></label>
+                     <textarea name="includes" id="includes" rows="5" class="form-control" value="{{$data->includes}}">{!! $data->includes !!}</textarea>
+                  </div>
+                  
+                  <div class="col-sm-6 mt-2">
+                     <label>Not includes <span style="color:red; font-size:12px">Note: please add not includes with using ; (not includes 1; not includes 2; etc...)</span></label>
+                     <textarea name="notIncludes" id="notIncludes" rows="5" class="form-control" value="{{$data->notIncludes}}">{!! $data->notIncludes !!}</textarea>
+                  </div>
+                  
 
                   {{-- Day-wise Content --}}
                   <div class="col-sm-12 add-more-day">

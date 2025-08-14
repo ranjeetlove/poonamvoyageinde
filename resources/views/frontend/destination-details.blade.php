@@ -150,20 +150,29 @@
          <div class="col-lg-6 col-xs-12 mb-5">
             <h5 class="mb-4">❌ Le prix ne comprend pas :</h5>
             <ul class="info-pack">
-               <li>Les déjeuners (repas de midi)</li>
-               <li>Les vols internationaux</li>
-               <li>Les pourboires, achats personnels et dépenses à caractère individuel</li>
-               <li>Les frais de visa pour l’Inde et l’assurance voyage (vivement recommandée)</li>
-               <li>Les droits d’entrée dans les monuments et sites touristiques</li>
+                 @php
+                     $notIncludes = $tour->notIncludes
+                           ? explode('; ', $tour->notIncludes) 
+                           : [];
+                     @endphp
+
+                  @foreach($notIncludes as $index => $notInclude)
+                     <li>{{ $notInclude }}</li>
+                  @endforeach
             </ul>
          </div>
          <div class="col-lg-6 col-xs-12">
             <h5 class="mb-4">🟢 Le prix comprend :</h5>
             <ul class="info-pack">
-               <li>Hébergement : 7 nuits en hôtels de catégorie standard ou charme, en formule demi-pension (petit-déjeuner et dîner inclus)</li>
-               <li>Transport privé : véhicule climatisé avec chauffeur professionnel pour tous les transferts et trajets selon l’itinéraire</li>
-               <li>Guide local francophone pendant tout le circuit</li>
-               <li>Deux safaris à la découverte des tigres, matin et soir, en camion partagé</li>
+                  @php
+                     $includes = $tour->includes
+                           ? explode('; ', $tour->includes) 
+                           : [];
+                     @endphp
+
+                  @foreach($includes as $index => $include)
+                     <li>{{ $include }}</li>
+                  @endforeach
             </ul>
          </div>
       </div>
