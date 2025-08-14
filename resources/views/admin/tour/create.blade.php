@@ -210,6 +210,28 @@
                               @endif
                            </div>
                         </div>
+                         <div class="col-sm-6">
+                           <div class="form-group mt-2">
+                              <label>Include <span style="color:red; font-size:12px">Note: please add include with using ; (include 1; include 2; etc...)</span></label>
+                             <textarea name="includes" id="includes" rows="3" class="form-control" value=""></textarea>
+                              @if ($errors->has('includes'))
+                              <span class="error">
+                              <strong>{{ $errors->first('includes') }}</strong>
+                              </span>
+                              @endif
+                           </div>
+                        </div>
+                         <div class="col-sm-6">
+                           <div class="form-group mt-2">
+                              <label>Not include <span style="color:red; font-size:12px">Note: please add Not include with using ; (Not include 1; Not include 2; etc...)</span></label>
+                             <textarea name="notIncludes" id="notIncludes" rows="3" class="form-control" value=""></textarea>
+                              @if ($errors->has('notIncludes'))
+                              <span class="error">
+                              <strong>{{ $errors->first('notIncludes') }}</strong>
+                              </span>
+                              @endif
+                           </div>
+                        </div>
                         <div class="col-sm-12 add-more-day">
                            <div id="point-div" class="w-100">
                               <div class="form-group mt-2">
