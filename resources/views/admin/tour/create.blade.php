@@ -314,17 +314,27 @@
 @endsection
 @section('script')
 <script>
+let dayIndex = 0;   
 function add() {
+   dayIndex++;
    var div = $("<div />");
-   div.html(GetDynamicProductPriceWeight(""));
+   div.html(GetDynamicProductPriceWeight("", dayIndex));
    $("#day-div").append(div);
+   // Initialize CKEditor for the new textarea
+    CKEDITOR.replace('day_content_' + dayIndex);
 };
 
 $("body").on("click", ".removeRadio", function () {
-   $(this).closest(".added-image").remove();
+    let textareaId = $(this).siblings("textarea").attr("id");
+    if (CKEDITOR.instances[textareaId]) {
+        CKEDITOR.instances[textareaId].destroy(true);
+    }
+    $(this).closest(".added-image").remove();
 });
+
 //  <hr class="hr-top-box">
-function GetDynamicProductPriceWeight(value) {
+function GetDynamicProductPriceWeight(value, index) {
+   let textareaId = 'day_content_' + index;
    return `
    <div class="added-image position-relative" style="position: relative; border: 1px solid #ccc; padding: 15px; margin-bottom: 15px;">
       <div class="row">
@@ -356,7 +366,7 @@ function GetDynamicProductPriceWeight(value) {
       </div>
 
       <div>
-         <textarea rows="5" class="form-control" id="day_content" name="day_content[]" style="padding-right: 50px;"></textarea>
+         <textarea rows="5" id="${textareaId}" class="form-control" id="day_content" name="day_content[]" style="padding-right: 50px;"></textarea>
          <button type="button" class="removeRadio fa fa-minus-circle fa-2x" 
             style="position: absolute; top: 5px; right: 10px; font-size: 1.5em; border: none; background: transparent; color: #dc3545;">
          </button>
@@ -429,6 +439,10 @@ $(document).ready(function () {
     });
 });
 
+</script>
+<script>
+    CKEDITOR.replace( 'description' );
+    CKEDITOR.replace( 'day_content' );
 </script>
 
 
