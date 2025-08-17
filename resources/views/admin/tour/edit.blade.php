@@ -1,6 +1,5 @@
 @extends('admin.layouts.app')
 @section('content')
-
 <style>
    .add-more-day {
       display: flex;
@@ -175,6 +174,9 @@
                      <div id="point-div" class="w-100">
                         <label class="mt-3 d-block">Itinerary (Days)</label>
                         <div class="form-group mt-2" id="day-div">
+                           @php
+                              $dayCount = optional($data->daychart)->count() ?? 0;
+                           @endphp
                            @foreach ($data->daychart as $index => $day)
                            <div class="added-image {{ $index != 0 ? 'position-relative' : '' }}" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px;">
                               <div class="row">
@@ -197,7 +199,7 @@
                                     @endif
                                  </div>
                               </div>
-                              <textarea rows="5" name="day_content[]" class="form-control mt-2">{{ $day->day_content }}</textarea>
+                              <textarea rows="5" id="day_content_{{$index}}" name="day_content[]" class="form-control mt-2">{{ $day->day_content }}</textarea>
                                @if($index != 0)
                                  <button type="button" class="removeRadio fa fa-minus-circle fa-2x" 
                                  style="position: absolute; top: 5px; right: 10px; border: none; background: transparent; color: #dc3545;"></button>
@@ -235,19 +237,45 @@
 @endsection
 
 @section('script')
-<script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
-<!-- <script>
-   CKEDITOR.replace('content');
-</script> -->
-
 <script>
+let dayIndex = {{ $dayCount }};
+
+ $(document).ready(function () {
+        if (dayIndex > 0) {
+            for (let i = 1; i <= dayIndex; i++) {
+                let textareaId = 'day_content_' + i;
+                if (document.getElementById(textareaId) && !CKEDITOR.instances[textareaId]) {
+                    CKEDITOR.replace(textareaId);
+                }
+            }
+            dayIndex--;
+        }
+});
+
 function add() {
-   var div = $("<div />");
-   div.html(GetDynamicDayHtml());
-   $("#day-div").append(div);
+   console.log(dayIndex);
+    dayIndex++;
+    console.log(dayIndex);
+    var div = $("<div />");
+    div.html(GetDynamicDayHtml(dayIndex));
+    $("#day-div").append(div);
+
+    // Initialize CKEditor for the new textarea
+    CKEDITOR.replace('day_content_' + dayIndex);
 }
 
-function GetDynamicDayHtml() {
+$("body").on("click", ".removeRadio", function () {
+    let textareaId = $(this).siblings("textarea").attr("id");
+    if (CKEDITOR.instances[textareaId]) {
+        CKEDITOR.instances[textareaId].destroy(true);
+    }
+    $(this).closest(".added-image").remove();
+});
+
+
+
+function GetDynamicDayHtml(index) {
+   let textareaId = 'day_content_' + index;
    return `
    <div class="added-image position-relative" style="border:1px solid #ccc; padding:15px; margin-bottom:15px;">
       <div class="row">
@@ -265,7 +293,7 @@ function GetDynamicDayHtml() {
                                              </select>
          </div>
       </div>
-      <textarea rows="5" name="day_content[]" class="form-control mt-2" style="padding-right: 50px;"></textarea>
+      <textarea rows="5" id="${textareaId}" name="day_content[]" class="form-control mt-2" style="padding-right: 50px;"></textarea>
       <button type="button" class="removeRadio fa fa-minus-circle fa-2x" 
          style="position: absolute; top: 5px; right: 10px; border: none; background: transparent; color: #dc3545;"></button>
    </div>`;
@@ -280,5 +308,8 @@ $("body").on("click", ".removeRadio", function () {
    $(function () {
       $('.selectpicker').selectpicker();
    });
+</script>
+<script>
+    CKEDITOR.replace( 'content' );
 </script>
 @endsection

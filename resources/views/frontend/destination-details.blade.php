@@ -147,21 +147,7 @@
    </div>
    <div class="container mt-5">
       <div class="row">
-         <div class="col-lg-6 col-xs-12 mb-5">
-            <h5 class="mb-4">❌ Le prix ne comprend pas :</h5>
-            <ul class="info-pack">
-                 @php
-                     $notIncludes = $tour->notIncludes
-                           ? explode('; ', $tour->notIncludes) 
-                           : [];
-                     @endphp
-
-                  @foreach($notIncludes as $index => $notInclude)
-                     <li>{{ $notInclude }}</li>
-                  @endforeach
-            </ul>
-         </div>
-         <div class="col-lg-6 col-xs-12">
+          <div class="col-lg-6 col-xs-12 mb-5">
             <h5 class="mb-4">🟢 Le prix comprend :</h5>
             <ul class="info-pack">
                   @php
@@ -172,6 +158,20 @@
 
                   @foreach($includes as $index => $include)
                      <li>{{ $include }}</li>
+                  @endforeach
+            </ul>
+         </div>
+         <div class="col-lg-6 col-xs-12">
+            <h5 class="mb-4">❌ Le prix ne comprend pas :</h5>
+            <ul class="info-pack">
+                 @php
+                     $notIncludes = $tour->notIncludes
+                           ? explode('; ', $tour->notIncludes) 
+                           : [];
+                     @endphp
+
+                  @foreach($notIncludes as $index => $notInclude)
+                     <li>{{ $notInclude }}</li>
                   @endforeach
             </ul>
          </div>
