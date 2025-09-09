@@ -13,8 +13,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Language" content="fr" />
-	<meta name="title" content="Explorez l'Inde avec le Meilleur Tour Opérateur - Poonam Voyage">
-    <meta name="description" content="Partez à la découverte de l'Inde avec Poonam Voyage, votre agence de voyage indienne de confiance. Circuits organisés, voyages sur mesure et exploration des meilleures destinations. Réservez votre aventure dès aujourd'hui!">
+	<meta name="title" content="Tour opérateur en Inde, agence de voyage indienne experte des circuits">
+    <meta name="description" content="Tour opérateur en Inde, Poonam Voyage Inde propose des circuits sur mesure avec son agence de voyage indienne experte et francophone.">
     <meta name="keywords" content="tour opérateur en inde, agence de voyage indienne, inde agence de voyage, agence de voyage inde, agence de voyage locale en inde, Voyage en Inde, Circuit en Inde, Tourisme en Inde, Inde voyage organisé, Visiter l'Inde">
     <title>Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant !</title>
     <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
@@ -611,7 +611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="testimonialsSliderWrapper owl-carousel testimonialSlider">
                         @foreach ($test as $item)
                             <div class="testimonialsItem">
-                                <p class="testmonialsText">{!! Str::limit($item->comment_content, 200) !!} <a
+                                <p class="testmonialsText">{{ Str::limit(html_entity_decode(strip_tags($item->comment_content)), 200) }} <a
                                         href ='{{ route("commentsdetails", $item->slug) }}'>En savoir plus</a></p>
                                 @php
                                     $imagePath =
