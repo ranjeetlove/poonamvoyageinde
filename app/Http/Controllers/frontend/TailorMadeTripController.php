@@ -12,9 +12,9 @@ class TailorMadeTripController extends Controller
     public function tailormadetrip(){
 		$regions=Region::where('status','Active')->get();
 		$banner= Banner::where('name','LIKE','%tailor%')->first();
-        $pageTitle = "Voyage de Luxe en Inde | Séjour Inde Pas Cher avec Poonam Voyage";
-        $pageDescription = "Explorez l'Inde avec style grâce à nos voyages de luxe ou découvrez des séjours économiques adaptés à votre budget. Poonam Voyage vous propose des expériences personnalisées et authentiques.";
-        $pageKeywords = "Voyage de luxe en Inde, Séjour Inde pas cher";
-        return view('frontend.tailor-made-trip',compact('regions','banner','pageTitle','pageDescription','pageKeywords'));
+        $metaTitle = "Voyage sur mesure en Inde | Rajasthan, Inde du Nord & Sud";
+        $pageDescription = "Voyage sur mesure en Inde avec Poonam Voyage Inde : circuits personnalisés au Rajasthan, en Inde du Nord et en Inde du Sud.";
+        $pageKeywords = "voyage sur mesure en Inde,  Voyage en Inde,  voyage sur mesure au Rajasthan,  voyage sur mesure en Inde du Nord,  voyage sur mesure en Inde du Sud";
+        return view('frontend.tailor-made-trip',compact('regions','banner','metaTitle','pageDescription','pageKeywords'));
     }
 }

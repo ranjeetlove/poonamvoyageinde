@@ -6632,6 +6632,20 @@ textarea.form-control {
 	background-color: #fd5056
 }
 
+.comment-img-fix .image{
+  height: 300px; 
+  width: 100%;     
+  overflow: hidden;   
+  position: relative;
+}
+
+.comment-img-fix .image img {
+  height: 100% !important;
+  width: 100%;
+  object-fit: cover;    /* ensures cover without stretching */
+  object-position: center; /* centers the image */
+}
+
 @-webkit-keyframes ripple {
 	0% {
 		-webkit-transform: scale(1);
