@@ -47,6 +47,62 @@
         ]
     }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi choisir Poonam Voyage Inde pour voyager en Inde et au Népal ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Poonam Voyage Inde est un tour opérateur spécialisé dans les circuits sur mesure en Inde et au Népal. Avec plus de 10 ans d’expérience, des guides francophones experts et une équipe locale professionnelle, l’agence propose des voyages authentiques adaptés aux envies et au budget des voyageurs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les destinations proposées par Poonam Voyage Inde ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L’agence propose des circuits dans tout le pays : Rajasthan, Inde du Nord, Inde du Sud, Ladakh, Cachemire, Gujarat, Madhya Pradesh, Bengale ainsi qu’au Népal. Chaque circuit est conçu pour offrir une expérience unique, des palais royaux aux paysages himalayens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels types d’expériences puis-je vivre avec Poonam Voyage Inde ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous pouvez profiter de safaris animaliers, de retraites spirituelles à Varanasi, de séjours chez l’habitant, de circuits culturels et historiques, de balades à dos de chameau dans le désert du Thar, ainsi que d’explorations des temples et monastères du Népal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les voyages proposés sont-ils personnalisés ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, Poonam Voyage Inde se spécialise dans les circuits sur mesure. Les itinéraires sont conçus selon vos préférences : patrimoine royal du Rajasthan, festivals colorés, cuisine locale, ou encore vie rurale authentique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qui est Khusipal Singh, le fondateur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Khusipal Singh est un guide francophone expérimenté, fondateur de Poonam Voyage Inde et Rajasthan avec Khusipal. Avec plus de dix ans d’expérience dans le tourisme, il propose des voyages authentiques et enrichissants pour les voyageurs francophones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment demander un devis pour un circuit en Inde ou au Népal ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous pouvez sélectionner vos dates de voyage, renseigner votre courriel et numéro de téléphone, puis envoyer une demande de devis via le site officiel de Poonam Voyage Inde. Un conseiller francophone vous accompagnera pour créer votre voyage personnalisé."
+      }
+    }
+  ]
+}
+</script>
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/boxicons.min.css') }}">
