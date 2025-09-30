@@ -116,15 +116,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css">
     <link rel="icon" href="{{ asset('frontend/assets/img/favicon.png') }}" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="fr-fr" />
+    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="fr" />
     <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="x-default" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/newLandingCss.css') }}" />
-
     <?php
     if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
         $link = 'https';
@@ -143,6 +136,12 @@
     //  echo $link;
     ?>
     <link rel="canonical" href="<?php echo $link; ?>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/newLandingCss.css') }}" />
 </head>
 
 <body>
