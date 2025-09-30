@@ -128,9 +128,9 @@
                <div class="col-lg-12">
                   <div class="tour-bg">
                      <div class="tour-travel-home">
-                        <h2>Contact us local travel agency in india | Poonam Travel India</h2>
-                        <h6>Fill out the form for information All Inclusive Vacation Packages You can also call us on 9818153249 or visit our website at https://poonamvoyageinde.com/ for more details.</h6>
-                        
+                       <h2>Contactez notre agence de voyage locale en Inde | Poonam Travel India</h2>
+                        <h6>Remplissez le formulaire pour recevoir des informations sur nos forfaits vacances tout compris.  
+                        Vous pouvez également nous appeler au 9818153249 ou visiter notre site web : https://poonamvoyageinde.com/ pour plus de détails.</h6>
                      </div>
                   </div>
                  

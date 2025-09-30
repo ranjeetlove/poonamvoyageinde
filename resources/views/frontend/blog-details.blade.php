@@ -5,7 +5,7 @@
             <div class="page-title-content">
                <h1>Blog Details</h1>
                <ul>
-                  <li class="item"><a href="index.html">Home</a></li>
+                  <li class="item"><a href="https://www.poonamvoyageinde.com/">Home</a></li>
                   <li class="item"><a href="#"><i class='bx bx-chevrons-right'></i>Blog Details</a></li>
                </ul>
             </div>

@@ -162,10 +162,10 @@
                <div class="col-lg-12">
                   <div class="tour-bg">
                      <div class="tour-travel-home">
-                        <h2>Gujarat Trip With guide | Poonam travel India</h2>
-                        <h6>Traveling to Gujarat is easy now with the Poonam voyage. Discovering tradition, culture and wild sites of Gujarat. Start your trip today!!!</h6>
-                        <p>voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord, voyage Inde du nord</p>
-                        <p>agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord, agence voyage inde du nord</p>
+                        <h2>Voyage au Gujarat avec guide | Poonam Travel India</h2>
+                        <h6>Voyager au Gujarat devient simple avec Poonam Voyage. Découvrez les traditions, la culture et les sites naturels de cette région unique. Commencez votre aventure dès aujourd’hui !</h6>
+                        <p>Partez à la découverte de l’Inde du Nord avec un itinéraire sur mesure. Le Gujarat vous offre une richesse culturelle exceptionnelle : temples, villages traditionnels, gastronomie locale et paysages sauvages.</p>
+                        <p>Notre agence de voyage en Inde du Nord vous accompagne dans l’organisation de votre séjour. Profitez d’un service personnalisé, de guides expérimentés et de circuits authentiques adaptés à vos envies et à votre budget.</p>
                      </div>
                   </div>
                  
