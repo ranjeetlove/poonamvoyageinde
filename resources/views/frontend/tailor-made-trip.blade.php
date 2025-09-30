@@ -166,10 +166,10 @@
                <div class="col-lg-12">
                   <div class="tour-bg">
                      <div class="tour-travel-home">
-                        <h2>Tailor-made trip to India | Poonam Voyage India</h2>
-                        <h6>Looking to travel to India? Ask us for a quote, we specialize in organizing family trips on a small budget</h6>
-                        <p>agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan, agence locale rajasthan</p>
-                        <p>agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne, agence de voyage indienne</p>
+                        <h2>Voyage sur mesure en Inde | Poonam Voyage India</h2>
+                        <h6>Vous souhaitez voyager en Inde ? Demandez-nous un devis, nous sommes spécialisés dans l’organisation de voyages familiaux à petit budget.</h6>
+                        <p>Votre agence locale au Rajasthan, experte dans la création d’itinéraires authentiques et adaptés à vos envies. Découvrez la culture, l’histoire et les paysages du Rajasthan avec un accompagnement personnalisé et des services de qualité.</p>
+                        <p>Agence de voyage indienne spécialisée dans les séjours sur mesure en Inde. Nous vous aidons à vivre une expérience unique : circuits culturels, voyages en famille, découvertes gastronomiques et rencontres locales, toujours au meilleur prix.</p>
                      </div>
                   </div>
                  
