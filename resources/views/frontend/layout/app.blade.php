@@ -30,38 +30,67 @@
       <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css') }}" />
       <link rel="stylesheet" href="{{asset('frontend/assets/css/theme-dark.css') }}" />
       <link rel="icon" href="{{asset('frontend/assets/img/favicon.png') }}" type="image/png" />
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="fr" />
+      <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="x-default" />
+      <?php 
+      if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+              $link = "https";
+          else $link = "http";
+            
+          // Here append the common URL characters.
+          $link .= "://";
+            
+          // Append the host(domain name, ip) to the URL.
+          $link .= $_SERVER['HTTP_HOST'];
+            
+          // Append the requested resource location to the URL
+          $link .= $_SERVER['REQUEST_URI'];
+            //  echo $link;
+      ?>
+      <link rel="canonical" href="<?php echo $link;?>" />	   
+      <?php 
+       if (strpos($link, '/blog') !== false) {
+      ?>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.poonamvoyageinde.com/blog/explorez-les-splendeurs-du-gujarat-:-un-guide-touristique-complet-par-poonam-voyageinde"
+        },
+        "headline": "Explorez les splendeurs du Gujarat : un guide touristique complet par Poonam Voyageinde",
+        "description": "Découvrez les merveilles du Gujarat : Ahmedabad, Gandhinagar, Rann of Kutch, Somnath, Dwarka, le parc national de Gir, Vadodara, Champaner-Pavagadh, Bhuj et Saputara. Un guide complet par Poonam Voyageinde pour explorer la richesse culturelle, historique et naturelle de l’État.",
+        "image": "https://www.poonamvoyageinde.com/uploads/blog/blog-9-banner.jpg",
+        "author": {
+          "@type": "Organization",
+          "name": "Poonam Voyageinde",
+          "url": "https://www.poonamvoyageinde.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Poonam Voyageinde",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.poonamvoyageinde.com/uploads/logo.png"
+          }
+        },
+        "datePublished": "2025-09-15",
+        "dateModified": "2025-09-15",
+        "articleSection": "Voyage en Inde",
+        "keywords": [
+          "Voyage Gujarat",
+          "Tourisme Gujarat",
+          "Circuit Gujarat",
+          "Voyage en Inde",
+          "Poonam Voyageinde"
+        ]
+      }
+      </script>
+      <?php } ?>
 
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	   
-    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="fr-fr" />
-    <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="x-default" />
-
-
-<?php 
-if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-        $link = "https";
-    else $link = "http";
-      
-    // Here append the common URL characters.
-    $link .= "://";
-      
-    // Append the host(domain name, ip) to the URL.
-    $link .= $_SERVER['HTTP_HOST'];
-      
-    // Append the requested resource location to the URL
-    $link .= $_SERVER['REQUEST_URI'];
-       //  echo $link;
-?>
-<link rel="canonical" href="<?php echo $link;?>" />	   
-
-	   
-
-	   <style>
-
-		   
-		 
-
-
+<style>
 .icon-bar {
   position: fixed;
   top:65%;
