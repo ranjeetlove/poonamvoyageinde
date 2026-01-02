@@ -89,6 +89,66 @@
       }
       </script>
       <?php } ?>
+      
+      <?php
+    $current_url = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+   
+if ($current_url == "https://www.poonamvoyageinde.com/blog/vivre-la-victoire-de-rama-sur-ravana-lors-dun-voyage-sur-mesure") :
+?>
+    <!-- Vos autres balises meta, CSS, scripts etc. -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quand commence Dussehra cette année en Inde ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dussehra commence aujourd'hui, le 2 octobre 2025, marquant le début des festivités à travers l'Inde."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que le Mysore Dasara ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Mysore Dasara est le festival d'État du Karnataka, célébré avec des processions royales, des éléphants décorés et des illuminations spectaculaires du palais de Mysore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Où puis-je vivre Dussehra de manière authentique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Des villes comme Mysore, Varanasi, Jaipur et Kota offrent des expériences authentiques de Dussehra, chacune avec ses propres traditions et festivités."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi choisir un voyage sur mesure pour Dussehra ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un voyage sur mesure permet de vivre Dussehra selon vos préférences, avec un itinéraire personnalisé, des guides locaux et une immersion culturelle profonde."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je voyager avec une agence locale en Inde ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, Poonam Voyage Inde propose des circuits accompagnés par des guides locaux de confiance, assurant une expérience authentique et sécurisée."
+          }
+        }
+      ]
+    }
+    </script>
+<?php
+endif;
+?>
+
 
 <style>
 .icon-bar {
