@@ -14,6 +14,7 @@
       <meta http-equiv="Content-Language" content="fr" />
       <meta name="title" content="{!! $metaTitle ?? 'Tour opérateur en Inde, agence de voyage indienne experte des circuits' !!}" />
       <meta name="description" content="{!! $pageDescription ?? 'Vous recherchez une agence de voyage ou un tour opérateur en Inde ? Poonam Voyage Inde propose les meilleurs forfaits touristiques, des guides experts et des expériences de voyage inoubliables. Réservez maintenant!' !!}" />
+      <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
       <meta name="keywords" content="{!! $pageKeywords ?? 'Meilleure agence de voyage en Inde, Meilleur tour opérateur en Inde, Les meilleurs forfaits touristiques en Inde, Forfaits de voyage en Inde, Poonam Voyage Inde,Guides experts en Inde, Réservez dès maintenant vos circuits en Inde' !!}" />
       <title>{{ $pageTitle ?? 'Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant!' }}</title>
       <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
