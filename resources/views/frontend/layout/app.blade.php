@@ -14,10 +14,10 @@
       <meta http-equiv="Content-Language" content="fr" />
       <meta name="title" content="{!! $metaTitle ?? 'Tour opérateur en Inde, agence de voyage indienne experte des circuits' !!}" />
       <meta name="description" content="{!! $pageDescription ?? 'Vous recherchez une agence de voyage ou un tour opérateur en Inde ? Poonam Voyage Inde propose les meilleurs forfaits touristiques, des guides experts et des expériences de voyage inoubliables. Réservez maintenant!' !!}" />
-      <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
       <meta name="keywords" content="{!! $pageKeywords ?? 'Meilleure agence de voyage en Inde, Meilleur tour opérateur en Inde, Les meilleurs forfaits touristiques en Inde, Forfaits de voyage en Inde, Poonam Voyage Inde,Guides experts en Inde, Réservez dès maintenant vos circuits en Inde' !!}" />
+      <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
       <title>{{ $pageTitle ?? 'Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant!' }}</title>
-      <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
+      <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
       <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css') }}" />
       <link rel="stylesheet" href="{{asset('frontend/assets/css/fontawesome.min.css') }}" />
       <link rel="stylesheet" href="{{asset('frontend/assets/css/boxicons.min.css') }}">
@@ -145,6 +145,118 @@ if ($current_url == "https://www.poonamvoyageinde.com/blog/vivre-la-victoire-de-
         }
       ]
     }
+    </script>
+<?php
+endif;
+?>
+
+<?php
+if ($current_url == "https://www.poonamvoyageinde.com/blog/circuit-inde-sur-mesure-2026-lexpertise-de-notre-agence-locale-indienne") :
+?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.poonamvoyageinde.com/blog/circuit-inde-sur-mesure-2026-lexpertise-de-notre-agence-locale-indienne"
+      },
+      "headline": "Circuit Inde sur mesure 2026 : L'expertise de notre agence locale indienne",
+      "description": "Découvrez pourquoi choisir une agence de voyage locale en Inde pour votre circuit de mars 2026. Profitez de l'expertise de Poonam Voyage Inde pour un séjour authentique, avec guides francophones et immersion totale pour la fête de Holi.",
+      "image": "https://www.poonamvoyageinde.com/images/banner-inde-2026.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Poonam Voyage Inde",
+        "url": "https://www.poonamvoyageinde.com/"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "Poonam Voyage Inde",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.poonamvoyageinde.com/logo.png"
+        }
+      },
+      "datePublished": "2026-02-23",
+      "dateModified": "2026-02-23",
+      "about": [
+        {"@type": "Thing", "name": "Voyage sur mesure Inde"},
+        {"@type": "Thing", "name": "Agence de voyage locale Inde"},
+        {"@type": "Thing", "name": "Holi 2026"}
+      ],
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pourquoi choisir une agence locale en Inde pour 2026 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choisir une agence locale comme Poonam Voyage Inde vous garantit une expertise de terrain, des tarifs directs sans intermédiaires et un circuit 100% personnalisable selon vos envies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quand aura lieu la fête de Holi en 2026 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En 2026, la fête des couleurs, Holi, sera célébrée les 3 et 4 mars. C'est le moment idéal pour un voyage culturel au Rajasthan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des guides francophones en Inde ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, Poonam Voyage Inde dispose d'un réseau de guides touristiques français et francophones pour une immersion culturelle profonde et sans barrière linguistique."
+          }
+        }
+      ]
+    }
+    </script>
+<?php
+endif;
+?>
+
+
+<?php
+if ($current_url == "https://www.poonamvoyageinde.com/voyage-sur-mesure-en-inde") :
+?>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Poonam Voyage Inde",
+  "url": "https://www.poonamvoyageinde.com/contactez-nous",
+  "logo": "https://www.poonamvoyageinde.com/logo.png",
+  "image": "https://www.poonamvoyageinde.com/og-image.jpg",
+  "description": "Agence de voyage basée à Jodhpur, Rajasthan (Inde). Spécialisée dans les circuits personnalisés et les voyages en Inde.",
+  "telephone": "+91 98 18153249",
+  "email": "info@poonamvoyageinde.com",
+  "alternateName": "Poonam Voyage Inde – Agence de voyages",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4th Street, Rathore-Bhawan Prithipura Rasala Road",
+    "addressLocality": "Jodhpur",
+    "addressRegion": "Rajasthan",
+    "postalCode": "342001",
+    "addressCountry": "IN"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 98 18153249",
+      "contactType": "customer service",
+      "email": "info@poonamvoyageinde.com",
+      "areaServed": "IN",
+      "availableLanguage": ["Hindi", "English", "Français"]
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "26.2389",
+    "longitude": "73.0243"
+  },
+  "openingHours": "Mo,Tu,We,Th,Fr 09:30-18:30"
+}
     </script>
 <?php
 endif;
