@@ -2663,6 +2663,103 @@ textarea.form-control {
 	color: #d6d6d6
 }
 
+/* Our Team Section */
+#ourTeams {
+	padding: 80px 0 60px;
+}
+#ourTeams .section-header .eyebrow {
+	display: inline-block;
+	margin-bottom: 12px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #86242e;
+}
+#ourTeams .section-header h2 {
+	font-size: 2.6rem;
+	font-weight: 700;
+	margin-bottom: 16px;
+	color: #090031;
+}
+#ourTeams .section-header p {
+	max-width: 720px;
+	margin: 0 auto;
+	color: #555;
+	line-height: 1.8;
+}
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 24px;
+}
+.team-card {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 24px;
+	border-radius: 24px;
+	background: #ffffff;
+	border: 1px solid rgba(14, 24, 61, 0.08);
+	box-shadow: 0 18px 40px rgba(14, 24, 61, 0.08);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.team-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(134, 36, 46, 0.16);
+	box-shadow: 0 26px 60px rgba(14, 24, 61, 0.12);
+}
+.team-avatar {
+	flex-shrink: 0;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	background: #f5f5ff;
+	border: 1px solid rgba(134, 36, 46, 0.12);
+}
+.team-avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.team-body {
+	min-width: 0;
+}
+.team-head h3 {
+	font-size: 1.25rem;
+	margin-bottom: 8px;
+	color: #090031;
+}
+.team-role {
+	margin: 0 0 16px;
+	font-size: 0.95rem;
+	color: #86242e;
+	font-weight: 600;
+}
+.team-body p {
+	margin: 0;
+	color: #4f5165;
+	line-height: 1.75;
+}
+@media only screen and (max-width: 767px) {
+	.team-card {
+		flex-direction: column;
+		text-align: center;
+	}
+	.team-avatar {
+		width: 140px;
+		height: 140px;
+	}
+	.team-head h3 {
+		font-size: 1.4rem;
+	}
+	.team-card .team-body {
+		width: 100%;
+	}
+}
+
 .tours-section .item-single .content .review i {
 	margin-right: 0;
 	color: #f4b316;
