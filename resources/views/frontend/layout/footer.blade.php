@@ -25,6 +25,11 @@
                            <li>
                              <a href="{{route('aboutus') }}">Qui Sommes Nous </a>
                           </li>
+                          
+                           <li>
+                             <a href="{{route('ourTeams') }}">Nos équipes</a>
+                          </li>
+
 
                            <li>
                              <a href="{{route('tailormadetrip') }}">Voyage Sur Mesure En Inde </a>
@@ -103,14 +108,14 @@
 
                              <ul class="social-linkss  clearfix">
 
-                                                    <a href="https://www.facebook.com/profile.php?id=100086158731809" target="_blank">
+                                                    <a href="https://www.facebook.com/share/1bkoHwj8nb/?mibextid=wwXIfr" target="_blank">
                                                     <img src="https://convertkit.com/images/social-icons/facebook.png" alt="Facebook"  style="text-decoration: none; width: 30px;"></a>
 
                                                    <a href="https://twitter.com/poonamvoyage" target="_blank">
                                                    <img src="https://convertkit.com/images/social-icons/twitter.png" alt="Twitter"  style="text-decoration: none; width: 30px;"></a>
 
 
-                                                   <a href="https://www.youtube.com/channel/UCy77dsmJ9dLPeCIQB5eVAdg" target="_blank">
+                                                   <a href="https://youtu.be/ZYw_FhWs73M?si=sL8OwQaUz-XaTfOx" target="_blank">
                                                    <img src="https://convertkit.com/images/social-icons/youtube_alt.png" alt="YouTube"  style="text-decoration: none; width: 30px;"></a>
 
                                                    <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" target="_blank">
@@ -120,7 +125,7 @@
                                                    <a href="https://in.pinterest.com/poonamvoyageinde90/" target="_blank">
                                                    <img src="https://convertkit.com/images/social-icons/pinterest.png" alt="linkedin"  style="text-decoration: none; width: 30px;">
                                                    </a>
-								                  <a href="https://www.instagram.com/poonamvoyageinde90/" target="_blank">
+								                  <a href="https://www.instagram.com/poonamvoyageinde90?igsh=YmJ3YTlibDdkcmQ1&utm_source=qr" target="_blank">
                                                   <img src="https://convertkit.com/images/social-icons/instagram.png" alt="Instagram" style="text-decoration: none; width: 30px;">
 								                  </a>
 

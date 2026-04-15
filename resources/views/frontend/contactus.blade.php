@@ -61,7 +61,7 @@
 
                      </div>
                   </div>
-                  <div class="col-lg-7">
+                  <div class="col-lg-6">
                            <div class="main-form ptb-100">
                <form action="{{route('mail') }}" enctype="multipart/form-data" method="post">
                 @csrf

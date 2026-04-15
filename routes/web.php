@@ -85,7 +85,7 @@ Route::get('/destination-list', [DestinationController::class, 'allTour'])->name
 
 Route::get('/privacy-policy', [PolicyController::class, 'privacyPolicy'])->name('privacyPolicy');
 Route::get('/terms-and-conditions', [PolicyController::class, 'termsandconditions'])->name('termsandconditions');
-Route::get('/our-teams', [OurTeamsController::class, 'ourTeams'])->name('ourTeams');
+Route::get('/nos-équipes', [OurTeamsController::class, 'ourTeams'])->name('ourTeams');
 
 Route::get('/voyage-sur-mesure-en-inde', [TailorMadeTripController::class, 'tailormadetrip'])->name('tailormadetrip');
 Route::get('/newLandingPage', [HomeController::class, 'newLandingPage'])->name('newLandingPage');

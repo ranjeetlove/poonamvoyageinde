@@ -216,6 +216,53 @@ if ($current_url == "https://www.poonamvoyageinde.com/blog/circuit-inde-sur-mesu
 endif;
 ?>
 
+<?php
+if ($current_url == "https://www.poonamvoyageinde.com/blog/tourisme-en-inde-le-guide-ultime-pour-un-voyage-sur-mesure-inoubliable") :
+?>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi choisir une agence de voyage locale en Inde ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choisir une agence locale en Inde du Nord comme Poonamvoyageinde vous permet de bénéficier d'une expertise terrain unique, de tarifs directs sans intermédiaires et d'une assistance 24/7."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-il possible d'avoir un guide francophone en Inde pour mon circuit ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, absolument. Poonamvoyageinde propose un guide francophone en Inde pour un confort total et une meilleure compréhension de la culture locale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment organiser un voyage sur mesure en Inde ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour un voyage sur mesure en Inde, il vous suffit de nous contacter avec vos dates, votre budget et vos centres d'intérêt. En tant que tour opérateur en Inde, nous personnalisons chaque étape de votre circuit en Inde pour qu'il corresponde parfaitement à vos attentes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le meilleur moment pour visiter l'Inde avec Poonamvoyageinde ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L’Inde se visite toute l’année : Octobre à Mars est idéal pour le Nord (Rajasthan, Taj Mahal). Avril à Juin est parfait pour l’Himalaya ou un safari (tigres). Juillet à Septembre est la saison idéale pour l'Ayurveda au Kerala avec des paysages luxuriants. Poonamvoyageinde adapte chaque itinéraire selon la saison."
+      }
+    }
+  ]
+}
+</script>
+<?php
+endif;
+?>
+
 
 <?php
 if ($current_url == "https://www.poonamvoyageinde.com/voyage-sur-mesure-en-inde") :

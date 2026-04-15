@@ -1,16 +1,18 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    
-    # Redirect HTTP to HTTPS and www
-    Redirect 301 /index.php /
-    #Redirect 301 /public/index.php/comments-details /
-    #Redirect 301 /public/comments-details /
-    RewriteCond %{HTTP_HOST} ^poonamvoyageinde\.com [NC]
-    RewriteRule ^(.*)$ https://www.poonamvoyageinde.com/$1 [L,R=301]
+RewriteEngine On
 
-    RewriteCond %{HTTPS} off
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Force HTTPS + www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^poonamvoyageinde\.com$ [NC]
+RewriteRule ^(.*)$ https://www.poonamvoyageinde.com/$1 [L,R=301]
 
-    RewriteCond %{REQUEST_URI} !^public
-    RewriteRule ^(.*)$ public/$1 [L]
+# Remove /public from URL
+RewriteCond %{THE_REQUEST} \s/+public[^\s]* [NC]
+RewriteRule ^public/?(.*)$ https://www.poonamvoyageinde.com/$1 [R=301,L]
+
+# Laravel routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
 </IfModule>
