@@ -15,7 +15,7 @@ jQuery(function ($) {
       }
    })
    $('.destinationHever').on('click',function(){
-      $('.dropMenuInner').toggleClass('openMenuHover')
+      $(this).find('.dropMenuInner').toggleClass('openMenuHover')
    })
    $(window).on('scroll', function () {
       $(window).scrollTop() >= 200 ? $('.main-navbar-area').addClass('stickyadd') : $('.main-navbar-area').removeClass('stickyadd');

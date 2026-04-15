@@ -8,12 +8,12 @@
   gtag('config', 'G-S5HH4YKZ90');
 </script>
    <div class="icon-bar">
-    <a href="https://www.facebook.com/profile.php?id=100086158731809" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.facebook.com/share/1bkoHwj8nb/?mibextid=wwXIfr" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
     <a href="https://twitter.com/poonamvoyage" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-    <a href="https://www.youtube.com/channel/UCy77dsmJ9dLPeCIQB5eVAdg" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="https://youtu.be/ZYw_FhWs73M?si=sL8OwQaUz-XaTfOx" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
     <a href="https://in.pinterest.com/poonamvoyageinde90/" class="google" target="_blank"><i class="fa fa-pinterest"></i></a>
     <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" class="linkedin" target="blank"><i class="fa fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/poonamvoyageinde90/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.instagram.com/poonamvoyageinde90?igsh=YmJ3YTlibDdkcmQ1&utm_source=qr" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
   </div>
 <link rel="canonical" href="https://www.poonamvoyageinde.com/">
 <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
@@ -48,13 +48,13 @@
                <div class="side-option">
                   <div class="item">
 
-                             <a href="https://www.facebook.com/profile.php?id=100086158731809" target="_blank">
+                             <a href="https://www.facebook.com/share/1bkoHwj8nb/?mibextid=wwXIfr" target="_blank">
                              <img src="https://convertkit.com/images/social-icons/facebook.png" alt="Facebook"  style="text-decoration: none; width: 28px;"></a>
                              <a href="https://twitter.com/poonamvoyage" target="_blank">
                              <img src="https://convertkit.com/images/social-icons/twitter.png" alt="Twitter"  style="text-decoration: none; width: 28px;"></a>           
-                             <a href="https://www.instagram.com/poonamvoyageinde90/" target="_blank">
+                             <a href="https://www.instagram.com/poonamvoyageinde90?igsh=YmJ3YTlibDdkcmQ1&utm_source=qr" target="_blank">
                              <img src="https://convertkit.com/images/social-icons/instagram.png" alt="instagram" style="text-decoration: none; width: 28px;"></a>
-                             <a href="https://www.youtube.com/channel/UCy77dsmJ9dLPeCIQB5eVAdg" target="_blank">
+                             <a href="https://youtu.be/ZYw_FhWs73M?si=sL8OwQaUz-XaTfOx" target="_blank">
                              <img src="https://convertkit.com/images/social-icons/youtube_alt.png" alt="YouTube"  style="text-decoration: none; width: 28px;"></a>
                              <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" target="_blank">
                              <img src="https://convertkit.com/images/social-icons/linkedin.png" alt="linkedin"  style="text-decoration: none; width: 28px;">
@@ -125,7 +125,16 @@
                      </li>
 
                       <li class="nav-item">
-                        <a href="{{route('aboutus') }}" class="nav-link">QUI SOMMES NOUS</a>
+                        <a href="#" class="nav-link toggle">À propos de nous
+                        <i class='bx bxs-chevron-down'></i></a>
+                        <ul class="dropdown-menu">
+                           <li class="nav-item">
+                              <a href="{{route('aboutus') }}" class="nav-link">QUI SOMMES NOUS</a>
+                           </li>
+                           <li class="nav-item">
+                              <a style="text-transform: uppercase;" href="{{route('ourTeams') }}" class="nav-link">Nos équipes</a>
+                           </li>
+                        </ul>
                      </li>
 
 

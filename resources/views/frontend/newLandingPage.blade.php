@@ -17,7 +17,7 @@
     <meta name="description" content="Tour opérateur en Inde, Poonam Voyage Inde propose des circuits sur mesure avec son agence de voyage indienne experte et francophone.">
     <meta name="keywords" content="tour opérateur en inde, agence de voyage indienne, inde agence de voyage, agence de voyage inde, agence de voyage locale en inde, Voyage en Inde, Circuit en Inde, Tourisme en Inde, Inde voyage organisé, Visiter l'Inde">
     <title>Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant !</title>
-    <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
+    <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -178,10 +178,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="headerTopRightMenu flexItem">
                         <a href="javascript:void(0)" class="headerSocial">Follow Us:- </a>
-                        <a href="https://www.facebook.com/profile.php?id=100086158731809" class="headerSocial"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.facebook.com/share/1bkoHwj8nb/?mibextid=wwXIfr" target="_blank" class="headerSocial"><i class='bx bxl-facebook'></i></a>
                         <a href="https://twitter.com/poonamvoyage" class="headerSocial"><i class='bx bxl-twitter'></i></a>
-                        <a href="https://www.instagram.com/poonamvoyageinde90/" class="headerSocial"><i class='bx bxl-instagram'></i></a>
-                        <a href="https://www.youtube.com/channel/UCy77dsmJ9dLPeCIQB5eVAdg" class="headerSocial"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://www.instagram.com/poonamvoyageinde90?igsh=YmJ3YTlibDdkcmQ1&utm_source=qr" target="_blank" class="headerSocial"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://youtu.be/ZYw_FhWs73M?si=sL8OwQaUz-XaTfOx" target="_blank" class="headerSocial"><i class='bx bxl-youtube'></i></a>
                         <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" class="headerSocial"><i class='bx bxl-linkedin'></i></a>
                         <a href="https://in.pinterest.com/poonamvoyageinde90/" class="headerSocial"><i class='bx bxl-pinterest'></i></a>
                         <span class="headerSap">|</span>
@@ -210,8 +210,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li>
                                 <a href="{{ route('index') }}" class="headerMenuLinks">Accueil</a>
                             </li>
-                            <li>
-                                <a href="{{ route('aboutus') }}" class="headerMenuLinks">Qui sommes nous</a>
+                            <li class="destinationHever">
+                                <a href="#" class="headerMenuLinks">À propos de nous</a>
+                                <ul class="list-unstyled dropMenuInner">
+                                            <li><a href="{{ route('aboutus') }}">Qui sommes nous</a></li>
+                                             <li><a href="{{route('ourTeams') }}">Nos équipes</a></li>          
+                                </ul>
                             </li>
                             <li class="destinationHever">
                                 <a href="#" class="headerMenuLinks">Destinations</a>

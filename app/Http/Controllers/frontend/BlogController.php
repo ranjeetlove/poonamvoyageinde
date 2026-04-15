@@ -18,6 +18,9 @@ class BlogController extends Controller
     public function blogdetails($slug){
         $banner= Banner::where('name','LIKE','%blog%')->first();
         $blog= Blog::where('slug',$slug)->first();
+         if(!$blog){
+            return redirect()->route('blog')->with('error', 'Blog post not found');
+        }
         $blogs = Blog::orderBy('created_at', 'desc')->limit(6)->get();
         $pageTitle = $blog->title;
         $pageDescription = $blog->meta_description;

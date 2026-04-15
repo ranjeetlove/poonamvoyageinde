@@ -339,8 +339,8 @@
                <article class="team-card-our-teams">
                   <div class="member-photo-wrap">
                      <img
-                        src="https://www.poonamvoyageinde.com/uploads/abouts/WhatsApp Image 2025-06-21 at 13.36.58 (1).jpeg"
-                        alt="Portrait of James Harrington"
+                        src="https://www.poonamvoyageinde.com/uploads/teams/9A15D28E-ECB4-46E3-BE92-75E2F39D4371.png"
+                        alt="Khushal Singh"
                         loading="eager"
                         />
                   </div>
@@ -348,7 +348,7 @@
                      <h3 class="member-name">Khushal Singh</h3>
                      <p class="member-role">PDG (Président-directeur général)</p>
                      <p class="member-bio">
-                        est un professionnel du tourisme depuis 2013. Originaire près de Jodhpur, il a débuté dans le transport à New Delhi, où il a développé une bonne compréhension des voyageurs internationaux
+                        Khushal Singh est un professionnel du tourisme depuis 2013. Originaire près de Jodhpur, il a débuté dans le transport à New Delhi, où il a développé une bonne compréhension des voyageurs internationaux
                      </p>
                      <p>Après une expérience à Pondichéry, il est devenu guide touristique spécialisé dans le Rajasthan et le nord de l’Inde.</p>
                      <p>Il dispose aussi d’une expérience internationale (croisières Costa et Europe) et s’engage à offrir un service professionnel, authentique et de qualité.</p>
@@ -378,8 +378,8 @@
                <article class="team-card-our-teams">
                   <div class="member-photo-wrap">
                      <img
-                        src="https://www.poonamvoyageinde.com/uploads/teams/ourteam.png"
-                        alt="Portrait of Sophia Chen"
+                        src="https://www.poonamvoyageinde.com/uploads/teams/IMG_3418.jpeg"
+                        alt="Dilip Singh Rathore"
                         loading="lazy"
                         />
                   </div>
@@ -387,7 +387,7 @@
                      <h3 class="member-name">Dilip Singh Rathore</h3>
                      <p class="member-role">Directeur de Bureau – Poonam Voyage Inde</p>
                      <p class="member-bio">
-                        est un professionnel du tourisme et de l’hôtellerie avec plus de 20 ans d’expérience. Originaire de Jodhpur, il a travaillé dans des établissements prestigieux comme Umaid Bhawan Palace (groupe Taj Hotels) et ITC Welcome.
+                        Dilip Singh Rathore est un professionnel du tourisme et de l’hôtellerie avec plus de 20 ans d’expérience. Originaire de Jodhpur, il a travaillé dans des établissements prestigieux comme Umaid Bhawan Palace (groupe Taj Hotels) et ITC Welcome.
                      </p>
                      <p>Aujourd’hui, chez Poonam Voyage Inde, il gère les opérations de voyages pour une clientèle internationale, en assurant un service professionnel et de qualité.</p>
                      <div class="member-meta">
@@ -412,8 +412,8 @@
                <article class="team-card-our-teams">
                   <div class="member-photo-wrap">
                      <img
-                        src="https://www.poonamvoyageinde.com/uploads/teams/ourteam.png"
-                        alt="Portrait of Marcus Ellington"
+                        src="https://www.poonamvoyageinde.com/uploads/teams/860287a9-afc1-4c21-905e-a7d789385982.jpeg"
+                        alt="Rajendre Singh Rajpurohit"
                         loading="lazy"
                         />
                   </div>
@@ -502,7 +502,7 @@
                <article class="team-card-our-teams">
                   <div class="member-photo-wrap">
                      <img
-                        src="https://www.poonamvoyageinde.com/uploads/abouts/WhatsApp Image 2025-06-21 at 13.36.58 (1).jpeg"
+                        src="https://www.poonamvoyageinde.com/uploads/teams/9A15D28E-ECB4-46E3-BE92-75E2F39D4371.png"
                         alt="Portrait of Khusipal Singh"
                         loading="lazy"
                         />
