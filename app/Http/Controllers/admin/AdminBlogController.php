@@ -59,9 +59,10 @@ class AdminBlogController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/blog/' . $filename;
-            $file->move(public_path('uploads/blog'),$filePath);
-            //dd($filename);
+            // $filePath = 'uploads/blog/' . $filename;
+            // $file->move(public_path('uploads/blog'),$filePath);
+            $destinationPath = base_path('uploads/blog');
+            $file->move($destinationPath, $filename);
             $blog->image = $filename;
         }
 
@@ -126,9 +127,11 @@ class AdminBlogController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/blog/' . $filename;
-            $file->move(public_path('uploads/blog'),$filePath);
-            //dd($filename);
+            // $filePath = 'uploads/blog/' . $filename;
+            // dd(public_path('uploads/blog'));
+            // $file->move(public_path('uploads/blog'),$filename);
+            $destinationPath = base_path('uploads/blog');
+            $file->move($destinationPath, $filename);
             $blog->image = $filename;
         }
 

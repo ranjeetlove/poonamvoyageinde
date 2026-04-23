@@ -61,8 +61,10 @@ class AdminAboutController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/abouts/' . $filename;
-            $file->move(public_path('uploads/abouts'),$filePath);
+            // $filePath = 'uploads/abouts/' . $filename;
+            // $file->move(public_path('uploads/abouts'),$filePath);
+            $destinationPath = base_path('uploads/abouts');
+            $file->move($destinationPath, $filename);
             //dd($filename);
             $about->image = $filename;
         }
@@ -122,8 +124,10 @@ class AdminAboutController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/abouts/' . $filename;
-            $file->move(public_path('uploads/abouts'),$filePath);
+            // $filePath = 'uploads/abouts/' . $filename;
+            // $file->move(public_path('uploads/abouts'),$filePath);
+            $destinationPath = base_path('uploads/abouts');
+            $file->move($destinationPath, $filename);
             //dd($filename);
             $about->image = $filename;
         }

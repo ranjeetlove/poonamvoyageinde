@@ -52,8 +52,10 @@ class AdminRegionController extends Controller
         {
             $file = $request->file('banner');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/regions/' . $filename;
-            $file->move(public_path('uploads/regions'),$filePath);
+            // $filePath = 'uploads/regions/' . $filename;
+            // $file->move(public_path('uploads/regions'),$filePath);
+            $destinationPath = base_path('uploads/regions');
+            $file->move($destinationPath, $filename);
             //dd($filename);
             $region->banner = $filename;
         }
@@ -61,8 +63,10 @@ class AdminRegionController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/regions/' . $filename;
-            $file->move(public_path('uploads/regions'),$filePath);
+            // $filePath = 'uploads/regions/' . $filename;
+            // $file->move(public_path('uploads/regions'),$filePath);
+            $destinationPath = base_path('uploads/regions');
+            $file->move($destinationPath, $filename);
             //dd($filename);
             $region->image = $filename;
         }
@@ -127,8 +131,10 @@ class AdminRegionController extends Controller
     {
         $file = $request->file('banner');
         $filename = $file->getClientOriginalName();
-        $filePath = 'uploads/regions/' . $filename;
-        $file->move(public_path('uploads/regions'),$filePath);
+        // $filePath = 'uploads/regions/' . $filename;
+        // $file->move(public_path('uploads/regions'),$filePath);
+        $destinationPath = base_path('uploads/regions');
+        $file->move($destinationPath, $filename);
         //dd($filename);
         $region->banner = $filename;
     }
@@ -136,8 +142,10 @@ class AdminRegionController extends Controller
     {
         $file = $request->file('image');
         $filename = $file->getClientOriginalName();
-        $filePath = 'uploads/regions/' . $filename;
-        $file->move(public_path('uploads/regions'),$filePath);
+        // $filePath = 'uploads/regions/' . $filename;
+        // $file->move(public_path('uploads/regions'),$filePath);
+        $destinationPath = base_path('uploads/regions');
+        $file->move($destinationPath, $filename);
         //dd($filename);
         $region->image = $filename;
     }

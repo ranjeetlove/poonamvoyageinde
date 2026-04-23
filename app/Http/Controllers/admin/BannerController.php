@@ -58,8 +58,10 @@ class BannerController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/banners/' . $filename;
-            $file->move(public_path('uploads/banners'),$filePath);
+            // $filePath = 'uploads/banners/' . $filename;
+            // $file->move(public_path('uploads/banners'),$filePath);
+            $destinationPath = base_path('uploads/banners');
+            $file->move($destinationPath, $filename);
             //dd($filename);
             $banners->image = $filename;
         }
@@ -120,8 +122,10 @@ class BannerController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/banners/' . $filename;
-            $file->move(public_path('uploads/banners'),$filePath);
+            // $filePath = 'uploads/banners/' . $filename;
+            // $file->move(public_path('uploads/banners'),$filePath);
+            $destinationPath = base_path('uploads/banners');
+            $file->move($destinationPath, $filename);
             //dd($filename);
             $banners->image = $filename;
         }

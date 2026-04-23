@@ -128,16 +128,20 @@ class AdminTourController extends Controller
         // Upload banner
         if ($request->hasFile('banner')) {
             $file = $request->file('banner');
-            $filename = time().'_'.$file->getClientOriginalName();
-            $file->move(public_path('uploads/tour/banner'), $filename);
+            // $filename = time().'_'.$file->getClientOriginalName();
+            // $file->move(public_path('uploads/tour/banner'), $filename);
+            $destinationPath = base_path('uploads/tour/banner');
+            $file->move($destinationPath, $filename);
             $tour->banner = $filename;
         }
 
         // Upload main image
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $filename = time().'_'.$file->getClientOriginalName();
-            $file->move(public_path('uploads/tour/image'), $filename);
+            // $filename = time().'_'.$file->getClientOriginalName();
+            // $file->move(public_path('uploads/tour/image'), $filename);
+            $destinationPath = base_path('uploads/tour/banner');
+            $file->move($destinationPath, $filename);
             $tour->image = $filename;
         }
 
@@ -308,16 +312,20 @@ class AdminTourController extends Controller
         // Update banner image if uploaded
         if ($request->hasFile('banner')) {
             $file = $request->file('banner');
-            $filename = time().'_'.$file->getClientOriginalName();
-            $file->move(public_path('uploads/tour/banner'), $filename);
+            // $filename = time().'_'.$file->getClientOriginalName();
+            // $file->move(public_path('uploads/tour/banner'), $filename);
+            $destinationPath = base_path('uploads/tour/banner');
+            $file->move($destinationPath, $filename);
             $tour->banner = $filename;
         }
 
         // Update main image if uploaded
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $filename = time().'_'.$file->getClientOriginalName();
-            $file->move(public_path('uploads/tour/image'), $filename);
+            // $filename = time().'_'.$file->getClientOriginalName();
+            // $file->move(public_path('uploads/tour/image'), $filename);
+            $destinationPath = base_path('uploads/tour/banner');
+            $file->move($destinationPath, $filename);
             $tour->image = $filename;
         }
         $tour->region_id        = $request->region_id;
