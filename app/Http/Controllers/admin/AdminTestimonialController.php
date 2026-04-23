@@ -64,8 +64,10 @@ class AdminTestimonialController extends Controller
                     {
                         $file = $request->file('image');
                         $filename = $file->getClientOriginalName();
-                        $filePath = 'uploads/testimonials/' . $filename;
-                        $file->move(public_path('uploads/testimonials'),$filePath);
+                        // $filePath = 'uploads/testimonials/' . $filename;
+                        // $file->move(public_path('uploads/testimonials'),$filePath);
+                        $destinationPath = base_path('uploads/testimonials');
+                        $file->move($destinationPath, $filename);
                         //dd($filename);
                         $testimonial->image = $filename;
                     }
@@ -131,8 +133,10 @@ class AdminTestimonialController extends Controller
         {
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $filePath = 'uploads/testimonials/' . $filename;
-            $file->move(public_path('uploads/testimonials'),$filePath);
+            // $filePath = 'uploads/testimonials/' . $filename;
+            // $file->move(public_path('uploads/testimonials'),$filePath);
+            $destinationPath = base_path('uploads/testimonials');
+            $file->move($destinationPath, $filename);
             //dd($filename);
             $testimonial->image = $filename;
         }
