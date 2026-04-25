@@ -15,7 +15,6 @@
     <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" class="linkedin" target="blank"><i class="fa fa-linkedin"></i></a>
     <a href="https://www.instagram.com/poonamvoyageinde90?igsh=YmJ3YTlibDdkcmQ1&utm_source=qr" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
   </div>
-<link rel="canonical" href="https://www.poonamvoyageinde.com/">
 <meta name="google-site-verification" content="lpK8VQtKX9gpTy4nd5vloLnyctJBRTheNH7vggewunU" />
 
 

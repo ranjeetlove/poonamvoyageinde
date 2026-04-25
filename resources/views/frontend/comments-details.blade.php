@@ -33,11 +33,7 @@
                                                 {{-- <img src="{{asset('uploads/testimonials/'.$testimonials->image) }}" alt="Demo Image"> --}}
                                                 @php
                                                     $imagePath =
-                                                        !empty($testimonials->image) &&
-                                                        file_exists(
-                                                            public_path('uploads/testimonials/' . $testimonials->image),
-                                                        )
-                                                            ? asset('uploads/testimonials/' . $testimonials->image)
+                                                        !empty($testimonials->image) ? asset('uploads/testimonials/' . $testimonials->image)
                                                             : asset('uploads/testimonials/user.png');
                                                 @endphp
                                                 <img src="{{ $imagePath }}"

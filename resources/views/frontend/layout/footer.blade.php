@@ -13,6 +13,20 @@
                        <p>Poonam Voyage India "-est une agence locale basée en Inde(New Delhi)spécialisée dans les voyages sur mesure au Rajasthan avec Chauffeur Privé et Guide. Notre agence de voyage propose également des prolongations de séjour à Agra (Taj Mahal) et Varanasi (Bénarès).</p>
 
                     </div>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer1.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer2.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer3.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer4.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                    </div>
                  </div>
                 <div class="col-lg-3 col-md-5 col-sm-6 col-12">
                     <div class="footer-widget">
