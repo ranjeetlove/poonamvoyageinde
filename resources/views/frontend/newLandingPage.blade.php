@@ -792,6 +792,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p class="footerText">Poonam Voyage India "- est une agence locale basée en Inde (New Delhi)
                         spécialisé dans les voyages sur mesure au Rajasthan avec Chauffeur et Guide Privés.</p>
                     </div>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer1.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer2.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer3.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="{{asset('frontend/assets/img/footer4.jpeg') }}" alt="" class="img-fluid" />
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-2">
                     <ul class="list-unstyled footerUlWrapper">

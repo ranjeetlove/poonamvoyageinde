@@ -27,7 +27,7 @@
                   <div class="blog-details-desc mb-30">
                      <div class="image mb-20">
                         {{-- <img src="{{asset('/uploads/blog/'.$blog->image)}}" alt="image" /> --}}
-                        <img src="{{ isset($blog) && $blog->image && file_exists(public_path('uploads/blog/'.$blog->image)) ?
+                        <img src="{{ isset($blog) && $blog->image ?
                         asset('uploads/blog/'.$blog->image) : asset('uploads/tour/image/no-image.jpg') }}"
                         alt="">
                      </div>
