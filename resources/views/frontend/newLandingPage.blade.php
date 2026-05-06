@@ -9,14 +9,12 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MQBDSD7Z');</script>
     <!-- End Google Tag Manager -->
-
+    <title>Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant !</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Language" content="fr" />
-	<meta name="title" content="Tour opérateur en Inde, agence de voyage indienne experte des circuits">
     <meta name="description" content="Tour opérateur en Inde, Poonam Voyage Inde propose des circuits sur mesure avec son agence de voyage indienne experte et francophone.">
     <meta name="keywords" content="tour opérateur en inde, agence de voyage indienne, inde agence de voyage, agence de voyage inde, agence de voyage locale en inde, Voyage en Inde, Circuit en Inde, Tourisme en Inde, Inde voyage organisé, Visiter l'Inde">
-    <title>Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant !</title>
     <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
     <script type="application/ld+json">
     {

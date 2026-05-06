@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
    <head>
        <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -9,11 +8,19 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MQBDSD7Z');</script>
         <!-- End Google Tag Manager -->
+       <?php 
+      if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+              $link = "https";
+          else $link = "http";
+          $link .= "://";
+          $link .= $_SERVER['HTTP_HOST'];
+          $link .= $_SERVER['REQUEST_URI'];
+      ?>
+      <link rel="canonical" href="<?php echo $link;?>" />	     
       <title>{{ $pageTitle ?? 'Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant!' }}</title>    
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="Content-Language" content="fr" />
-      <meta name="title" content="{!! $pageTitle ?? 'Tour opérateur en Inde, agence de voyage indienne experte des circuits' !!}" />
       <meta name="description" content="{!! $pageDescription ?? 'Vous recherchez une agence de voyage ou un tour opérateur en Inde ? Poonam Voyage Inde propose les meilleurs forfaits touristiques, des guides experts et des expériences de voyage inoubliables. Réservez maintenant!' !!}" />
       <meta name="keywords" content="{!! $pageKeywords ?? 'Meilleure agence de voyage en Inde, Meilleur tour opérateur en Inde, Les meilleurs forfaits touristiques en Inde, Forfaits de voyage en Inde, Poonam Voyage Inde,Guides experts en Inde, Réservez dès maintenant vos circuits en Inde' !!}" />
       <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
@@ -32,24 +39,8 @@
       <link rel="stylesheet" href="{{asset('frontend/assets/css/theme-dark.css') }}" />
       <link rel="icon" href="{{asset('frontend/assets/img/favicon.png') }}" type="image/png" />
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="fr" />
-      <link rel="alternate" href="https://www.poonamvoyageinde.com/" hreflang="x-default" />
-      <?php 
-      if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-              $link = "https";
-          else $link = "http";
-            
-          // Here append the common URL characters.
-          $link .= "://";
-            
-          // Append the host(domain name, ip) to the URL.
-          $link .= $_SERVER['HTTP_HOST'];
-            
-          // Append the requested resource location to the URL
-          $link .= $_SERVER['REQUEST_URI'];
-            //  echo $link;
-      ?>
-      <link rel="canonical" href="<?php echo $link;?>" />	   
+      <link rel="alternate" href="<?php echo $link;?>" hreflang="fr" />
+      <link rel="alternate" href="<?php echo $link;?>" hreflang="x-default" />
       <?php 
        if (strpos($link, '/blog') !== false) {
       ?>
