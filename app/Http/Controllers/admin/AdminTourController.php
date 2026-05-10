@@ -101,6 +101,9 @@ class AdminTourController extends Controller
             'highlights'     => 'required',
             'includes'     => 'required',
             'notIncludes'     => 'required',
+            'schema' => 'nullable|string',
+            'faq_questions' => 'nullable|array',
+            'faq_answers' => 'nullable|array',
         ]);
 
         if(!empty($request->slug)){
@@ -157,6 +160,11 @@ class AdminTourController extends Controller
         $tour->highlights       = $request->highlights;
         $tour->includes       = $request->includes;
         $tour->notIncludes       = $request->notIncludes;
+        $tour->c_schema = $request->schema;
+        $tour->faq = json_encode([
+            'questions' => $request->faq_questions ?? [],
+            'answers' => $request->faq_answers ?? []
+        ]);
         $tour->save();
 
         // Save day-wise data
@@ -288,6 +296,9 @@ class AdminTourController extends Controller
             'banner'         => 'nullable|image',
             'image'          => 'nullable|image',
             'highlights'     => 'required',
+            'schema' => 'nullable|string',
+            'faq_questions' => 'nullable|array',
+            'faq_answers' => 'nullable|array',
         ]);
 
         $tour = Tour::findOrFail($id);
@@ -343,6 +354,11 @@ class AdminTourController extends Controller
         $tour->highlights       = $request->highlights;
         $tour->includes         = $request->includes;
         $tour->notIncludes      = $request->notIncludes;
+        $tour->c_schema = $request->schema;
+        $tour->faq = json_encode([
+            'questions' => $request->faq_questions ?? [],
+            'answers' => $request->faq_answers ?? []
+        ]);
         $tour->save();
 
         Daychart::where('tour_id', $tour->id)->delete();

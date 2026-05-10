@@ -215,7 +215,41 @@
                         <label>
                            <input type="radio" class="status" value="InActive" name="status" {{ $data->status == 'InActive' ? 'checked' : '' }}> Inactive
                         </label>
+                        
+                        <div class="form-group mt-2">
+                          <label for="">Schema (JSON-LD)</label>
+                          <textarea rows="10" class="form-control" id="schema" name="schema">{{ $data->c_schema ?? old('schema') }}</textarea>
+                          @if ($errors->has('schema'))
+                            <span class="error">
+                              <strong>{{ $errors->first('schema') }}</strong>
+                            </span>
+                          @endif
+                        </div>
 
+                        <div class="form-group mt-2">
+                          <label for="">FAQ</label>
+                          <div id="faq-container">
+                            @if(isset($data->faq) && $data->faq)
+                              @php $faqs = json_decode($data->faq, true); @endphp
+                              @if(isset($faqs['questions']) && is_array($faqs['questions']))
+                                @foreach($faqs['questions'] as $index => $question)
+                                  <div class="faq-row mb-3">
+                                    <div class="form-group">
+                                      <label>Question</label>
+                                      <input type="text" name="faq_questions[]" class="form-control" value="{{ $question }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Answer</label>
+                                      <textarea rows="3" name="faq_answers[]" class="form-control" required>{{ $faqs['answers'][$index] ?? '' }}</textarea>
+                                    </div>
+                                    <button type="button" class="btn btn-danger remove-faq">Remove</button>
+                                  </div>
+                                @endforeach
+                              @endif
+                            @endif
+                          </div>
+                          <button type="button" id="add-faq" class="btn btn-secondary mt-2">Add FAQ</button>
+                        </div>
                         <div class="form-group mt-3">
                            <button id="submit" type="submit" class="btn btn-primary">Update Tour</button>
                         </div>
@@ -311,5 +345,26 @@ $("body").on("click", ".removeRadio", function () {
 </script>
 <script>
     CKEDITOR.replace( 'content' );
+    
+    $(document).ready(function() {
+        $('#add-faq').click(function() {
+            var row = '<div class=\"faq-row mb-3\">' +
+                '<div class=\"form-group\">' +
+                    '<label>Question</label>' +
+                    '<input type=\"text\" name=\"faq_questions[]\" class=\"form-control\" required>' +
+                '</div>' +
+                '<div class=\"form-group\">' +
+                    '<label>Answer</label>' +
+                    '<textarea rows=\"3\" name=\"faq_answers[]\" class=\"form-control\" required></textarea>' +
+                '</div>' +
+                '<button type=\"button\" class=\"btn btn-danger remove-faq\">Remove</button>' +
+            '</div>';
+            $('#faq-container').append(row);
+        });
+
+        $(document).on('click', '.remove-faq', function() {
+            $(this).closest('.faq-row').remove();
+        });
+    });
 </script>
 @endsection
