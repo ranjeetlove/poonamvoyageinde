@@ -42,7 +42,11 @@
                                  <a href="{{route('commentsdetails',$testimonial->slug)}}">{{ \Str::limit($testimonial->comment_head, 55) }}</a>
                               </h3>
                               <!-- <span>{!!Str::limit($testimonial->comment_content, 60)  !!}</span> -->
-                              <p>{{ Str::limit(strip_tags($testimonial->comment_content), 55) }}</p>
+                              {!! Str::limit(
+                                    html_entity_decode(strip_tags($testimonial->comment_content)),
+                                    55
+                                 ) !!}
+                              </br></br>      
                               <button onclick="location.href = '{{route('commentsdetails',$testimonial->slug)}}';" type="button" class="btn btn-sm btn-danger">Lire Plus</button>
                            </div>
 

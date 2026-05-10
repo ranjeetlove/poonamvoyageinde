@@ -46,9 +46,14 @@
                                  <li><i class='bx bx-tag'></i>{{ $blog->category }}</li>
                               </ul>
                               <h3>
-                              <a href="{{ route('blogdetails', $blog->slug) }}">{{ \Str::limit($blog->title, 60) }}</a>
+                              <a href="{{ route('blogdetails', $blog->slug) }}">{{ $blog->title }}</a>
                               </h3>
-                              <p>{{ Str::limit(strip_tags($blog->content), 90) }}</p>
+                             <p>
+                                 {!! Str::limit(
+                                    html_entity_decode(strip_tags($blog->content)),
+                                    90
+                                 ) !!}
+                              </p>
                               <ul class="list">
                                  <li>
                                     <div class="author">
