@@ -99,6 +99,23 @@
                                   <option value="5">5</option>
                                 </select>
                           </div>
+                          <div class="form-group mt-2">
+                            <label for="">Schema (JSON-LD)</label>
+                            <textarea rows="10" class="form-control" id="schema" name="schema">{{ old('schema') }}</textarea>
+                            @if ($errors->has('schema'))
+                              <span class="required">
+                                <strong>{{ $errors->first('schema') }}</strong>
+                              </span>
+                            @endif
+                          </div>
+
+                          <div class="form-group mt-2">
+                            <label for="">FAQ</label>
+                            <div id="faq-container">
+                              <!-- FAQ rows will be added here -->
+                            </div>
+                            <button type="button" id="add-faq" class="btn btn-secondary mt-2">Add FAQ</button>
+                          </div>
                           <label for="chkYes">
                               <input type="radio" class="status" value="Active" name="status" checked />
                               @if ($errors->has('status'))
@@ -132,6 +149,27 @@
     </section>
     <script>
       CKEDITOR.replace( 'content' );
+       
+      $(document).ready(function() {
+          $('#add-faq').click(function() {
+              var row = '<div class=\"faq-row mb-3\">' +
+                  '<div class=\"form-group\">' +
+                      '<label>Question</label>' +
+                      '<input type=\"text\" name=\"faq_questions[]\" class=\"form-control\" required>' +
+                  '</div>' +
+                  '<div class=\"form-group\">' +
+                      '<label>Answer</label>' +
+                      '<textarea rows=\"3\" name=\"faq_answers[]\" class=\"form-control\" required></textarea>' +
+                  '</div>' +
+                  '<button type=\"button\" class=\"btn btn-danger remove-faq\">Remove</button>' +
+              '</div>';
+              $('#faq-container').append(row);
+          });
+
+          $(document).on('click', '.remove-faq', function() {
+              $(this).closest('.faq-row').remove();
+          });
+      });
       </script> 
     <!-- /.content -->
 @endsection

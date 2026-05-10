@@ -41,6 +41,9 @@ class AdminRegionController extends Controller
         $validate = $request->validate([
             'region' => 'required',
             'status' => 'required',
+            'schema' => 'nullable|string',
+            'faq_questions' => 'nullable|array',
+            'faq_answers' => 'nullable|array',
         ]);
         //dd($request->all());
         $slug=str_replace(['/',' ','\\',','],'-',strtolower($request->region));
@@ -78,6 +81,11 @@ class AdminRegionController extends Controller
         $region->content= $request->content;
         $region->rating= $request->rating;
         $region->status= $request->status;
+        $region->c_schema = $request->schema;
+        $region->faq = json_encode([
+            'questions' => $request->faq_questions ?? [],
+            'answers' => $request->faq_answers ?? []
+        ]);
         $checkSlug = $region->whereSlug($slug)->exists();
         // dd($region);
         if(!$checkSlug){
@@ -124,6 +132,9 @@ class AdminRegionController extends Controller
     {
     //    dd($request->all());
        $validate = $request->validate([
+            //  'schema' => 'nullable|string',
+            // 'faq_questions' => 'nullable|array',
+            // 'faq_answers' => 'nullable|array',
     ]);
     $id=$request->id;
     $region = Region::find($id);
@@ -157,6 +168,11 @@ class AdminRegionController extends Controller
     $region->content= $request->content;
     $region->rating= $request->rating;
     $region->status= $request->status;
+    $region->c_schema = $request->schema;
+    $region->faq = json_encode([
+        'questions' => $request->faq_questions ?? [],
+        'answers' => $request->faq_answers ?? []
+    ]);
     // dd($region);
     $region->save();
     return redirect()->route('region')->with('status','Region Updated Successfully');
