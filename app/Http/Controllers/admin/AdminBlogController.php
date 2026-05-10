@@ -46,6 +46,9 @@ class AdminBlogController extends Controller
             'content' => 'required',
             'image' => 'required',
             'status' => 'required',
+            'schema' => 'required|nullable|string',
+            'faq_questions' => 'nullable|array',
+            'faq_answers' => 'nullable|array',
         ]);
         //dd($request->all());
         $slug=str_replace(['/',' ','\\',','],'-',strtolower($request->title));
@@ -73,6 +76,11 @@ class AdminBlogController extends Controller
         $blog->slug= $slug;
         $blog->content= $request->content;
         $blog->status= $request->status;
+        $blog->c_schema = $request->schema;
+        $blog->faq = json_encode([
+            'questions' => $request->faq_questions ?? [],
+            'answers' => $request->faq_answers ?? []
+        ]);
         // dd($blog);
         $blog->save();
         return redirect()->route('admin-blog')->with('success','upload successful');
@@ -116,6 +124,9 @@ class AdminBlogController extends Controller
     {
         //  dd($request->all());
          $validate = $request->validate([
+            'schema' => 'nullable|string',
+            'faq_questions' => 'nullable|array',
+            'faq_answers' => 'nullable|array',
         ]);
         $id=$request->id;
         $blog = Blog::find($id);
@@ -142,6 +153,11 @@ class AdminBlogController extends Controller
         $blog->meta_keywords= $request->meta_keywords;
         $blog->content= $request->content;
         $blog->status= $request->status;
+        $blog->c_schema = $request->schema;
+        $blog->faq = json_encode([
+            'questions' => $request->faq_questions ?? [],
+            'answers' => $request->faq_answers ?? []
+        ]);
 
         $blog->save();
         return redirect()->route('admin-blog')->with('status','blog Updated Successfully');

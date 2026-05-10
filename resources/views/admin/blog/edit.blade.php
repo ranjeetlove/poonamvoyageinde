@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('content')
-<script src="https://cdn.ckeditor.com/4.25.1-lts/standard/ckeditor.js"></script>
+<script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -46,6 +46,41 @@
                               <input type="text" placeholder="meta keywords" class="form-control" name='meta_keywords' value="{{$data->meta_keywords}}" ><br>
                               <textarea rows="20" class="form-control" name="content" required>{{$data->content}}</textarea>
 
+                              <div class="form-group mt-2">
+                                <label for="">Schema (JSON-LD)</label>
+                                <textarea rows="10" class="form-control" id="schema" name="schema">{{ $data->c_schema ?? old('schema') }}</textarea>
+                                @if ($errors->has('schema'))
+                                  <span class="required">
+                                    <strong>{{ $errors->first('schema') }}</strong>
+                                  </span>
+                                @endif
+                              </div>
+
+                              <div class="form-group mt-2">
+                                <label for="">FAQ</label>
+                                <div id="faq-container">
+                                  @if(isset($data->faq) && $data->faq)
+                                    @php $faqs = json_decode($data->faq, true); @endphp
+                                    @if(isset($faqs['questions']) && is_array($faqs['questions']))
+                                      @foreach($faqs['questions'] as $index => $question)
+                                        <div class="faq-row mb-3">
+                                          <div class="form-group">
+                                            <label>Question</label>
+                                            <input type="text" name="faq_questions[]" class="form-control" value="{{ $question }}" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label>Answer</label>
+                                            <textarea rows="3" name="faq_answers[]" class="form-control" required>{{ $faqs['answers'][$index] ?? '' }}</textarea>
+                                          </div>
+                                          <button type="button" class="btn btn-danger remove-faq">Remove</button>
+                                        </div>
+                                      @endforeach
+                                    @endif
+                                  @endif
+                                </div>
+                                <button type="button" id="add-faq" class="btn btn-secondary mt-2">Add FAQ</button>
+                              </div>
+
                           <label for="chkYes">
                               <input type="radio" class="status" value="Active" name="status" @if($data->status == 'Active') checked @endif/>
                               @if ($errors->has('status'))
@@ -79,5 +114,27 @@
     <script>
       CKEDITOR.replace( 'content' );
       </script>
+    <script>
+        $(document).ready(function() {
+            $('#add-faq').click(function() {
+                var row = '<div class="faq-row mb-3">' +
+                    '<div class="form-group">' +
+                        '<label>Question</label>' +
+                        '<input type="text" name="faq_questions[]" class="form-control" required>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                        '<label>Answer</label>' +
+                        '<textarea rows="3" name="faq_answers[]" class="form-control" required></textarea>' +
+                    '</div>' +
+                    '<button type="button" class="btn btn-danger remove-faq">Remove</button>' +
+                '</div>';
+                $('#faq-container').append(row);
+            });
+
+            $(document).on('click', '.remove-faq', function() {
+                $(this).closest('.faq-row').remove();
+            });
+        });
+    </script>
     <!-- /.content -->
 @endsection

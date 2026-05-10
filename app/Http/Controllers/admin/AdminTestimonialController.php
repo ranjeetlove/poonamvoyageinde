@@ -42,6 +42,9 @@ class AdminTestimonialController extends Controller
         $validate = $request->validate([
 
             'status' => 'required',
+            'schema' => 'nullable|string',
+            'faq_questions' => 'nullable|array',
+            'faq_answers' => 'nullable|array',
         ]);
         // dd($request->all());
         $slug=str_replace(['/',' ','\\',','],'-',strtolower($request->comment_head));
@@ -60,6 +63,11 @@ class AdminTestimonialController extends Controller
                 $testimonial->comment_content= $request->comment_content;
                 $testimonial->rating= $request->rating;
                 $testimonial->status= $request->status;
+                $testimonial->c_schema = $request->schema;
+                $testimonial->faq = json_encode([
+                    'questions' => $request->faq_questions ?? [],
+                    'answers' => $request->faq_answers ?? []
+                ]);
                 if($request->hasfile('image'))
                     {
                         $file = $request->file('image');
@@ -117,6 +125,9 @@ class AdminTestimonialController extends Controller
     {
         //   dd($request->all());
          $validate = $request->validate([
+            'schema' => 'nullable|string',
+            'faq_questions' => 'nullable|array',
+            'faq_answers' => 'nullable|array',
         ]);
         $id=$request->id;
         $testimonial = Testimonial::find($id);
@@ -129,6 +140,11 @@ class AdminTestimonialController extends Controller
         $testimonial->comment_content= $request->comment_content;
         $testimonial->rating= $request->rating;
         $testimonial->status= $request->status;
+        $testimonial->c_schema = $request->schema;
+        $testimonial->faq = json_encode([
+            'questions' => $request->faq_questions ?? [],
+            'answers' => $request->faq_answers ?? []
+        ]);
         if($request->hasfile('image'))
         {
             $file = $request->file('image');
