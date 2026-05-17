@@ -22,7 +22,7 @@
         "@type": "TravelAgency",
         "name": "Poonam Voyage Inde - Tour opérateur en Inde",
         "description": "Tour opérateur francophone basé à Jodhpur, Rajasthan. Spécialisé dans les circuits privés et sur mesure en Inde.",
-        "image": "https://www.poonamvoyageinde.com/frontend/assets/img/logo/mlogo.jpg",
+        "image": "https://www.poonamvoyageinde.com/frontend/assets/img/logo/mlogo.png",
         "@id": "https://www.poonamvoyageinde.com",
         "url": "https://www.poonamvoyageinde.com",
         "telephone": "+91-9818153249",
@@ -193,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="headerMenuWrapper">
                     <div class="headerLeftMenu">
                         <a href="{{ route('index') }}" class="headerLefta">
-                            <img src="{{ asset('frontend/assets/img/logo/mlogo.jpg') }}" alt=""
+                            <img src="{{ asset('frontend/assets/img/logo/mlogo.png') }}" alt=""
                                 class="headerLogo" width="120">
                         </a>
                         <a href="javascript:void(0)" class="headerMenuIcon menuCLick"><i
@@ -786,7 +786,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row">
                 <div class="col-md-3">
                     <div class="footerTextWrapper">
-                        <img src="{{ asset('frontend/assets/img/logo/mlogo-removebg.png') }}" alt="" width="150">
+                        <img src="{{ asset('frontend/assets/img/logo/mlogo.png') }}" alt="" width="150">
                         <p class="footerText">Poonam Voyage India "- est une agence locale basée en Inde (New Delhi)
                         spécialisé dans les voyages sur mesure au Rajasthan avec Chauffeur et Guide Privés.</p>
                     </div>
