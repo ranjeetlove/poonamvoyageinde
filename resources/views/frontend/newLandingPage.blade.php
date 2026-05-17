@@ -479,7 +479,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         $tour->id != 23 &&
                                         $tour->id != 29 &&
                                         $tour->id != 26 &&
-                                        $tour->id != 27
+                                        $tour->id != 27 &&
+                                        $tour->id != 28 &&
+                                        $tour->id != 21 &&
+                                        $tour->id != 18
                                         )
                                         <div class="col-md-4 col-sm-6 col-xs-6 col-lg-4 filtr-item col-12"
                                             data-category="{{ $key + 1 }}" data-sort="value">
