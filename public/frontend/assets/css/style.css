@@ -638,7 +638,7 @@ textarea.form-control {
 
 .main-nav .navbar {
 	position: inherit;
-	padding: 15px 0;
+	padding: 8px 0;
 	background: #fff
 }
 
@@ -1039,12 +1039,16 @@ textarea.form-control {
 	}
 
 	.main-responsive-nav .mean-bar {
-		z-index: 9
+		/* z-index: 9; */
+		position: absolute;
+        bottom: 23px;
 	}
 
 	.main-responsive-nav .main-responsive-menu.mean-container .mean-nav .navbar-nav {
 		height: 300px;
-		overflow-y: scroll
+		overflow-y: scroll;
+		position: absolute;
+        background: #fff;
 	}
 
 	.main-responsive-nav .main-responsive-menu.mean-container .mean-nav ul {

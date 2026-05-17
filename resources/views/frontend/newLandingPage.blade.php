@@ -194,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="headerLeftMenu">
                         <a href="{{ route('index') }}" class="headerLefta">
                             <img src="{{ asset('frontend/assets/img/logo/mlogo.jpg') }}" alt=""
-                                class="headerLogo">
+                                class="headerLogo" width="120">
                         </a>
                         <a href="javascript:void(0)" class="headerMenuIcon menuCLick"><i
                                 class="bx bx-menu-alt-right"></i></a>
@@ -786,7 +786,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row">
                 <div class="col-md-3">
                     <div class="footerTextWrapper">
-                        <img src="{{ asset('frontend/assets/img/logo/mlogo.jpg') }}" alt="">
+                        <img src="{{ asset('frontend/assets/img/logo/mlogo-removebg.png') }}" alt="" width="150">
                         <p class="footerText">Poonam Voyage India "- est une agence locale basée en Inde (New Delhi)
                         spécialisé dans les voyages sur mesure au Rajasthan avec Chauffeur et Guide Privés.</p>
                     </div>
