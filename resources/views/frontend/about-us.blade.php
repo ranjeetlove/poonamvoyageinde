@@ -50,23 +50,23 @@
      </section>
 
 <!-- Tours and Travels start -->
-      <section class="tour-travel">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="tour-bg">
-                     <div class="tour-travel-home">
-                        <h2>Tour Operator in India | Poonam Trip India</h2>
-                        <h6>Beat travel agency in India with good reputation. We are also available now in Jodhpur, North India. Start your tour now with Poonamvoyageinde.</h6>
-                        <p>voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde</p>
-                        <p>guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage</p>
-                     </div>
-                  </div>
+      <!--<section class="tour-travel">-->
+      <!--   <div class="container">-->
+      <!--      <div class="row">-->
+      <!--         <div class="col-lg-12">-->
+      <!--            <div class="tour-bg">-->
+      <!--               <div class="tour-travel-home">-->
+      <!--                  <h2>Tour Operator in India | Poonam Trip India</h2>-->
+      <!--                  <h6>Beat travel agency in India with good reputation. We are also available now in Jodhpur, North India. Start your tour now with Poonamvoyageinde.</h6>-->
+      <!--                  <p>voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde, voyage sur mesure en Inde</p>-->
+      <!--                  <p>guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage, guide francophone agence de voyage</p>-->
+      <!--               </div>-->
+      <!--            </div>-->
                  
-               </div>
-            </div>
-         </div>
-      </section>
+      <!--         </div>-->
+      <!--      </div>-->
+      <!--   </div>-->
+      <!--</section>-->
       <!-- Tours and Travels End -->
 
 <section id="about" class="about-section pt-100 pb-70">

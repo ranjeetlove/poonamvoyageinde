@@ -1,4 +1,83 @@
 User-agent: *
-Disallow: 
+Allow: /
+
+# ✅ Sitemap
+Sitemap: https://www.poonamvoyageinde.com/sitemap.xml
+
+# --- Allow AI crawlers and social preview bots ---
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OpenAI-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: MetaAI
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# --- Disallow private or unnecessary folders (adjust as needed) ---
 Disallow: /cgi-bin/
-Sitemap: https://poonamvoyageinde.com/sitemap.xml
+
+# --- Block outdated or malicious crawlers ---
+User-agent: OmniExplorer_Bot
+Disallow: /
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: Jetbot
+Disallow: /
+
+User-agent: WebVac
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: Copernic
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: Xenu's Link Sleuth
+Disallow: /
+
+User-agent: Zeus
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: NetAnts
+Disallow: /
+
+User-agent: sootle
+Disallow: /
+
+User-agent: Enterprise_Search
+Disallow: /
+
+# =====================================================
+# End of file — Poonam Voyage Inde
+# =====================================================

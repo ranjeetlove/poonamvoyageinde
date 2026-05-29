@@ -96,8 +96,8 @@
             <div class="main-responsive-menu">
                <div class="logo">
                   <a href="{{route('index') }}">
-                  <img src="{{asset('frontend/assets/img/logo/mlogo.jpg') }}" class="logo1" alt="Logo" width="120">
-                  <img src="{{asset('frontend/assets/img/logo/mlogo.jpg') }}" class="logo2" alt="Logo" width="120">
+                  <img src="{{asset('frontend/assets/img/logo/mlogo.png') }}" class="logo1" alt="Logo" width="120">
+                  <img src="{{asset('frontend/assets/img/logo/mlogo.png') }}" class="logo2" alt="Logo" width="120">
                   </a>
                </div>
               <!-- <div class="cart responsive">
@@ -112,8 +112,8 @@
          <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
                <a class="navbar-brand" href="{{route('index') }}">
-               <img src="{{asset('frontend/assets/img/logo/mlogo.jpg') }}" class="logo1" alt="Logo" width="120">
-               <img src="{{asset('frontend/assets/img/logo/mlogo.jpg') }}"  class="logo2" alt="Logo" width="120">
+               <img src="{{asset('frontend/assets/img/logo/mlogo.png') }}" class="logo1" alt="Logo" width="120">
+               <img src="{{asset('frontend/assets/img/logo/mlogo.png') }}"  class="logo2" alt="Logo" width="120">
                </a>
                <div class="collapse navbar-collapse mean-menu">
                   <ul class="navbar-nav ms-auto">

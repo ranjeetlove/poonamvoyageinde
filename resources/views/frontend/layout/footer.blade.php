@@ -7,7 +7,7 @@
                     <div class="footer-widget">
                        <div class="navbar-brand">
                           <a href="{{route('index') }}">
-                          <img src="{{asset('frontend/assets/img/logo/mlogo.jpg') }}" alt="Logo" />
+                          <img src="{{asset('frontend/assets/img/logo/mlogo.png') }}" alt="Logo" width="120"/>
                           </a>
                        </div>
                        <p>Poonam Voyage India "-est une agence locale basée en Inde(New Delhi)spécialisée dans les voyages sur mesure au Rajasthan avec Chauffeur Privé et Guide. Notre agence de voyage propose également des prolongations de séjour à Agra (Taj Mahal) et Varanasi (Bénarès).</p>

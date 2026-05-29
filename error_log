@@ -1,0 +1,1 @@
+[06-May-2026 14:53:34 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) in /home/gwtknmarcjhd/public_html/app/Http/Controllers/frontend/HomeController.php on line 63

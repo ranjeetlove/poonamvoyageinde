@@ -60,7 +60,6 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-
         $validatedData = $request->validate([
             'region' => 'required|string|max:255',
             'interest' => 'required|string|max:255',

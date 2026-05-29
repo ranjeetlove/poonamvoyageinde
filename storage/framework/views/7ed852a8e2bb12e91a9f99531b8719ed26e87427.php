@@ -1,0 +1,173 @@
+
+      <footer class="footer-area">
+        <div class="container">
+           <div class="footer-top pt-100 pb-70">
+              <div class="row">
+                 <div class="col-lg-3 col-md-5 col-sm-6 col-12">
+                    <div class="footer-widget">
+                       <div class="navbar-brand">
+                          <a href="<?php echo e(route('index')); ?>">
+                          <img src="<?php echo e(asset('frontend/assets/img/logo/mlogo.png')); ?>" alt="Logo" width="120"/>
+                          </a>
+                       </div>
+                       <p>Poonam Voyage India "-est une agence locale basée en Inde(New Delhi)spécialisée dans les voyages sur mesure au Rajasthan avec Chauffeur Privé et Guide. Notre agence de voyage propose également des prolongations de séjour à Agra (Taj Mahal) et Varanasi (Bénarès).</p>
+
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="<?php echo e(asset('frontend/assets/img/footer1.jpeg')); ?>" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="<?php echo e(asset('frontend/assets/img/footer2.jpeg')); ?>" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="<?php echo e(asset('frontend/assets/img/footer3.jpeg')); ?>" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col-6">
+                            <img src="<?php echo e(asset('frontend/assets/img/footer4.jpeg')); ?>" alt="" class="img-fluid" />
+                        </div>
+                    </div>
+                 </div>
+                <div class="col-lg-3 col-md-5 col-sm-6 col-12">
+                    <div class="footer-widget">
+                       <h5>Liens Rapides</h5>
+                       <ul class="footer-links">
+                          <li>
+                             <a href="<?php echo e(route('index')); ?>">Accueil </a>
+                          </li>
+
+                           <li>
+                             <a href="<?php echo e(route('aboutus')); ?>">Qui Sommes Nous </a>
+                          </li>
+                          
+                           <li>
+                             <a href="<?php echo e(route('ourTeams')); ?>">Nos équipes</a>
+                          </li>
+
+
+                           <li>
+                             <a href="<?php echo e(route('tailormadetrip')); ?>">Voyage Sur Mesure En Inde </a>
+                          </li>
+
+                          <li>
+                             <a href="<?php echo e(route('comments')); ?>">Commentaires </a>
+                          </li>
+
+                           <li>
+                             <a href="<?php echo e(route('blog')); ?>">Blogs </a>
+                          </li>
+
+                          <li>
+                             <a href="<?php echo e(route('contactus')); ?>">Contactez Nous </a>
+                          </li>
+
+                          <li>
+                             <a href="<?php echo e(route('privacyPolicy')); ?>">Confidentialité</a>
+                          </li>
+
+                       </ul>
+                    </div>
+                 </div>
+                 <div class="col-lg-2 col-md-5 col-sm-6 col-12">
+                    <div class="footer-widget">
+                       <h5>Liens Rapides</h5>
+                       <ul class="footer-links">
+                        <?php
+                            $regions= App\Models\Region::where('status','Active')->orderBy('region')->get();
+                        ?>
+                        <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <li>
+                           <a href="<?php echo e(route('destinationlist',$rg->slug)); ?>"><?php echo e($rg->region); ?></a>
+                        </li>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                          
+                          <li>
+                             <a href="<?php echo e(route('termsandconditions')); ?>">Termes et Conditions</a>
+                          </li>
+
+                       </ul>
+                    </div>
+                 </div>
+
+
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12">
+                    <div class="footer-widget">
+                     <h5>coordonnées</h5>
+
+
+                       <div class="contact-info">
+                          <div class="content">
+                             <a href="tel:+91 9818153249">
+                             <i class='bx bx-phone'>
+                             </i>
+                            +91 9818153249
+                             </a>
+                          </div>
+
+                          <div class="content">
+                             <a href="mailto:poonamvoyageinde@gmail.com"> <i class='bx bx-envelope'></i>
+                             <span class="__cf_email__">
+                            poonamvoyageinde@gmail.com
+                             </span>
+                             </a>
+                          </div>
+
+                          <div class="content">
+                             <a href="#"> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                             <span class="__cf_email__">
+                           4,Rathore-Bhawan Prithipura Rasala Road Jodhpur-342001 Rajasthan
+                             </span>
+                             </a>
+                          </div>
+
+                             <ul class="social-linkss  clearfix">
+
+                                                    <a href="https://www.facebook.com/share/1bkoHwj8nb/?mibextid=wwXIfr" target="_blank">
+                                                    <img src="https://convertkit.com/images/social-icons/facebook.png" alt="Facebook"  style="text-decoration: none; width: 30px;"></a>
+
+                                                   <a href="https://twitter.com/poonamvoyage" target="_blank">
+                                                   <img src="https://convertkit.com/images/social-icons/twitter.png" alt="Twitter"  style="text-decoration: none; width: 30px;"></a>
+
+
+                                                   <a href="https://youtu.be/ZYw_FhWs73M?si=sL8OwQaUz-XaTfOx" target="_blank">
+                                                   <img src="https://convertkit.com/images/social-icons/youtube_alt.png" alt="YouTube"  style="text-decoration: none; width: 30px;"></a>
+
+                                                   <a href="https://www.linkedin.com/in/khusipal-singh-ba3405252/" target="_blank">
+                                                   <img src="https://convertkit.com/images/social-icons/linkedin.png" alt="linkedin"  style="text-decoration: none; width: 30px;">
+                                                   </a>
+
+                                                   <a href="https://in.pinterest.com/poonamvoyageinde90/" target="_blank">
+                                                   <img src="https://convertkit.com/images/social-icons/pinterest.png" alt="linkedin"  style="text-decoration: none; width: 30px;">
+                                                   </a>
+								                  <a href="https://www.instagram.com/poonamvoyageinde90?igsh=YmJ3YTlibDdkcmQ1&utm_source=qr" target="_blank">
+                                                  <img src="https://convertkit.com/images/social-icons/instagram.png" alt="Instagram" style="text-decoration: none; width: 30px;">
+								                  </a>
+
+                                               </ul>
+
+
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <hr>
+           <div class="copy-right-area">
+              <div class="container">
+                 <div class="copy-right-content">
+                    <p>
+                       Copyright @ <script>document.write(new Date().getFullYear())</script> Poonam Voyage Inde. 
+                    </p>
+                    <p class="copyBottomLinks">
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/destination-details/north-india/circuit-au-rajasthan-et-agra-taj-mahal-avec">Circuit 15 jour au Rajasthan Inde du nord</a>
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/destination-details/rajasthan/sejour-en-inde-du-nord-circuit-au-rajasthan" >Circuit Rajasthan 15 jours</a>
+                     <a target="_blank" href="https://www.poonamvoyageinde.com/qui-sommes-nous">Agence locale francophone Inde</a></p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+
+       <!--- Footer End -->
+
+<?php /**PATH /home/gwtknmarcjhd/public_html/resources/views/frontend/layout/footer.blade.php ENDPATH**/ ?>

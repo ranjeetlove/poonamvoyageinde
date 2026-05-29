@@ -129,7 +129,6 @@ a {
     -webkit-animation: slideInDown 1s 1;
     animation: slideInDown 1s 1;
     background: #fff;
-    padding: 10px 0;
     -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
 }
@@ -142,8 +141,8 @@ a {
     width: 100%;
 }
 
-.mainHeaderWrapper {
-   margin: 10px 0px;
+.mainContentWrapper {
+    margin-top: 15px;
 }
 
 .bannerBox {
@@ -864,7 +863,7 @@ a {
         padding: 0 8px;
     }
     .headerLefta img{
-        width: 35%;
+        width: 75%;
     }
     .headerTopLeft a, .headerTopRight a {
         margin-left: 5px;
@@ -968,7 +967,7 @@ a {
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 98%;
+        width: 85%;
     }
     .bannerTextWrapper h2 {
         font-size: 1.7rem;
@@ -1031,10 +1030,7 @@ a {
         display: block;
     }
     .headerLefta img{
-        width: 20%;
-    }
-    .bannerTextWrapper h1{
-        font-size: 1.5rem;
+        width: 60%;
     }
     .headerLeftMenu {
         display: flex;
