@@ -14,4 +14,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/lp
+/lpwell-known.zip
+lp/.well-known.zip
+lp/poonamvoyageinde.com.zip
