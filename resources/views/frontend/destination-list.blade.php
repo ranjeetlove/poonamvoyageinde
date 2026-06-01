@@ -156,6 +156,9 @@
             </div>
          </div>
       </section>
+
+      @include('frontend.partials.faq-schema', ['schema' => $region->c_schema ?? null, 'faq' => $region->faq ?? null])
+
 <!-- Tours and Travels start -->
       <section class="tour-travel">
          <div class="container">

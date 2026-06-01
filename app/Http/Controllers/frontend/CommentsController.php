@@ -25,7 +25,8 @@ class CommentsController extends Controller
         $pageTitle = $testimonials->comment_head;
         $pageDescription = $testimonials->meta_description;
         $pageKeywords = $testimonials->meta_keywords;
+        $schema = $testimonials->c_schema;
         // dd($testimonials);
-        return view('frontend.comments-details',compact('testimonials','banner','pageTitle','pageDescription','pageKeywords'));
+        return view('frontend.comments-details',compact('testimonials','banner','pageTitle','pageDescription','pageKeywords','schema'));
     }
 }

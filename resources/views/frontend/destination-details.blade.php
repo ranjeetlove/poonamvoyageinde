@@ -191,7 +191,7 @@
          </div>
       </div>
    </div>
-</section>
+   @include('frontend.partials.faq-schema', ['schema' => $tour->c_schema ?? null, 'faq' => $tour->faq ?? null])</section>
 <div class="modal fade" id="contactQuary" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">

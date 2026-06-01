@@ -37,6 +37,7 @@ class DestinationController extends Controller
         $pageTitle = $tour->meta_title;
         $pageDescription = $tour->meta_description;
         $pageKeywords = $tour->meta_keywords;
+        $schema = $tour->c_schema;
         // $relatedDestination = Tour::where('region_id',$tour->region_id)->with('region:id,slug')->orderBy('created_at', 'desc')->limit(6)->get();
         // echo '<pre>';
         // print_r($tour->toArray());
@@ -44,7 +45,7 @@ class DestinationController extends Controller
         //   print_r($dayCharts->toArray());
         // echo '</pre>';
         // die;
-        return view('frontend.destination-details', compact('tour', 'hotels', 'dayCharts', 'pageTitle', 'pageDescription', 'pageKeywords', 'regions'));
+        return view('frontend.destination-details', compact('tour', 'hotels', 'dayCharts', 'pageTitle', 'pageDescription', 'pageKeywords', 'regions', 'schema'));
     }
     public function destinationlist($slug){
         $region = Region::where('slug', $slug)->first();
@@ -54,7 +55,8 @@ class DestinationController extends Controller
         $pageTitle = $region->meta_title;
         $pageDescription = $region->meta_description;
         $pageKeywords = $region->meta_keywords;
-        return view('frontend.destination-list',compact('region','pageTitle','pageDescription','pageKeywords'));
+        $schema = $region->c_schema;
+        return view('frontend.destination-list',compact('region','pageTitle','pageDescription','pageKeywords','schema'));
     }
     
     public function allTour(){

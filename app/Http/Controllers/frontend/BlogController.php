@@ -25,6 +25,7 @@ class BlogController extends Controller
         $pageTitle = $blog->title;
         $pageDescription = $blog->meta_description;
         $pageKeywords = $blog->meta_keywords;
-        return view('frontend.blog-details',compact('blog','blogs','banner','pageTitle','pageDescription','pageKeywords'));
+        $schema = $blog->c_schema;
+        return view('frontend.blog-details',compact('blog','blogs','banner','pageTitle','pageDescription','pageKeywords','schema'));
     }
 }

@@ -111,4 +111,6 @@
         <div class="shape shape-3"><img src="{{ asset('frontend/assets/img/shape3.png') }}" alt="Background Shape"></div>
         <div class="shape shape-4"><img src="{{ asset('frontend/assets/img/shape4.png') }}" alt="Background Shape"></div>
     </section>
+
+    @include('frontend.partials.faq-schema', ['schema' => $testimonials->c_schema ?? null, 'faq' => $testimonials->faq ?? null])
 @endsection

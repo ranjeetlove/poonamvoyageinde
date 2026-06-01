@@ -39,6 +39,8 @@
                         <h3>{{ !empty($blog->title) ? $blog->title : '' }}</h3>
                         <p>{!! !empty($blog->content) ? $blog->content : '' !!}</p>
                      </div>
+
+                     @include('frontend.partials.faq-schema', ['schema' => $blog->c_schema ?? null, 'faq' => $blog->faq ?? null])
                   </div>
                </div>
 
