@@ -12,6 +12,7 @@ use App\Models\Tour;
 use App\Models\Video;
 use App\Models\Rating;
 use App\Models\Contact;
+use App\Models\Homepage;
 use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
@@ -24,7 +25,8 @@ class HomeController extends Controller
         $tours = Tour::orderBy('id','desc')->get();
         $videos = Video::orderBy('id','desc')->get();
         $about= About::orderBy('id','desc')->first();
-        return view('frontend.index',compact('blogs','test','banners','about','regions','tours','videos'));
+        $homepage = Homepage::orderBy('id','desc')->first();
+        return view('frontend.index',compact('blogs','test','banners','about','regions','tours','videos','homepage'));
     }
 
      public function landingpage(){
@@ -35,7 +37,8 @@ class HomeController extends Controller
         $tours = Tour::orderBy('id','desc')->get();
         $videos = Video::orderBy('id','desc')->get();
         $about= About::orderBy('id','desc')->first();
-        return view('frontend.landingpage',compact('blogs','test','banners','about','regions','tours','videos'));
+        $homepage = Homepage::orderBy('id','desc')->first();
+        return view('frontend.landingpage',compact('blogs','test','banners','about','regions','tours','videos','homepage'));
     }
     public function aboutus(){
         $banner= Banner::where('name','LIKE','%about%')->first();
@@ -51,11 +54,12 @@ class HomeController extends Controller
         $tours = Tour::orderBy('id','desc')->get();
         $videos = Video::orderBy('id','desc')->get();
         $about= About::orderBy('id','desc')->first();
+        $homepage = Homepage::orderBy('id','desc')->first();
         // echo '<pre>';
-        // print_r($regions->toArray());
+        // print_r($homepage->toArray());
         // echo '</pre>';
         // die;
-        return view('frontend.newLandingPage',compact('blogs','test','banner','about','regions','tours','videos'));
+        return view('frontend.newLandingPage',compact('blogs','test','banner','about','regions','tours','videos','homepage'));
     }
 
     public function store(Request $request)

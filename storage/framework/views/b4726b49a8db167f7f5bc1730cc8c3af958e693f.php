@@ -9,98 +9,41 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MQBDSD7Z');</script>
     <!-- End Google Tag Manager -->
-    <title>Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant !</title>
+        <title><?php echo e($homepage->page_title ?? 'Meilleur tour opérateur et agence de voyages en Inde | Réservez des forfaits touristiques maintenant !'); ?></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Language" content="fr" />
-    <meta name="description" content="Tour opérateur en Inde, Poonam Voyage Inde propose des circuits sur mesure avec son agence de voyage indienne experte et francophone.">
-    <meta name="keywords" content="tour opérateur en inde, agence de voyage indienne, inde agence de voyage, agence de voyage inde, agence de voyage locale en inde, Voyage en Inde, Circuit en Inde, Tourisme en Inde, Inde voyage organisé, Visiter l'Inde">
+        <meta name="description" content="<?php echo e($homepage->meta_description ?? 'Tour opérateur en Inde, Poonam Voyage Inde propose des circuits sur mesure avec son agence de voyage indienne experte et francophone.'); ?>">
+        <meta name="keywords" content="<?php echo e($homepage->meta_keywords ?? 'tour opérateur en inde, agence de voyage indienne, inde agence de voyage, agence de voyage inde, agence de voyage locale en inde, Voyage en Inde, Circuit en Inde, Tourisme en Inde, Inde voyage organisé, Visiter l\'Inde'); ?>">
     <meta name="google-site-verification" content="DSSfB1pNmR5mARV45p9_7cSZgjyk1fNldf3iRx7x400" />
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "TravelAgency",
-        "name": "Poonam Voyage Inde - Tour opérateur en Inde",
-        "description": "Tour opérateur francophone basé à Jodhpur, Rajasthan. Spécialisé dans les circuits privés et sur mesure en Inde.",
-        "image": "https://www.poonamvoyageinde.com/frontend/assets/img/logo/mlogo.png",
-        "@id": "https://www.poonamvoyageinde.com",
-        "url": "https://www.poonamvoyageinde.com",
-        "telephone": "+91-9818153249",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "4, Rathore-Bhawan Prithipura Rasala Road",
-            "addressLocality": "Jodhpur",
-            "addressRegion": "Rajasthan",
-            "postalCode": "342001",
-            "addressCountry": "IN"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 26.2389,
-            "longitude": 73.0243
-        },
-        "openingHours": "Mo-Sa 10:00-19:00",
-        "sameAs": [
-            "https://www.facebook.com/poonamvoyageinde/"
-        ]
-    }
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Pourquoi choisir Poonam Voyage Inde pour voyager en Inde et au Népal ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Poonam Voyage Inde est un tour opérateur spécialisé dans les circuits sur mesure en Inde et au Népal. Avec plus de 10 ans d’expérience, des guides francophones experts et une équipe locale professionnelle, l’agence propose des voyages authentiques adaptés aux envies et au budget des voyageurs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quelles sont les destinations proposées par Poonam Voyage Inde ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "L’agence propose des circuits dans tout le pays : Rajasthan, Inde du Nord, Inde du Sud, Ladakh, Cachemire, Gujarat, Madhya Pradesh, Bengale ainsi qu’au Népal. Chaque circuit est conçu pour offrir une expérience unique, des palais royaux aux paysages himalayens."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quels types d’expériences puis-je vivre avec Poonam Voyage Inde ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vous pouvez profiter de safaris animaliers, de retraites spirituelles à Varanasi, de séjours chez l’habitant, de circuits culturels et historiques, de balades à dos de chameau dans le désert du Thar, ainsi que d’explorations des temples et monastères du Népal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Les voyages proposés sont-ils personnalisés ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui, Poonam Voyage Inde se spécialise dans les circuits sur mesure. Les itinéraires sont conçus selon vos préférences : patrimoine royal du Rajasthan, festivals colorés, cuisine locale, ou encore vie rurale authentique."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Qui est Khusipal Singh, le fondateur ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Khusipal Singh est un guide francophone expérimenté, fondateur de Poonam Voyage Inde et Rajasthan avec Khusipal. Avec plus de dix ans d’expérience dans le tourisme, il propose des voyages authentiques et enrichissants pour les voyageurs francophones."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Comment demander un devis pour un circuit en Inde ou au Népal ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vous pouvez sélectionner vos dates de voyage, renseigner votre courriel et numéro de téléphone, puis envoyer une demande de devis via le site officiel de Poonam Voyage Inde. Un conseiller francophone vous accompagnera pour créer votre voyage personnalisé."
-      }
-    }
-  ]
-}
-</script>
+
+    <?php if(!empty($homepage) && !empty($homepage->schema)): ?>
+        <script type="application/ld+json">
+            <?php echo $homepage->schema; ?>
+
+        </script> 
+    <?php endif; ?>
+    <?php if(!empty($homepage) && !empty($homepage->faq_questions) && count($homepage->faq_questions)): ?>
+        <?php
+            $mainEntity = [];
+            $qs = (array)$homepage->faq_questions;
+            $as = (array)($homepage->faq_answers ?? []);
+            for($i=0;$i<count($qs);$i++){
+                $q = trim($qs[$i] ?? '');
+                $a = trim($as[$i] ?? '');
+                if($q !== '' && $a !== ''){
+                    $mainEntity[] = ['@type'=>'Question','name'=>$q,'acceptedAnswer'=>['@type'=>'Answer','text'=>$a]];
+                }
+            }
+            $faqJson = ['@context'=>'https://schema.org','@type'=>'FAQPage','mainEntity'=>$mainEntity];
+        ?>
+        <?php if(count($mainEntity)): ?>
+            <script type="application/ld+json">
+                <?php echo json_encode($faqJson, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT); ?>
+
+            </script>
+        <?php endif; ?>
+    <?php endif; ?>
     <link rel="stylesheet" href="<?php echo e(asset('frontend/assets/css/bootstrap.min.css')); ?>" />
     <link rel="stylesheet" href="<?php echo e(asset('frontend/assets/css/fontawesome.min.css')); ?>" />
     <link rel="stylesheet" href="<?php echo e(asset('frontend/assets/css/boxicons.min.css')); ?>">
@@ -251,8 +194,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Your browser does not support the video tag.
                             </video>    
                         <div class="bannerTextWrapper">
-                            <h1>Explorez l'Inde : Voyages inoubliables à des prix irrésistibles !</h1>
-                            <p class="bannerTextTop">Laissez-vous guider par nos experts francophones à travers l'Inde. Ils vous dévoileront des trésors culturels, partageront des récits historiques fascinants, et offriront des conseils pratiques pour faire de votre aventure un souvenir inoubliable.</p>
+                            <h1><?php echo $homepage->section1_heading ?? 'Explorez l\'Inde : Voyages inoubliables à des prix irrésistibles !'; ?></h1>
+                            <p class="bannerTextTop"><?php echo $homepage->section1_description ?? "Laissez-vous guider par nos experts francophones à travers l'Inde. Ils vous dévoileront des trésors culturels, partageront des récits historiques fascinants, et offriront des conseils pratiques pour faire de votre aventure un souvenir inoubliable."; ?></p>
                         </div>
                     </div>
                 </div>
@@ -768,19 +711,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <img src="<?php echo e(asset('frontend/assets/img/about/ab4.jpg')); ?>" width="100%" />
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3 class="h3Heading">Tour Opérateur en Inde | Circuits sur mesure en Inde</h3>
-                        <p class="toarPara">En tant qu'agence de guides touristiques en Inde, notre équipe dévouée de guides locaux
+                    <div class="col-md-6 tour-operator-india">
+                        <h3 class="h3Heading"><?php echo e($homepage->section2_heading ?? "Tour Opérateur en Inde | Circuits sur mesure en Inde"); ?></h3>
+                        <?php echo $homepage->section2_description ?? "En tant qu'agence de guides touristiques en Inde, notre équipe dévouée de guides locaux
                             des professionnels vous accompagneront tout au long de votre voyage, partageant des éclairages culturels,
-                            anecdotes historiques et conseils pratiques pour rendre votre expérience authentique et enrichissante.
-                        </p>
-                        <p class="toarPara">Chez Poonam Voyage, nous nous concentrons sur la personnalisation, permettant à nos clients de
-                            choisir et combiner les activités selon ses préférences. Que vous soyez intéressé
-                            dans l'architecture, la cuisine locale, les festivals colorés ou la vie rurale, nous créons des voyages qui
-                            correspondre à vos passions.</p>
-                        <p class="toarPara">Choisissez Poonam Voyage pour vivre une aventure exceptionnelle dans le
-                            cœur de l'Inde, explorant le Rajasthan avec une agence qui comprend vraiment les besoins et
-                            aspirations des voyageurs avides de découvertes uniques et authentiques.</p>
+                            anecdotes historiques et conseils pratiques pour rendre votre expérience authentique et enrichissante."; ?>
+
                     </div>
 
                 </div>

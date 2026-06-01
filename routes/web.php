@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\BannerController;
 use App\Http\Controllers\admin\AdminBlogController;
 use App\Http\Controllers\admin\AdminAboutController;
+use App\Http\Controllers\admin\AdminHomepageController;
 use App\Http\Controllers\admin\AdminRegionController;
 use App\Http\Controllers\admin\AdminTestimonialController;
 use App\Http\Controllers\admin\AdminTourController;
@@ -128,6 +129,13 @@ Route::post('/about/store',[AdminAboutController::class,'store']);
 Route::get('/about/edit',[AdminAboutController::class,'edit'])->name('about-edit');
 Route::post('/about/edit',[AdminAboutController::class,'update']);
 Route::post('/about/destroy',[AdminAboutController::class,'destroy'])->name('about-destroy');
+
+// Homepage Management (single record)
+Route::get('/homepage',[AdminHomepageController::class,'index'])->name('homepage');
+Route::get('/homepage/create',[AdminHomepageController::class,'create']);
+Route::post('/homepage/store',[AdminHomepageController::class,'store']);
+Route::get('/homepage/edit',[AdminHomepageController::class,'edit'])->name('homepage-edit');
+Route::post('/homepage/edit',[AdminHomepageController::class,'update']);
 
 Route::get('/region',[AdminRegionController::class,'index'])->name('region');
 Route::get('/region/create',[AdminRegionController::class,'create']);

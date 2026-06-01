@@ -179,6 +179,15 @@
                 </a>
               </li>
 
+              <li class="nav-item">
+                <a href="{{url('admin/homepage')}}" class="nav-link {{ request()->is('admin/homepage*') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>
+                   Homepage Management
+                  </p>
+                </a>
+              </li>
+
             <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>
