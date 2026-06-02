@@ -156,7 +156,7 @@
          </div>
       </section>
 <!-- Tours and Travels start -->
-      <section class="tour-travel">
+      <!-- <section class="tour-travel">
          <div class="container">
             <div class="row">
                <div class="col-lg-12">
@@ -172,7 +172,7 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
       <!-- Tours and Travels End -->
 
 	  <!-- Destination End -->

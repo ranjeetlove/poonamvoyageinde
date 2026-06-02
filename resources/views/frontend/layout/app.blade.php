@@ -94,6 +94,18 @@
          background:#0077b5;
          color: white;
          }
+         /* Hide contact info icons on mobile screens */
+         @media (max-width: 768px) {
+            .icon-bar  {
+               display: none !important;
+            }
+            .blog-section .item-single .content .list li {
+               display: inline-block;
+               margin-right: 12px;
+               color: #797979;
+               margin-bottom: 10px;
+            }
+         }
       </style>
    </head>
    <body>

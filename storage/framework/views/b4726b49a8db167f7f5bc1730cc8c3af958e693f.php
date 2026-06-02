@@ -332,7 +332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="container-fluid padding30 topDestinationMainWrapper">
             <div class="TopDestinations">
-                <h3 class="h3Heading text-center">Nous proposons les meilleures destinations</h3>
+                <h2 class="h3Heading text-center">Nous proposons les meilleures destinations</h2>
             </div>
             <div class="TopDestinationsWrapper">
                 <div class="row">
@@ -362,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="row">
                     <div class="col-sm-4">
                     <div class="text-left content-left-pakage contentTabSec">
-                            <h1 class="h3Heading">Poonam Voyage Inde – Tour opérateur en Inde et au Népal</h1>
+                            <h2 class="h3Heading">Poonam Voyage Inde – Tour opérateur en Inde et au Népal</h2>
                             <p>
                             Khusipal Singh est un guide francophone expérimenté avec plus de dix ans d’expérience dans le tourisme. Il est à la tête de deux agences de voyage, spécialisées dans l’organisation de circuits sur mesure en Inde et au Népal.</p>
                             
@@ -388,7 +388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="col-sm-8">
                         <div class="text-left">
-                            <h3 class="h3Heading">Destinations populaires en vedette</h3>
+                            <h2 class="h3Heading">Destinations populaires en vedette</h2>
                             <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
                             devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
                             <ul id="control" class="list-unstyled TabGroupsFilterUl">
@@ -479,7 +479,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="gellaryWrapper">
             <div class="container">
             <div class="text-center">
-                    <h3 class="h3Heading">Galerie récente</h3>
+                    <h2 class="h3Heading">Galerie récente</h2>
                     <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés
                     devenir de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
                 </div>
@@ -579,7 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h3 class="h3Heading">Tour Opérateur en Inde | Circuits sur mesure en Inde</h3>
+                        <h2 class="h3Heading">Tour Opérateur en Inde | Circuits sur mesure en Inde</h2>
                         <p class="toarPara">Poonam Voyage est une agence de voyages spécialisée dans l'organisation de voyages sur mesure
                             circuits en Inde, avec une expertise particulière dans les circuits au Rajasthan. En tant que voyagiste en
                             Inde, nous nous engageons à offrir des expériences uniques et mémorables à nos clients,
@@ -603,7 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row position-relative">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 text-center">
-                    <h3 class="h3Heading text-white">L'Inde vous attend : des forfaits touristiques abordables et exceptionnels, conçus spécialement pour vous !</h3>
+                    <h2 class="h3Heading text-white">L'Inde vous attend : des forfaits touristiques abordables et exceptionnels, conçus spécialement pour vous !</h2>
                     <p class="toarPara text-white">Notre guide francophone, dévoué et expert local, vous accompagnera tout au long de votre voyage, partageant avec vous des connaissances culturelles, des anecdotes historiques, et des conseils pratiques pour rendre votre expérience authentique et enrichissante.</p>
                 </div>
             </div>
@@ -611,7 +611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container-fluid padding30 testimonialsWrapper">
             <div class="row position-relative">
                 <div class="col-md-6">
-                    <h3 class="h3Heading mb-2">Les voyageurs aiment nos locaux</h3>
+                    <h2 class="h3Heading mb-2">Les voyageurs aiment nos locaux</h2>
                     <p class="toarPara">Poonamvoyageinde est le bon choix pour le tourisme en Inde.</p>
                     <div class="testimonialsSliderWrapper owl-carousel testimonialSlider">
                         <?php $__currentLoopData = $test; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -653,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="TabGroupsFilterWrapper">
             <div class="container">
                 <div class="text-center">
-                    <h3 class="h3Heading">Nos blogs les mieux notés</h3>
+                    <h2 class="h3Heading">Nos blogs les mieux notés</h2>
                     <p class="headingPara">Voyager nous a aidés à comprendre le sens de la vie et nous a aidés à devenir
                     de meilleures personnes. Chaque fois que nous voyageons, nous voyons le monde avec un nouveau regard.</p>
 
@@ -712,7 +712,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     <div class="col-md-6 tour-operator-india">
-                        <h3 class="h3Heading"><?php echo e($homepage->section2_heading ?? "Tour Opérateur en Inde | Circuits sur mesure en Inde"); ?></h3>
+                        <h2 class="h3Heading"><?php echo e($homepage->section2_heading ?? "Tour Opérateur en Inde | Circuits sur mesure en Inde"); ?></h2>
                         <?php echo $homepage->section2_description ?? "En tant qu'agence de guides touristiques en Inde, notre équipe dévouée de guides locaux
                             des professionnels vous accompagneront tout au long de votre voyage, partageant des éclairages culturels,
                             anecdotes historiques et conseils pratiques pour rendre votre expérience authentique et enrichissante."; ?>
