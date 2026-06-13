@@ -52,11 +52,16 @@
                let hasMore = {{ $testimonials->hasMorePages() ? 'true' : 'false' }};
                const sentinel = document.getElementById('testimonial-load-sentinel');
                const container = document.getElementById('testimonials-container');
+               let observer = null;
+
+               function setSentinelText(message) {
+                  sentinel.innerHTML = '<span>' + message + '</span>';
+               }
 
                function loadMoreTestimonials() {
                   if (!hasMore || loading) return;
                   loading = true;
-                  sentinel.innerHTML = '<span>Chargement en cours...</span>';
+                  setSentinelText('Chargement en cours...');
 
                   fetch('{{ route('comments') }}?page=' + nextPage, {headers:{'X-Requested-With':'XMLHttpRequest'}})
                     .then(res => res.json())
@@ -65,25 +70,39 @@
                        hasMore = data.hasMore;
                        nextPage += 1;
                        loading = false;
-                       sentinel.innerHTML = hasMore ? '<span>Faites défiler pour charger plus de témoignages...</span>' : '<span>Vous avez atteint la fin des témoignages.</span>';
+                       setSentinelText(hasMore ? 'Faites défiler pour charger plus de témoignages...' : 'Vous avez atteint la fin des témoignages.');
+                       if (!hasMore && observer) {
+                          observer.disconnect();
+                       }
                     }).catch(err=>{
                        console.error(err);
                        loading = false;
-                       sentinel.innerHTML = '<span>Erreur de chargement. Essayez de défiler à nouveau.</span>';
+                       setSentinelText('Erreur de chargement. Essayez à nouveau.');
                     });
                }
 
-               function onScroll() {
-                  if (!hasMore || loading) return;
-                  const threshold = 600;
-                  const scrollPosition = window.innerHeight + window.scrollY;
-                  const bottomPosition = document.documentElement.scrollHeight - threshold;
-                  if (scrollPosition >= bottomPosition) {
-                     loadMoreTestimonials();
-                  }
+               if ('IntersectionObserver' in window) {
+                  observer = new IntersectionObserver(function(entries) {
+                     entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                           loadMoreTestimonials();
+                        }
+                     });
+                  }, {
+                     rootMargin: '0px 0px 300px 0px'
+                  });
+                  observer.observe(sentinel);
+               } else {
+                  window.addEventListener('scroll', function() {
+                     if (!hasMore || loading) return;
+                     const threshold = 300;
+                     const scrollPosition = window.innerHeight + window.scrollY;
+                     const bottomPosition = document.documentElement.scrollHeight - threshold;
+                     if (scrollPosition >= bottomPosition) {
+                        loadMoreTestimonials();
+                     }
+                  });
                }
-
-               window.addEventListener('scroll', onScroll);
             });
             </script>
       </section>
