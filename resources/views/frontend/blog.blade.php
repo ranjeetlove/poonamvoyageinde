@@ -33,44 +33,68 @@
             <!-- <div class="section-title">
                <h2>Nos Blogs</h2>
 			 </div> -->
-			 <div class="row">
-                 @foreach ($blogs as $key => $blog)
-                 <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                      <div class="item-single mb-30">
-                           <div class="image">
-                            <img src="{{asset('uploads/blog/'.$blog->image)}}" alt="">
-                           </div>
-                           <div class="content">
-                              <ul class="info-list">
-                                 <li><i class='bx bx-calendar'></i>{{ \Carbon\Carbon::parse($blog->created_at)->format('F j, Y') }}</li>
-                                 <li><i class='bx bx-tag'></i>{{ $blog->category }}</li>
-                              </ul>
-                              <h3>
-                              <a href="{{ route('blogdetails', $blog->slug) }}">{{ $blog->title }}</a>
-                              </h3>
-                             <p>
-                                 {!! Str::limit(
-                                    html_entity_decode(strip_tags($blog->content)),
-                                    90
-                                 ) !!}
-                              </p>
-                              <ul class="list">
-                                 <li>
-                                    <div class="author">
-                                       <img src="{{asset('frontend/assets/img/blog/author1.jpg') }}" alt="Demo Image">
-                                       <span>By - {{ implode(' ', array_slice(explode(' ', $blog->posted_by), 0, 2)) }}</span>
-                                    </div>
-                                 </li>
-								  <li>
-									  <a href="{{route('blogdetails',$blog->slug) }}" class="btn-primary">Lire Plus</a>
-								  </li>
-                              </ul>
-                           </div>
-                        </div>
-				 </div>
-				  @endforeach
-			 </div>
-		 </div>
+			 <div class="row" id="blog-posts-container">
+                 @include('frontend.partials.blog-cards')
+                         </div>
+
+            <div class="row mt-4">
+               <div class="col-12 text-center">
+                  <div id="blog-load-sentinel" class="py-4">
+                     @if($blogs->hasMorePages())
+                        <span>Faites défiler pour charger plus de billets...</span>
+                     @else
+                        <span>Vous avez atteint la fin des articles.</span>
+                     @endif
+                  </div>
+               </div>
+            </div>
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+               let nextPage = 2;
+               let loading = false;
+               let hasMore = {{ $blogs->hasMorePages() ? 'true' : 'false' }};
+               const sentinel = document.getElementById('blog-load-sentinel');
+               const container = document.getElementById('blog-posts-container');
+
+               function loadMoreBlogs() {
+                  if (!hasMore || loading) return;
+                  loading = true;
+                  sentinel.innerHTML = '<span>Chargement en cours...</span>';
+
+                  fetch('{{ route('blog') }}?page=' + nextPage, {
+                     headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                     }
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                     container.insertAdjacentHTML('beforeend', data.html);
+                     hasMore = data.hasMore;
+                     nextPage += 1;
+                     loading = false;
+                     sentinel.innerHTML = hasMore ? '<span>Faites défiler pour charger plus de billets...</span>' : '<span>Vous avez atteint la fin des articles.</span>';
+                  })
+                  .catch(error => {
+                     console.error(error);
+                     loading = false;
+                     sentinel.innerHTML = '<span>Erreur de chargement. Essayez de défiler à nouveau.</span>';
+                  });
+               }
+
+               function onScroll() {
+                  if (!hasMore || loading) return;
+                  const threshold = 600;
+                  const scrollPosition = window.innerHeight + window.scrollY;
+                  const bottomPosition = document.documentElement.scrollHeight - threshold;
+                  if (scrollPosition >= bottomPosition) {
+                     loadMoreBlogs();
+                  }
+               }
+
+               window.addEventListener('scroll', onScroll);
+            });
+            </script>
       </section>
 <!-- Tours and Travels start -->
       <!-- <section class="tour-travel">

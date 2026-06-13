@@ -9,10 +9,18 @@ use App\Models\Banner;
 
 class BlogController extends Controller
 {
-    public function blog(){
+    public function blog(Request $request){
         $banner= Banner::where('name','LIKE','%blog%')->first();
-        $blogs = Blog::orderBy('id','desc')->get();
-		
+        $blogs = Blog::orderBy('id','desc')->paginate(6);
+
+        if ($request->ajax()) {
+            $html = view('frontend.partials.blog-cards', compact('blogs'))->render();
+            return response()->json([
+                'html' => $html,
+                'hasMore' => $blogs->hasMorePages()
+            ]);
+        }
+
         return view('frontend.blog',compact('blogs','banner'));
     }
     public function blogdetails($slug){
