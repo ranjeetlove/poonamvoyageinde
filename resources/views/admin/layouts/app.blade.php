@@ -187,6 +187,14 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{url('admin/pages/tailor-made-trip')}}" class="nav-link {{ request()->is('admin/pages/tailor-made-trip*') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-pencil-alt"></i>
+                  <p>
+                   Tailor-made Trip page
+                  </p>
+                </a>
+              </li>
 
             <!-- <li class="nav-item">
             <a href="#" class="nav-link">

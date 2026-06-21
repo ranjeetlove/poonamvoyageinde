@@ -15,6 +15,7 @@ use App\Http\Controllers\admin\BannerController;
 use App\Http\Controllers\admin\AdminBlogController;
 use App\Http\Controllers\admin\AdminAboutController;
 use App\Http\Controllers\admin\AdminHomepageController;
+use App\Http\Controllers\admin\AdminOtherPagesController;
 use App\Http\Controllers\admin\AdminRegionController;
 use App\Http\Controllers\admin\AdminTestimonialController;
 use App\Http\Controllers\admin\AdminTourController;
@@ -136,6 +137,13 @@ Route::get('/homepage/create',[AdminHomepageController::class,'create']);
 Route::post('/homepage/store',[AdminHomepageController::class,'store']);
 Route::get('/homepage/edit',[AdminHomepageController::class,'edit'])->name('homepage-edit');
 Route::post('/homepage/edit',[AdminHomepageController::class,'update']);
+
+// Reusable Pages Management (single record per page type)
+Route::get('/pages/{page_type}', [AdminOtherPagesController::class, 'index'])->name('pages');
+Route::get('/pages/{page_type}/create', [AdminOtherPagesController::class, 'create'])->name('pages-create');
+Route::post('/pages/{page_type}/store', [AdminOtherPagesController::class, 'store'])->name('pages-store');
+Route::get('/pages/{page_type}/edit', [AdminOtherPagesController::class, 'edit'])->name('pages-edit');
+Route::post('/pages/{page_type}/edit', [AdminOtherPagesController::class, 'update'])->name('pages-update');
 
 Route::get('/region',[AdminRegionController::class,'index'])->name('region');
 Route::get('/region/create',[AdminRegionController::class,'create']);
