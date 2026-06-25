@@ -33,7 +33,7 @@
             <div class="row filtr-container">
 
 			  <!-- List Start -->
-           @foreach ($region->tour as $tr)
+           @foreach ($tours as $tr)
                <div class="col-lg-4 col-md-6 filtr-item" data-category="1" data-sort="value">
                   <div class="item-single mb-30">
                      <div class="image" >

@@ -56,7 +56,8 @@ class DestinationController extends Controller
         $pageDescription = $region->meta_description;
         $pageKeywords = $region->meta_keywords;
         $schema = $region->c_schema;
-        return view('frontend.destination-list',compact('region','pageTitle','pageDescription','pageKeywords','schema'));
+        $tours = $region->tour()->where('status', 'Active')->get();
+        return view('frontend.destination-list', compact('region', 'tours', 'pageTitle', 'pageDescription', 'pageKeywords', 'schema'));
     }
     
     public function allTour(){

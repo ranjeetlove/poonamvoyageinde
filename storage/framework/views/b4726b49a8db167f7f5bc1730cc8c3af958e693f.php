@@ -404,6 +404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <?php
                                     $tours = App\Models\Tour::where('region_id', $region->id)
+                                            ->where('status', 'Active')
                                             ->orderBy('id', 'desc')
                                             ->get();
                                     $sortedTours = $tours->sortBy('day');

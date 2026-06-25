@@ -401,6 +401,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 @foreach ($regions as $key => $region)
                                     @php
                                     $tours = App\Models\Tour::where('region_id', $region->id)
+                                            ->where('status', 'Active')
                                             ->orderBy('id', 'desc')
                                             ->get();
                                     $sortedTours = $tours->sortBy('day');
